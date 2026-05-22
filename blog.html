@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Insights | Inchbrick Realty</title>
+  <meta name="description"
+    content="Real estate insights, market trends, home buying guides, and investment tips from Inchbrick Realty experts across India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body class="blog-page" data-page="blog">
+  <script src="js/layout.js"></script>
+  <div id="site-header" data-page="blog"></div>
+
+  <div class="blog-hero-wrap">
+    <section class="blog-hero" aria-label="Inchbrick Realty blog">
+      <div class="blog-hero-editorial">
+        <span class="blog-hero-kicker"><i class="fas fa-pen-nib"></i> The Inchbrick Journal</span>
+        <h1 class="blog-hero-title">Stories Behind <span>Every Address</span></h1>
+        <p class="blog-hero-desc">
+          Market intelligence, buyer guides, and lifestyle picks — written for families, investors, and first-time
+          homeowners across India.
+        </p>
+        <form class="blog-hero-search" id="blogSearchForm" role="search">
+          <input type="search" id="blogSearchHero" placeholder="Search articles, cities, topics…" aria-label="Search blog" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="blog-hero-visual">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80"
+          alt="City skyline and modern architecture">
+        <div class="blog-hero-stack">
+          <a href="#blogGrid" class="blog-mini-card">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&q=80" alt="">
+            <div>
+              <span>Trending</span>
+              <strong>2026 Metro Corridors Worth Watching</strong>
+            </div>
+          </a>
+          <a href="#blogGrid" class="blog-mini-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80" alt="">
+            <div>
+              <span>Guide</span>
+              <strong>First Home? RERA Checklist Inside</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main class="blog-main">
+    <div class="blog-toolbar">
+      <h2>Latest <em>Reads</em></h2>
+      <div class="blog-filters" role="tablist" aria-label="Filter articles">
+        <button type="button" class="blog-filter-btn is-active" data-filter="all">All</button>
+        <button type="button" class="blog-filter-btn" data-filter="market">Market</button>
+        <button type="button" class="blog-filter-btn" data-filter="guides">Guides</button>
+        <button type="button" class="blog-filter-btn" data-filter="investment">Investment</button>
+        <button type="button" class="blog-filter-btn" data-filter="lifestyle">Lifestyle</button>
+      </div>
+    </div>
+
+    <input type="search" id="blogSearch" hidden aria-hidden="true" tabindex="-1" />
+
+    <section class="blog-featured" aria-label="Featured articles">
+      <a href="#" class="blog-featured-main" data-category="market">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+          alt="Noida skyline">
+        <div class="overlay">
+          <span class="blog-tag blog-tag--gold">Featured · Market</span>
+          <h3>Noida Expressway: Why 2026 Could Be the Inflection Year for NCR Investors</h3>
+          <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> May 18, 2026</span>
+            <span><i class="far fa-clock"></i> 8 min read</span>
+            <span><i class="far fa-user"></i> Priya Sharma</span>
+          </div>
+        </div>
+      </a>
+      <div class="blog-featured-side">
+        <a href="#" class="blog-side-card" data-category="guides">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80" alt="Home keys">
+          <div>
+            <span class="blog-tag blog-tag--red">Guides</span>
+            <h4>Home Loan EMI vs Rent: A 5-Year Math Breakdown</h4>
+            <p>When buying beats renting in Gurugram, Pune, and Bangalore — with real numbers.</p>
+            <span class="blog-read">Read article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="blog-side-card" data-category="investment">
+          <img src="https://images.unsplash.com/photo-1600607687644-c7171b4243f3?auto=format&fit=crop&w=400&q=80" alt="Luxury interior">
+          <div>
+            <span class="blog-tag blog-tag--gold">Investment</span>
+            <h4>Pre-Leased Commercial: Stable Yields in Tier-1 Cities</h4>
+            <p>Cap rates, tenant quality, and what NRI buyers should verify first.</p>
+            <span class="blog-read">Read article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="blog-bento" id="blogGrid">
+      <a href="#" class="blog-card is-wide" data-category="market">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2602?auto=format&fit=crop&w=900&q=80" alt="Mumbai">
+          <span class="blog-tag blog-tag--navy">Market</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>Mumbai Suburbs: Micro-Markets Outpacing the Island City</h3>
+          <p>Thane, Navi Mumbai, and emerging corridors where end-users are moving for space and connectivity.</p>
+          <div class="blog-card-footer">
+            <span>May 12, 2026 · 6 min</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-category="guides">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Villa">
+          <span class="blog-tag blog-tag--red">Guides</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>Site Visit Day: 12 Questions to Ask the Builder</h3>
+          <p>From possession timelines to hidden charges — our field team's checklist.</p>
+          <div class="blog-card-footer">
+            <span>May 8, 2026</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-category="lifestyle">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Pool home">
+          <span class="blog-tag blog-tag--gold">Lifestyle</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>Wellness Townships: Pools, Parks &amp; Pedestrian-First Living</h3>
+          <p>How master-planned communities are reshaping weekend-home demand.</p>
+          <div class="blog-card-footer">
+            <span>May 5, 2026</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-category="investment">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1560520653-9a0d9c016fad?auto=format&fit=crop&w=600&q=80" alt="Charts">
+          <span class="blog-tag blog-tag--red">Investment</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>REITs vs Direct Property: What Suits Your Portfolio?</h3>
+          <p>Liquidity, tax treatment, and minimum ticket sizes explained simply.</p>
+          <div class="blog-card-footer">
+            <span>Apr 28, 2026</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-category="market">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab7?auto=format&fit=crop&w=600&q=80" alt="Bangalore">
+          <span class="blog-tag blog-tag--navy">Market</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>Whitefield to Sarjapur: Bangalore's Next Growth Spine</h3>
+          <p>Office absorption, metro extensions, and rental yield trends for 2026–27.</p>
+          <div class="blog-card-footer">
+            <span>Apr 22, 2026</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-category="guides">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1582407947306-fb9f028aeeb1?auto=format&fit=crop&w=600&q=80" alt="Documents">
+          <span class="blog-tag blog-tag--red">Guides</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>RERA Registration: How to Verify Any Project in 3 Minutes</h3>
+          <p>State portals, red flags, and what to do if a listing looks suspicious.</p>
+          <div class="blog-card-footer">
+            <span>Apr 15, 2026</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card is-wide" data-category="lifestyle">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe21c16aa?auto=format&fit=crop&w=900&q=80" alt="Interior">
+          <span class="blog-tag blog-tag--gold">Lifestyle</span>
+        </div>
+        <div class="blog-card-body">
+          <h3>Designing a Family Home: Layouts That Age With You</h3>
+          <p>From toddler-safe floors to multigenerational wings — architects share floor-plan wins.</p>
+          <div class="blog-card-footer">
+            <span>Apr 8, 2026 · 7 min</span>
+            <span class="blog-read">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <p class="blog-empty" id="blogEmpty">No articles match your search. Try another keyword or category.</p>
+    </div>
+
+    <section class="blog-newsletter" aria-label="Newsletter signup">
+      <div class="blog-newsletter-text">
+        <h3>Weekly Market Pulse</h3>
+        <p>One curated email — launches, price movements, and guides. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="blog-newsletter-form" id="blogNewsletter">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <div class="blog-topics">
+      <p>Popular topics</p>
+      <div class="blog-topic-tags">
+        <a href="#blogGrid" data-topic="rera">#RERA</a>
+        <a href="#blogGrid" data-topic="nri">#NRI Buyers</a>
+        <a href="#blogGrid" data-topic="metro">#Metro Cities</a>
+        <a href="#blogGrid" data-topic="loan">#Home Loans</a>
+        <a href="#blogGrid" data-topic="villa">#Luxury Villas</a>
+        <a href="#blogGrid" data-topic="rent">#Rent vs Buy</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/blog.js"></script>
+</body>
+
+</html>

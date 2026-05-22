@@ -1,0 +1,325 @@
+:root {
+      --primary: #c29a63;
+      --navy: #0f2339;
+      --gold-soft: #f2d6a2;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: #f5f0e8;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+    /* Shorter banner on contact */
+    .page-top-wrap {
+      margin-top: 1rem;
+    }
+    .short-banner.contact-banner {
+      height: 220px;
+      min-height: 220px;
+    }
+    .short-banner.contact-banner .banner-image,
+    .short-banner.contact-banner .banner-image img {
+      min-height: 220px;
+      height: 220px;
+    }
+    .short-banner.contact-banner .banner-content {
+      padding: 2rem 2rem 2rem 3.5rem;
+    }
+    .short-banner.contact-banner .title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+    }
+    /* Main panel */
+    .contact-main {
+      padding: 1.25rem 0 2.5rem;
+      flex: 1;
+    }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #7c5c2e;
+      background: #fff;
+      border: 1px solid rgba(194, 154, 99, 0.35);
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(15, 35, 57, 0.05);
+    }
+    .trust-chip i {
+      color: var(--primary);
+      font-size: 0.75rem;
+    }
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 6px rgba(15, 35, 57, 0.04),
+        0 24px 60px rgba(15, 35, 57, 0.12);
+      border: 1px solid rgba(194, 154, 99, 0.25);
+      background: #fff;
+    }
+    /* Left — brand side */
+    .contact-brand {
+      position: relative;
+      padding: 2rem 1.75rem;
+      background: linear-gradient(155deg, var(--navy) 0%, #1a3a52 55%, #2d4a3e 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+      overflow: hidden;
+    }
+    .contact-brand::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194, 154, 99, 0.35), transparent 70%);
+    }
+    .contact-brand::after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: -30px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242, 214, 162, 0.15), transparent 70%);
+    }
+    .brand-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .brand-inner h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .brand-inner h2 em {
+      font-style: italic;
+      color: var(--gold-soft);
+    }
+    .brand-inner > p {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      max-width: 260px;
+    }
+    .call-hero {
+      position: relative;
+      z-index: 1;
+      margin-top: 0.5rem;
+    }
+    .call-hero a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(194, 154, 99, 0.4);
+      border-radius: 16px;
+      transition: transform 0.25s, background 0.25s;
+    }
+    .call-hero a:hover {
+      transform: translateY(-3px);
+      background: rgba(194, 154, 99, 0.2);
+    }
+    .call-hero .ring {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), #9a7a4a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      animation: pulse-ring 2.5s ease infinite;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(194, 154, 99, 0.45); }
+      50% { box-shadow: 0 0 0 10px rgba(194, 154, 99, 0); }
+    }
+    .call-hero strong {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+    .call-hero span {
+      font-size: 0.72rem;
+      color: var(--gold-soft);
+    }
+    .link-pills {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .link-pills a {
+      flex: 1;
+      min-width: 72px;
+      text-align: center;
+      padding: 0.55rem 0.4rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--gold-soft);
+      transition: background 0.2s, color 0.2s;
+    }
+    .link-pills a i {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .link-pills a:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .brand-hours {
+      position: relative;
+      z-index: 1;
+      font-size: 0.7rem;
+      color: #64748b;
+    }
+    /* Right — form */
+    .contact-form-wrap {
+      padding: 1.75rem 2rem 2rem;
+      background: #fff;
+    }
+    .contact-form-wrap h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+    .contact-form-wrap .hint {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-bottom: 1.1rem;
+    }
+    .contact-form {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .form-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .field label {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #94a3b8;
+      margin-bottom: 0.3rem;
+    }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 0.62rem 0.85rem;
+      border: 1.5px solid #e8e0d4;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.86rem;
+      background: #faf8f5;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(194, 154, 99, 0.12);
+    }
+    .field textarea {
+      min-height: 64px;
+      resize: none;
+    }
+    .btn-send {
+      margin-top: 0.15rem;
+      width: 100%;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--primary) 0%, #9a7a4a 50%, var(--navy) 100%);
+      background-size: 200% auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 10px 28px rgba(194, 154, 99, 0.4);
+      transition: transform 0.2s, background-position 0.4s;
+    }
+    .btn-send:hover {
+      transform: translateY(-2px);
+      background-position: right center;
+    }
+    @media (max-width: 860px) {
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+      .contact-brand {
+        padding: 1.5rem;
+      }
+      .call-hero {
+        margin-top: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .short-banner.contact-banner {
+        height: auto;
+        grid-template-columns: 1fr;
+      }
+      .short-banner.contact-banner .banner-image,
+      .short-banner.contact-banner .banner-image img {
+        height: 180px;
+        min-height: 180px;
+      }
+      .form-2 {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-wrap {
+        padding: 1.35rem 1.25rem 1.5rem;
+      }
+    }
