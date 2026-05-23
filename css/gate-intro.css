@@ -1,0 +1,253 @@
+/* Gate overlay — fixed fullscreen when scrolling past hero (no spacer / white gaps) */
+
+body.gate-intro-skipped #gateOverlay,
+body.gate-intro-skipped .gate-scroll-zone {
+  display: none !important;
+}
+
+/* Absorbs scroll while gate plays — page below stays put until zone ends */
+.gate-scroll-zone {
+  height: 100vh;
+  min-height: 680px;
+  margin: 0;
+  padding: 0;
+  background: #070e1a;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+body.gate-video-active .gate-scroll-zone {
+  margin-bottom: 0;
+}
+
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: #070e1a;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.gate-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gate-solid-fill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #070e1a;
+}
+
+.gate-video-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #070e1a url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.gate-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #070e1a;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.gate-video-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 14, 26, 0.4) 0%,
+    rgba(7, 14, 26, 0.1) 50%,
+    rgba(7, 14, 26, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+.gate-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 51%;
+  z-index: 10;
+  background: linear-gradient(165deg, #0f2339 0%, #0a1628 42%, #152a3d 100%);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.65);
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+.gate-panel::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 2px solid rgba(194, 154, 99, 0.5);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.gate-panel-left {
+  left: 0;
+  border-right: 4px solid #c29a63;
+}
+
+.gate-panel-right {
+  right: 0;
+  border-left: 4px solid #c29a63;
+}
+
+.gate-panel-emblem {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: rgba(194, 154, 99, 0.22);
+  pointer-events: none;
+}
+
+.gate-panel-left .gate-panel-emblem {
+  right: 1.5rem;
+}
+
+.gate-panel-right .gate-panel-emblem {
+  left: 1.5rem;
+}
+
+.gate-center-brand {
+  position: absolute;
+  z-index: 11;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.gate-brand-inner {
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.gate-center-brand .gate-logo {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
+}
+
+.gate-center-brand .gate-logo span {
+  color: #c29a63;
+}
+
+.gate-center-brand .gate-tagline {
+  font-size: 0.8rem;
+  color: #c29a63;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.gate-scroll-hint {
+  position: absolute;
+  z-index: 12;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.gate-scroll-hint i {
+  color: #c29a63;
+  animation: gateHintBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes gateHintBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.gate-progress-bar {
+  position: absolute;
+  z-index: 12;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #c29a63, #c9242b);
+  transition: width 0.08s linear;
+}
+
+.gate-skip {
+  position: absolute;
+  z-index: 15;
+  top: 5.5rem;
+  right: 1.25rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(15, 35, 57, 0.92);
+  border: 1px solid rgba(194, 154, 99, 0.5);
+  cursor: pointer;
+}
+
+.gate-skip:hover {
+  background: #c9242b;
+}
+
+body.gate-video-active {
+  background: #070e1a;
+}
+
+html.gate-scroll-locked,
+body.gate-scroll-locked {
+  overscroll-behavior-y: none;
+}
+
+@media (max-width: 768px) {
+  .gate-panel-emblem {
+    display: none;
+  }
+
+  .gate-panel {
+    width: 53%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate-overlay {
+    display: none !important;
+  }
+}

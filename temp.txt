@@ -1,0 +1,53 @@
+<section class="hero-jobstyle">
+      <div class="container hero-content">
+        <h1 class="hero-title">Find your dream home now</h1>
+        <p class="hero-subtitle">10,000+ properties for you to explore</p>
+
+        <div class="search-bar-container">
+          <div class="search-bar-jobstyle">
+            <div class="search-input-group">
+              <i class="fas fa-search icon"></i>
+              <input type="text" placeholder="Enter locality / project / builder" />
+            </div>
+            <div class="divider"></div>
+            <div class="search-input-group select-group">
+              <select>
+                <option value="" disabled selected>Select property type</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Villa</option>
+                <option value="plot">Plot</option>
+                <option value="commercial">Commercial</option>
+              </select>
+            </div>
+            <div class="divider"></div>
+            <div class="search-input-group">
+              <input type="text" placeholder="Enter city" />
+            </div>
+            <button class="search-btn-jobstyle">Search</button>
+          </div>
+        </div>
+
+        <div class="quick-filters-container">
+          <div class="filter-pill"><i class="fas fa-gem icon"></i> Luxury Villas <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-building icon"></i> Ready to Move <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-hard-hat icon"></i> Under Construction <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-water icon"></i> Sea View <i class="fas fa-chevron-right arrow"></i>
+          </div>
+          <div class="filter-pill"><i class="fas fa-city icon"></i> Apartments <i
+              class="fas fa-chevron-right arrow"></i></div>
+        </div>
+        <div class="quick-filters-container row-2">
+          <div class="filter-pill"><i class="fas fa-shield-alt icon"></i> Gated Community <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-rupee-sign icon"></i> Affordable <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-store icon"></i> Commercial <i
+              class="fas fa-chevron-right arrow"></i></div>
+          <div class="filter-pill"><i class="fas fa-map icon"></i> Plots <i class="fas fa-chevron-right arrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>

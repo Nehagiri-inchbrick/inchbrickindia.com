@@ -1,0 +1,60 @@
+Lines: 10970 to 11027
+
+<section class="hero-luxury">
+  <div class="hero-bg-image"></div>
+  <div class="play-btn-overlay"><i class="fas fa-play" style="margin-left: 5px;"></i></div>
+  
+  <div class="hero-luxury-content">
+    <div class="hero-left-col">
+      <h1>Find More Than<br>Just a House.</h1>
+      <span class="cursive-text">Find Your Home.</span>
+      <p class="hero-desc">Discover spaces that inspire,<br>comfort that stays, and places<br>you'll love to call home.</p>
+      
+      <div class="happy-buyers">
+        <div class="buyer-avatars">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Buyer">
+          <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Buyer">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Buyer">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Buyer">
+        </div>
+        <div class="buyers-text">
+          <strong>2,500+</strong>
+          Happy Buyers
+        </div>
+      </div>
+      
+      <a href="#" class="watch-video-btn">
+        Watch Video
+        <div class="icon-circle"><i class="fas fa-chevron-right"></i></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="search-bar-wrapper">
+    <div class="search-bar-inner">
+      <div class="search-bar-container">
+          <div class="search-bar-jobstyle">
+            <div class="search-input-group">
+              <i class="fas fa-search icon"></i>
+              <input type="text" placeholder="Enter locality / project / builder" />
+            </div>
+            <div class="divider"></div>
+            <div class="search-input-group select-group">
+              <select>
+                <option value="" disabled selected>Select property type</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Villa</option>
+                <option value="plot">Plot</option>
+                <option value="commercial">Commercial</option>
+              </select>
+            </div>
+            <div class="divider"></div>
+            <div class="search-input-group">
+              <input type="text" placeholder="Enter city" />
+            </div>
+            <button class="search-btn-jobstyle">Search</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

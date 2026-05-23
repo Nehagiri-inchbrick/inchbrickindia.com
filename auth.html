@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Register | Inchbrick Realty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body class="auth-page">
+  <script src="js/layout.js"></script>
+  <div id="site-header" data-page="auth"></div>
+
+  <div class="auth-hero-band">
+    <h1>Your <em>property journey</em> starts here</h1>
+    <p>One secure account for saved listings, site visits, loan assistance, and personalized recommendations across India.</p>
+    <a href="contact.html#contactForm" class="auth-callback-btn"><i class="fas fa-phone-alt"></i> Get Callback</a>
+  </div>
+
+  <div class="auth-shell">
+    <aside class="auth-story" aria-label="Why join Inchbrick">
+      <div class="auth-story-hero">
+        <span class="auth-story-kicker"><i class="fas fa-gem"></i> Inchbrick Member</span>
+        <h2>India’s trusted bridge between buyers and premium developers</h2>
+        <p>
+          Join thousands of families and investors who use Inchbrick to discover RERA-verified projects,
+          compare localities, book guided site visits, and track offers — all in one elegant workspace.
+        </p>
+      </div>
+
+      <div class="auth-story-body">
+        <div class="auth-benefits">
+          <article class="auth-benefit">
+            <i class="fas fa-bookmark"></i>
+            <h3>Save & compare homes</h3>
+            <p>Bookmark projects, shortlist floor plans, and share with family in a single click.</p>
+          </article>
+          <article class="auth-benefit">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Priority site visits</h3>
+            <p>Schedule chauffeured visits with relationship managers who know every micro-market.</p>
+          </article>
+          <article class="auth-benefit">
+            <i class="fas fa-file-contract"></i>
+            <h3>Loan & legal desk</h3>
+            <p>Pre-approved EMI options, document checklists, and RERA compliance summaries.</p>
+          </article>
+          <article class="auth-benefit">
+            <i class="fas fa-bell"></i>
+            <h3>Launch alerts</h3>
+            <p>Be first to know about pre-launch pricing, investor decks, and limited inventory drops.</p>
+          </article>
+        </div>
+
+        <div class="auth-stats-row">
+          <div class="auth-stat"><strong>25K+</strong><span>Happy families</span></div>
+          <div class="auth-stat"><strong>12.5K+</strong><span>Homes sold</span></div>
+          <div class="auth-stat"><strong>45+</strong><span>Cities</span></div>
+          <div class="auth-stat"><strong>100+</strong><span>Partner brands</span></div>
+        </div>
+
+        <blockquote class="auth-quote">
+          <p>“Inchbrick simplified our move from Mumbai to Bangalore — transparent pricing, no spam calls, and a dedicated advisor till registration.”</p>
+          <cite>— Priya &amp; Rohan M., Members since 2022</cite>
+        </blockquote>
+
+        <h3 class="auth-story-subhead">What you unlock with a free account</h3>
+        <ul class="auth-why-list">
+          <li><i class="fas fa-check-circle"></i> Personalized property feed based on budget, city, and lifestyle</li>
+          <li><i class="fas fa-check-circle"></i> Exclusive member pricing on select developer launches</li>
+          <li><i class="fas fa-check-circle"></i> Download brochures, payment plans, and cost sheets anytime</li>
+          <li><i class="fas fa-check-circle"></i> Chat history with advisors and visit notes in one timeline</li>
+          <li><i class="fas fa-check-circle"></i> NRI desk for virtual tours, POA guidance, and FEMA-friendly payments</li>
+          <li><i class="fas fa-check-circle"></i> Investment heatmaps with 3-year appreciation benchmarks</li>
+          <li><i class="fas fa-check-circle"></i> Early access to resale and rental inventory in gated communities</li>
+        </ul>
+
+        <div class="auth-trust-pills">
+          <span><i class="fas fa-shield-alt"></i> RERA guided</span>
+          <span><i class="fas fa-lock"></i> 256-bit SSL</span>
+          <span><i class="fas fa-user-shield"></i> No spam sharing</span>
+          <span><i class="fas fa-headset"></i> 24/7 support</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="auth-form-panel">
+      <div class="auth-forms-wrap">
+        <!-- Login -->
+        <div class="auth-form-view is-active" data-auth-view="login" role="tabpanel">
+          <div class="auth-form-head">
+            <h3>Welcome back</h3>
+            <p>Sign in to continue your saved searches, visits, and advisor conversations.</p>
+          </div>
+          <form id="loginForm" action="#" method="post" novalidate>
+            <div class="auth-field">
+              <label for="loginEmail">Email or mobile <span class="req">*</span></label>
+              <div class="auth-input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="loginEmail" name="login" placeholder="you@email.com or +91 98765 43210" required autocomplete="username">
+              </div>
+            </div>
+            <div class="auth-field">
+              <label for="loginPassword">Password <span class="req">*</span></label>
+              <div class="auth-input-wrap">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required autocomplete="current-password">
+              </div>
+            </div>
+            <div class="auth-row-between">
+              <label class="auth-check" style="margin:0">
+                <input type="checkbox" name="remember"> Remember me
+              </label>
+              <button type="button" class="auth-link" data-auth-show="forgot">Forgot password?</button>
+            </div>
+            <button type="submit" class="auth-submit">Sign in <i class="fas fa-arrow-right"></i></button>
+            <div class="auth-divider">or continue with</div>
+            <div class="auth-social">
+              <button type="button" class="auth-social-btn"><i class="fab fa-google"></i> Google</button>
+              <button type="button" class="auth-social-btn"><i class="fab fa-apple"></i> Apple</button>
+            </div>
+            <p class="auth-foot-note">New to Inchbrick? <button type="button" class="auth-link" data-auth-show="register">Create an account</button></p>
+            <p class="auth-foot-note auth-callback-note">Prefer to talk first? <a href="contact.html#contactForm" class="auth-link">Get Callback</a></p>
+          </form>
+        </div>
+
+        <!-- Register -->
+        <div class="auth-form-view" data-auth-view="register" role="tabpanel">
+          <div class="auth-form-head">
+            <h3>Create your account</h3>
+            <p>Free forever. Get curated projects, visit scheduling, and member-only launch offers.</p>
+          </div>
+          <form id="registerForm" action="#" method="post" novalidate>
+            <div class="auth-field-row">
+              <div class="auth-field">
+                <label for="regFirst">First name <span class="req">*</span></label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="regFirst" name="first_name" placeholder="First name" required autocomplete="given-name">
+                </div>
+              </div>
+              <div class="auth-field">
+                <label for="regLast">Last name <span class="req">*</span></label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="regLast" name="last_name" placeholder="Last name" required autocomplete="family-name">
+                </div>
+              </div>
+            </div>
+            <div class="auth-field">
+              <label for="regEmail">Email address <span class="req">*</span></label>
+              <div class="auth-input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" name="email" placeholder="you@email.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="auth-field">
+              <label for="regPhone">Mobile number <span class="req">*</span></label>
+              <div class="auth-input-wrap">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="regPhone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="auth-field-row">
+              <div class="auth-field">
+                <label for="regCity">Preferred city</label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <select id="regCity" name="city">
+                    <option value="">Select city</option>
+                    <option>Mumbai</option>
+                    <option>Delhi NCR</option>
+                    <option>Bangalore</option>
+                    <option>Pune</option>
+                    <option>Hyderabad</option>
+                    <option>Chennai</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="auth-field">
+                <label for="regIntent">I am a</label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-home"></i>
+                  <select id="regIntent" name="intent">
+                    <option>Home buyer</option>
+                    <option>Investor</option>
+                    <option>NRI buyer</option>
+                    <option>Agent / partner</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="auth-field-row">
+              <div class="auth-field">
+                <label for="regPass">Password <span class="req">*</span></label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="regPass" name="password" placeholder="Min. 8 characters" required autocomplete="new-password" minlength="8">
+                </div>
+                <p class="auth-password-hint">Use 8+ characters with a number and symbol.</p>
+              </div>
+              <div class="auth-field">
+                <label for="regPass2">Confirm password <span class="req">*</span></label>
+                <div class="auth-input-wrap">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="regPass2" name="password_confirm" placeholder="Repeat password" required autocomplete="new-password" minlength="8">
+                </div>
+              </div>
+            </div>
+            <div class="auth-field">
+              <label for="regNote">What are you looking for? (optional)</label>
+              <textarea id="regNote" name="note" placeholder="e.g. 3 BHK in Whitefield under ₹1.2 Cr, ready in 2026…"></textarea>
+            </div>
+            <label class="auth-check">
+              <input type="checkbox" name="terms" required>
+              I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>, and consent to be contacted about relevant properties.
+            </label>
+            <label class="auth-check">
+              <input type="checkbox" name="whatsapp">
+              Send me updates on WhatsApp for site visits and launch alerts.
+            </label>
+            <button type="submit" class="auth-submit">Create account <i class="fas fa-user-plus"></i></button>
+            <p class="auth-foot-note">Already a member? <button type="button" class="auth-link" data-auth-show="login">Sign in</button></p>
+          </form>
+        </div>
+
+        <!-- Forgot password -->
+        <div class="auth-form-view" data-auth-view="forgot" role="tabpanel">
+          <button type="button" class="auth-back" data-auth-show="login"><i class="fas fa-arrow-left"></i> Back to login</button>
+          <div class="auth-form-head">
+            <h3>Reset password</h3>
+            <p>Enter the email linked to your Inchbrick account. We’ll send a secure link to create a new password.</p>
+          </div>
+          <form id="forgotForm" action="#" method="post" novalidate>
+            <div class="auth-field">
+              <label for="forgotEmail">Registered email <span class="req">*</span></label>
+              <div class="auth-input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="forgotEmail" name="email" placeholder="you@email.com" required autocomplete="email">
+              </div>
+            </div>
+            <button type="submit" class="auth-submit">Send reset link <i class="fas fa-paper-plane"></i></button>
+            <button type="button" class="auth-submit outline" data-auth-show="login">Cancel</button>
+            <p class="auth-foot-note" style="margin-top:1.5rem;text-align:left;font-size:0.82rem">
+              <i class="fas fa-info-circle" style="color:#c29a63"></i>
+              Didn’t receive the email? Check spam or contact <a href="mailto:support@inchbrickrealty.com" class="auth-link">support@inchbrickrealty.com</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="js/auth.js"></script>
+</body>
+
+</html>

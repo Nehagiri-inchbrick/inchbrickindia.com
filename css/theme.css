@@ -1,0 +1,161 @@
+/**
+ * Shared light-theme palette: red CTAs, gold accents, black text, white/gray backgrounds.
+ * Matches index.html "LIGHT THEME + RED BASE WITH GOLD ACCENTS".
+ * Load after page inline styles.
+ */
+
+:root {
+  --primary: #c9242b;
+  --primary-dark: #a71d22;
+}
+
+body {
+  background: #f5f5f5;
+  color: #1e293b;
+}
+
+/* Red primary actions */
+.btn-callback,
+.btn-red,
+.search-btn,
+.view-project-btn,
+.community-cta,
+.investor-cta,
+.brand-btn.primary,
+.emi-btn,
+.footer-search-btn,
+.picked-cta,
+.btn-send,
+.btn-contact-submit,
+.watch-more-btn {
+  background: #c9242b !important;
+  color: #fff !important;
+  border-color: #c9242b !important;
+}
+
+.btn-callback:hover,
+.btn-red:hover,
+.search-btn:hover,
+.view-project-btn:hover,
+.community-cta:hover,
+.investor-cta:hover,
+.brand-btn.primary:hover,
+.emi-btn:hover,
+.footer-search-btn:hover,
+.picked-cta:hover,
+.btn-send:hover,
+.btn-contact-submit:hover,
+.watch-more-btn:hover {
+  background: #a71d22 !important;
+  border-color: #a71d22 !important;
+}
+
+.tab.active {
+  background: #c9242b;
+  color: #fff;
+  border-color: #c9242b;
+}
+
+/* Gold accent labels & icons */
+.hero-kicker,
+.mood-kicker,
+.smart-kicker,
+.loc-badge-top,
+.hp-side-label,
+.impact-kicker,
+.community-badge,
+.trust-chip {
+  color: #c29a63 !important;
+}
+
+.hero-point i,
+.filter-pill .icon,
+.impact-icon,
+.impact-pill i,
+.wcu-icon i,
+.smart-icon i,
+.trust-chip i {
+  color: #c29a63 !important;
+}
+
+.section-title {
+  color: #1e293b;
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, #c9242b, #fb923c);
+}
+
+.section-subtitle {
+  color: #64748b;
+}
+
+/* Community tabs — red active, gold badge */
+.community-city-section,
+.projects-community {
+  background: #fafafa;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.projects-community .section-title {
+  color: #1e293b;
+}
+
+.community-city-btn {
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #475569;
+}
+
+.community-city-btn:hover {
+  border-color: #c9242b;
+  color: #c9242b;
+}
+
+.community-city-btn.active {
+  background: #c9242b !important;
+  color: #fff !important;
+  border-color: #c9242b !important;
+  box-shadow: 0 4px 15px rgba(201, 36, 43, 0.35);
+}
+
+.starting-price,
+.location-price,
+.community-rating,
+.smart-metric,
+.follow-us-note a {
+  color: #c9242b;
+}
+
+.search-input:focus,
+.footer-search input:focus,
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #c9242b;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.18);
+}
+
+.brands-tag,
+.heat-chip {
+  border-color: rgba(249, 115, 22, 0.35);
+  background: rgba(249, 115, 22, 0.08);
+  color: #a71d22;
+}
+
+/* Contact page */
+.contact-main {
+  background: transparent;
+}
+
+.contact-form-wrap {
+  background: #fff;
+}
+
+.call-hero .ring {
+  background: #c9242b !important;
+}
+
+.contact-brand {
+  background: linear-gradient(155deg, #0f2339 0%, #1a3a52 55%, #2d4a3e 100%);
+}

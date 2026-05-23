@@ -1,0 +1,99 @@
+ solid #0b111e;
+  margin-left: -15px;
+  object-fit: cover;
+}
+.buyer-avatars img:first-child { margin-left: 0; }
+
+.buyers-text {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: #cbd5e1;
+}
+.buyers-text strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.watch-video-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  color: #0b111e;
+  padding: 6px 6px 6px 24px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 220px;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+.watch-video-btn:hover {
+  transform: translateY(-2px);
+}
+.watch-video-btn .icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #3f4e64;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Search bar overlapping position */
+.search-bar-wrapper {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.search-bar-inner {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Ensure the search bar itself looks good overlapping */
+.search-bar-inner .search-bar-container {
+  margin-top: 0; 
+}
+.search-bar-inner .search-bar-jobstyle {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* stronger shadow for overlap */
+}
+
+@media (max-width: 900px) {
+  .hero-bg-image {
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 70%);
+    mask-image: linear-gradient(to top, transparent, black 70%);
+    opacity: 0.4;
+  }
+  .play-btn-overlay {
+    top: 20%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .hero-left-col h1 { font-size: 2.8rem; }
+  .hero-left-col .cursive-text { font-size: 2.8rem; }
+  .search-bar-wrapper {
+    position: relative;
+    bottom: 0;
+    margin-top: 40px;
+  }
+  .hero-luxury {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: block; /* stack layout */
+  }
+}
+</style>
+

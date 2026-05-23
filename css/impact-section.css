@@ -1,0 +1,231 @@
+/**
+ * "Building Trust. Delivering Results." — light, attractive impact section
+ * Load after page inline styles.
+ */
+.stats-section {
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(194, 154, 99, 0.14), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(201, 36, 43, 0.06), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f5f0e8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 90%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(194, 154, 99, 0.5), transparent);
+  pointer-events: none;
+}
+
+.stats-section .impact-wrap {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(194, 154, 99, 0.22);
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 4px 24px rgba(15, 35, 57, 0.06),
+    0 20px 56px rgba(15, 35, 57, 0.08);
+}
+
+.stats-section .impact-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+
+.stats-section .impact-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #a71d22;
+  background: rgba(201, 36, 43, 0.08);
+  border: 1px solid rgba(201, 36, 43, 0.22);
+  margin-bottom: 1rem;
+}
+
+.stats-section .impact-kicker::before,
+.stats-section .impact-kicker::after {
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c29a63);
+  border-radius: 2px;
+}
+
+.stats-section .impact-kicker::after {
+  background: linear-gradient(90deg, #c29a63, transparent);
+}
+
+.stats-section .impact-title {
+  font-family: "Playfair Display", "Cormorant Garamond", serif;
+  font-size: clamp(1.85rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: #0f2339;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.stats-section .impact-title span {
+  color: #c9242b;
+  font-style: italic;
+}
+
+.stats-section .impact-subtitle {
+  color: #64748b;
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.stats-section .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.stats-section .impact-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1.25rem 0.85rem 1.1rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(15, 35, 57, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.stats-section .impact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 36, 43, 0.22);
+  box-shadow: 0 14px 36px rgba(201, 36, 43, 0.1);
+}
+
+.stats-section .impact-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin: 0 auto 0.85rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  color: #c9242b;
+  font-size: 1.25rem;
+  background: linear-gradient(145deg, rgba(194, 154, 99, 0.2), rgba(201, 36, 43, 0.08));
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.stats-section .impact-card:hover .impact-icon {
+  transform: scale(1.06);
+  background: linear-gradient(145deg, rgba(201, 36, 43, 0.12), rgba(194, 154, 99, 0.22));
+}
+
+.stats-section .impact-value {
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  color: #c9242b;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.stats-section .impact-label {
+  font-size: 0.95rem;
+  color: #0f2339;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.stats-section .impact-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.stats-section .impact-trust-strip {
+  margin-top: 1.75rem;
+  border: 1px solid rgba(194, 154, 99, 0.28);
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #fff 0%, #faf8f5 50%, #fff 100%);
+  box-shadow: 0 4px 16px rgba(15, 35, 57, 0.05);
+}
+
+.stats-section .impact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.stats-section .impact-pill i {
+  color: #c29a63;
+  font-size: 0.95rem;
+}
+
+.stats-section .impact-sep {
+  color: rgba(148, 163, 184, 0.45);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1100px) {
+  .stats-section .impact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-section .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stats-section .impact-wrap {
+    border-radius: 20px;
+    padding: 1.75rem 1rem 1.25rem;
+  }
+
+  .stats-section .impact-trust-strip {
+    border-radius: 18px;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .stats-section .impact-sep {
+    display: none;
+  }
+
+  .stats-section .impact-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-section .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
