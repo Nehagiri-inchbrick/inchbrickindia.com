@@ -17,7 +17,6 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
-
     :root {
       --primary: #c29a63;
       --primary-dark: #0f2339;
@@ -3975,178 +3974,397 @@
 
     .client-story-wrap {
       margin-top: 0.75rem;
-      border: 1px solid rgba(195, 155, 98, 0.3);
-      border-radius: 18px;
-      background: linear-gradient(145deg, #1e293b, #0f172a);
-      /* Softer slate dark theme */
-      padding: 0.9rem;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(195, 155, 98, 0.22);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 85% 95%, rgba(195, 155, 98, 0.08), transparent 35%),
+        linear-gradient(155deg, #111827 0%, #0b1220 55%, #070d18 100%);
+      padding: clamp(1.4rem, 3vw, 2.2rem);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
+
+    .client-story-wrap .reviews-layout {
+      margin-top: 0;
+      gap: clamp(1.4rem, 3vw, 2.4rem);
+      align-items: center;
     }
 
     .client-video-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0.7rem;
+      gap: 0.85rem;
     }
 
     .client-video-label {
       font-size: 0.72rem;
-      letter-spacing: 1px;
+      letter-spacing: 2.2px;
       font-weight: 700;
       text-transform: uppercase;
       color: #d4ae77;
-      /* Lighter Gold */
     }
 
     .client-video-heading {
-      font-size: clamp(1.35rem, 2.2vw, 1.9rem);
-      line-height: 1.12;
+      font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+      line-height: 1.15;
       color: #f8fafc;
-      /* Very light slate */
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .client-video-heading .gold-text {
+      color: #d4ae77;
+    }
+
+    .client-heading-accent {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: -0.25rem;
+    }
+
+    .client-accent-line {
+      display: block;
+      width: 72px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d4ae77, rgba(212, 174, 119, 0.15));
+    }
+
+    .client-accent-star {
+      color: #d4ae77;
+      font-size: 0.55rem;
+      transform: rotate(12deg);
     }
 
     .client-video-copy {
-      color: #cbd5e1;
-      /* Lighter gray text */
-      font-size: 0.9rem;
-      line-height: 1.45;
-      max-width: 300px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 380px;
     }
 
     .client-story-btn {
       width: fit-content;
-      background: linear-gradient(135deg, #c39b62 0%, #a67c40 100%);
-      color: #0f172a;
-      border-radius: 10px;
-      padding: 0.72rem 1.1rem;
-      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: linear-gradient(135deg, #d4ae77 0%, #c39b62 48%, #a67c40 100%);
+      color: #0b1220;
+      border-radius: 999px;
+      padding: 0.78rem 1.25rem;
+      font-size: 0.88rem;
       font-weight: 700;
       border: none;
+      box-shadow: 0 8px 20px rgba(195, 155, 98, 0.28);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .client-story-btn i {
+      font-size: 1rem;
     }
 
     .client-story-btn:hover {
-      background: linear-gradient(135deg, #d4ae77 0%, #c39b62 100%);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(195, 155, 98, 0.38);
     }
 
-    .client-video-card {
-      background: #1e293b;
-      /* Softer card background */
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-      position: relative;
-    }
-
-    .client-video-slider {
-      overflow: hidden;
-    }
-
-    .client-video-track {
-      display: flex;
-      transition: transform 0.4s ease;
-    }
-
-    .client-video-slide {
-      min-width: 100%;
-      padding: 0.5rem;
-    }
-
-    .client-story-grid {
+    .client-stats-row {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.35rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
     }
 
-    .client-story-item {
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      background: #334155;
-      /* Lighter inner card */
+    .client-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+
+    .client-stat i {
+      color: #d4ae77;
+      font-size: 1.05rem;
+    }
+
+    .client-stat strong {
+      display: block;
+      color: #f1f5f9;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .client-impact-quote {
+      margin-top: 0.35rem;
+      color: #64748b;
+      font-size: 0.84rem;
+      font-style: italic;
+      line-height: 1.55;
+      max-width: 340px;
+      position: relative;
+      padding-left: 1.1rem;
+    }
+
+    .client-impact-quote::before {
+      content: "\201C";
+      position: absolute;
+      left: 0;
+      top: -0.15rem;
+      color: #d4ae77;
+      font-size: 1.35rem;
+      font-style: normal;
+      line-height: 1;
+    }
+
+    .client-carousel-panel {
+      position: relative;
+      background:
+        radial-gradient(circle at 92% 88%, rgba(212, 174, 119, 0.07), transparent 28%),
+        linear-gradient(165deg, #152033 0%, #101a2b 100%);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+      min-height: 500px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .client-carousel-panel::after {
+      content: "";
+      position: absolute;
+      right: 1rem;
+      bottom: 3.5rem;
+      width: 90px;
+      height: 90px;
+      background-image: radial-gradient(rgba(212, 174, 119, 0.35) 1px, transparent 1px);
+      background-size: 10px 10px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .client-carousel-viewport {
+      position: relative;
+      height: clamp(420px, 52vw, 470px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.8rem 1rem 1rem;
+      overflow: hidden;
+    }
+
+    .client-carousel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .client-testimonial-card {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(310px, 88%);
+      border-radius: 16px;
+      background: #1a2438;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.78);
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+      pointer-events: none;
+      z-index: 1;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .client-testimonial-card.is-active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 3;
+      border-color: rgba(212, 174, 119, 0.55);
+      box-shadow:
+        0 0 0 1px rgba(212, 174, 119, 0.15),
+        0 18px 40px rgba(0, 0, 0, 0.35),
+        0 0 42px rgba(195, 155, 98, 0.18);
+      pointer-events: auto;
+    }
+
+    .client-testimonial-card.is-prev {
+      opacity: 0.45;
+      transform: translate(calc(-50% - 58%), -50%) scale(0.86);
+      z-index: 2;
+    }
+
+    .client-testimonial-card.is-next {
+      opacity: 0.45;
+      transform: translate(calc(-50% + 58%), -50%) scale(0.86);
+      z-index: 2;
+    }
+
+    .client-card-video-wrap {
+      position: relative;
+      background: #000;
+    }
+
+    .client-video-quote-icon {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(212, 174, 119, 0.35);
+      color: #d4ae77;
+      font-size: 0.72rem;
     }
 
     .client-video {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 10;
       border: none;
       object-fit: cover;
       background: #000;
-    }
-
-    .client-story-quote {
-      padding: 0.8rem 0.95rem 0.95rem;
-      color: #f1f5f9;
-      /* Bright gray text */
-      font-size: 0.9rem;
-      line-height: 1.5;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .client-story-quote strong {
       display: block;
-      margin-top: 0.4rem;
-      color: #ffffff;
-      font-weight: 600;
     }
 
-    @media (max-width: 700px) {
-      .client-story-grid {
-        grid-template-columns: 1fr;
-      }
+    .client-card-body {
+      padding: 0.85rem 1rem 1rem;
+    }
+
+    .client-card-stars {
+      color: #d4ae77;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.45rem;
+    }
+
+    .client-card-text {
+      color: #e2e8f0;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .client-card-author {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .client-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(212, 174, 119, 0.35);
+      flex-shrink: 0;
+    }
+
+    .client-card-author strong {
+      display: block;
+      color: #f8fafc;
+      font-size: 0.86rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .client-card-author span {
+      display: block;
+      color: #94a3b8;
+      font-size: 0.76rem;
+      margin-top: 0.1rem;
     }
 
     .client-story-controls {
       position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
+      top: 0.85rem;
+      right: 0.85rem;
       display: flex;
-      gap: 0.4rem;
-      z-index: 4;
+      gap: 0.45rem;
+      z-index: 5;
     }
 
     .client-story-nav {
-      width: 30px;
-      height: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 50%;
-      background: rgba(30, 41, 59, 0.9);
-      color: #ffffff;
-      font-size: 0.8rem;
+      background: rgba(15, 23, 42, 0.75);
+      color: #e2e8f0;
+      font-size: 0.78rem;
       display: grid;
       place-items: center;
       transition: all 0.2s ease;
+      cursor: pointer;
     }
 
     .client-story-nav:hover {
-      background: #c39b62;
-      color: #0f172a;
-      border-color: #c39b62;
+      background: #d4ae77;
+      color: #0b1220;
+      border-color: #d4ae77;
     }
 
     .client-story-dots {
       display: flex;
       justify-content: center;
-      gap: 0.4rem;
-      padding: 0.55rem 0 0.8rem;
-      background: #1e293b;
+      gap: 0.45rem;
+      padding: 0.35rem 0 1.1rem;
+      position: relative;
+      z-index: 4;
     }
 
     .client-story-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       border: none;
-      background: rgba(148, 163, 184, 0.6);
+      background: rgba(148, 163, 184, 0.45);
       cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .client-story-dot.active {
-      background: #0f172a;
-      transform: scale(1.15);
+      background: #d4ae77;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(212, 174, 119, 0.45);
+    }
+
+    @media (max-width: 900px) {
+      .client-stats-row {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
+
+      .client-stat {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.65rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .client-testimonial-card.is-prev,
+      .client-testimonial-card.is-next {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .client-carousel-viewport {
+        height: 440px;
+        padding-top: 3rem;
+      }
     }
 
     .site-footer {
@@ -4455,71 +4673,109 @@
       font-size: 0.88rem;
     }
 
-    .voiceover-widget {
+    .voice-tour-panel {
       position: fixed;
+      top: 88px;
       right: 1rem;
-      bottom: 1rem;
-      z-index: 2050;
-      width: min(340px, calc(100vw - 1.2rem));
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      border-radius: 14px;
-      background: linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.82));
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
-      padding: 0.7rem;
-    }
-
-    .voiceover-title {
-      font-size: 0.88rem;
-      color: #f8fafc;
-      margin-bottom: 0.25rem;
-      font-weight: 700;
-    }
-
-    .voiceover-sub {
-      color: #cbd5e1;
-      font-size: 0.76rem;
-      margin-bottom: 0.55rem;
-    }
-
-    .voiceover-controls {
+      z-index: 1095;
       display: flex;
-      gap: 0.45rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.4rem;
+      max-width: min(300px, calc(100vw - 1.5rem));
+      pointer-events: none;
+    }
+
+    .voice-tour-panel>* {
+      pointer-events: auto;
+    }
+
+    .voice-tour-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .voiceover-btn {
-      border: 1px solid rgba(148, 163, 184, 0.4);
+    .voice-lang-select {
+      height: 36px;
+      padding: 0 1.85rem 0 0.65rem;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.75);
-      color: #e2e8f0;
+      border: 1px solid rgba(194, 154, 99, 0.45);
+      background: rgba(15, 35, 57, 0.94) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23d4ae77' d='M1 1l4 4 4-4'/%3E%3C/svg%3E") no-repeat right 0.65rem center;
+      color: #f8fafc;
       font-size: 0.76rem;
-      font-weight: 700;
-      padding: 0.36rem 0.66rem;
+      font-weight: 600;
       cursor: pointer;
+      appearance: none;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(10px);
+      max-width: 130px;
     }
 
-    .voiceover-btn.primary {
-      background: #fbbf24;
-      border-color: rgba(245, 158, 11, 0.7);
+    .voice-lang-select:focus {
+      outline: 2px solid rgba(212, 174, 119, 0.55);
+      outline-offset: 2px;
+    }
+
+    .voice-lang-select option {
       color: #0f172a;
+      background: #fff;
     }
 
-    .voiceover-btn:hover {
-      border-color: rgba(245, 158, 11, 0.6);
-      color: #fbbf24;
+    .voice-tour-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.52rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(194, 154, 99, 0.45);
+      background: rgba(15, 35, 57, 0.94);
+      color: #f8fafc;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(10px);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .voiceover-btn.primary:hover {
+    .voice-tour-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(212, 174, 119, 0.7);
+    }
+
+    .voice-tour-btn.active {
+      background: linear-gradient(135deg, #d4ae77 0%, #c39b62 100%);
       color: #0f172a;
-      background: #c9242b;
+      border-color: #c39b62;
+    }
+
+    .voice-tour-btn-ghost {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      justify-content: center;
+      background: rgba(15, 35, 57, 0.88);
     }
 
     .voiceover-status {
-      margin-top: 0.5rem;
-      font-size: 0.74rem;
-      color: #94a3b8;
-      min-height: 1.1em;
+      margin: 0;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      background: rgba(15, 35, 57, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 8px;
+      line-height: 1.35;
+      text-align: right;
+      backdrop-filter: blur(8px);
+    }
+
+    [data-voice-text].voice-section-active {
+      outline: 2px solid rgba(212, 174, 119, 0.45);
+      outline-offset: 4px;
     }
 
     .blog-section {
@@ -5028,9 +5284,9 @@
         min-height: 84px;
       }
 
-      .voiceover-widget {
+      .voice-tour-panel {
+        top: 78px;
         right: 0.6rem;
-        bottom: 0.6rem;
       }
 
       .stats-grid {
@@ -5348,7 +5604,6 @@
     .map-panel,
     .nearby-item,
     .reviews-carousel,
-    .client-video-card,
     .blog-card,
     .virtual-card,
     .mood-card,
@@ -5358,7 +5613,6 @@
     .location-slider-shell,
     .location-home-card,
     .emi-dialog,
-    .voiceover-widget,
     .investor-card,
     .brand-card,
     .community-city-panels,
@@ -5963,28 +6217,23 @@
       border-top-color: rgba(148, 163, 184, 0.2);
     }
 
-    .voiceover-widget {
-      background: #fff !important;
-      border-color: rgba(0, 0, 0, 0.1) !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    .voice-tour-btn,
+    .voice-lang-select {
+      background-color: #fff !important;
+      color: #1e293b !important;
+      border-color: rgba(194, 154, 99, 0.45) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
     }
 
-    .voiceover-title {
-      color: #1e293b;
-    }
-
-    .voiceover-sub {
-      color: #64748b;
+    .voice-tour-btn.active {
+      background: linear-gradient(135deg, #d4ae77, #c39b62) !important;
+      color: #0f172a !important;
     }
 
     .voiceover-status {
-      color: #94a3b8;
-    }
-
-    .voiceover-btn {
-      background: #f1f5f9;
-      color: #475569;
-      border-color: rgba(0, 0, 0, 0.1);
+      color: #64748b !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
     }
 
     .voiceover-btn.primary {
@@ -11474,8 +11723,34 @@
   <script src="js/layout.js"></script>
   <div id="site-header" data-page="home"></div>
 
+  <div class="voice-tour-panel" id="voiceTourPanel">
+    <div class="voice-tour-actions">
+      <select id="voiceLangSelect" class="voice-lang-select" aria-label="Voice over language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="mr">मराठी</option>
+        <option value="gu">ગુજરાતી</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="bn">বাংলা</option>
+      </select>
+      <button type="button" class="voice-tour-btn" id="voicePlayBtn" aria-pressed="false"
+        aria-label="Start voice tour">
+        <i class="fas fa-volume-high" id="voicePlayIcon" aria-hidden="true"></i>
+        <span id="voicePlayLabel">Start Voice Tour</span>
+      </button>
+      <button type="button" class="voice-tour-btn voice-tour-btn-ghost" id="voiceStopBtn" hidden
+        aria-label="Stop voice tour">
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+    <p class="voiceover-status" id="voiceoverStatus">Voice tour off · scroll to explore sections</p>
+  </div>
+
   <main id="homeMain">
-    <section class="hero-premium" id="heroBanner">
+    <section class="hero-premium" id="heroBanner" data-voice-label="Hero"
+      data-voice-text="Welcome to Inchbrick Realty. Discover curated homes for exceptional living with verified premium properties in India's best locations.">
       <!-- Background Image -->
       <div class="hero-bg-image">
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
@@ -11531,7 +11806,8 @@
     </section>
 
     <!-- Search Bar (outside hero for proper overlap) -->
-    <div class="hero-bottom-section">
+    <div class="hero-bottom-section" data-voice-label="Search" id="heroSearchSection"
+      data-voice-text="Use the search bar to find properties by location, type, price range, and bedrooms. Over two thousand five hundred happy buyers trust our verified listings across fifty plus cities.">
       <div class="hero-search-bar">
         <div class="hsb-field">
           <div class="hsb-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -11598,7 +11874,8 @@
 
     <div id="gateScrollZone" class="gate-scroll-zone" aria-hidden="true"></div>
 
-    <section class="mood-lifestyle-section">
+    <section class="mood-lifestyle-section" data-voice-label="Lifestyle" id="moodLifestyleSection"
+      data-voice-text="Find property by mood and lifestyle. Choose from family living, city life, beachside homes, peaceful retreats, work from home spaces, or smart investment options that match your vibe.">
       <div class="container">
         <div class="mood-header">
           <p class="mood-kicker">Find Property By</p>
@@ -11710,7 +11987,8 @@
       </div>
     </section>
 
-    <section class="location-slider-section" id="localities">
+    <section class="location-slider-section" id="localities" data-voice-label="Top Destinations"
+      data-voice-text="Explore top destinations across India. Browse featured localities and discover premium homes in cities that fit your lifestyle and investment goals.">
       <div class="container">
         <div class="location-slider-head ls-head-wrap">
           <div class="ls-head-left">
@@ -11853,7 +12131,8 @@
       </div>
     </section>
     <!-- Homes Picked For You -->
-    <section class="hpd-section" id="homesPickedSection">
+    <section class="hpd-section" id="homesPickedSection" data-voice-label="Homes Picked For You"
+      data-voice-text="Homes picked for you. Explore personalised property selections based on your lifestyle, budget, and dream location, updated daily with curated premium listings.">
       <div class="hpd-inner">
 
         <!-- Side Panel -->
@@ -11943,7 +12222,8 @@
     </section>
 
     <!-- Live Hot Deals -->
-    <section class="hpd-section dark" id="liveDealsSection">
+    <section class="hpd-section dark" id="liveDealsSection" data-voice-label="Live Hot Deals"
+      data-voice-text="Live hot deals. Grab flash discounts on premium properties with verified prices and no hidden charges. Limited time offers on prime homes across top cities.">
       <div class="hpd-inner">
 
         <!-- Cards -->
@@ -12057,7 +12337,8 @@
       </div>
     </section>
 
-    <section class="nri-premium-section">
+    <section class="nri-premium-section" id="nriPremiumSection" data-voice-label="NRI Services"
+      data-voice-text="Invest in India from anywhere in the world. Our NRI services offer dedicated support for overseas buyers, from virtual tours to documentation and end to end property assistance.">
       <div class="nri-premium-container">
         <div class="nri-premium-grid">
           <!-- Left: Typography & Actions -->
@@ -12174,7 +12455,8 @@
       </div>
     </div>
 
-    <section class="developers-projects">
+    <section class="developers-projects" id="developersProjects" data-voice-label="Top Developers"
+      data-voice-text="Trusted brands and iconic projects. We partner with India's leading developers like D L F, Lodha, Godrej, and Prestige to bring you landmark residential spaces you can trust.">
       <div class="container">
         <div class="brand-showcase-container">
           <!-- Main Header -->
@@ -12255,11 +12537,11 @@
       </div>
     </section>
 
-    <section class="social-proof">
+    <section class="social-proof" id="socialProofSection" data-voice-label="Social Proof"
+      data-voice-text="Luxury homes on screen. See how our premium properties have been featured and celebrated, building confidence through real visibility and trusted buyer experiences.">
       <div class="container">
         <div class="social-header-top">
-          <span class="star-icon">⭐</span> SOCIAL PROOF <span class="social-header-sub">(YOUTUBE / INSTAGRAM VIDEOS
-            <span class="star-icon">⭐</span> <span class="new-badge">NEW</span>)</span>
+          <span class="star-icon">⭐</span> SOCIAL PROOF <span class="star-icon">⭐</span>
         </div>
 
         <div class="social-header-main">
@@ -12349,7 +12631,8 @@
         </div>
       </div>
     </section>
-    <section class="reviews-video-section">
+    <section class="reviews-video-section" id="reviewsVideoSection" data-voice-label="Client Stories"
+      data-voice-text="Hear from our happy clients. Read real Google reviews and watch client stories about how we helped buyers overcome challenges, achieve growth, and find lasting success.">
       <div class="container">
 
 
@@ -12429,71 +12712,122 @@
         <div class="client-story-wrap">
           <div class="reviews-layout">
             <div class="client-video-info">
-              <span class="client-video-label">Client Video</span>
-              <h3 class="client-video-heading">Hear From Our Happy Clients</h3>
-              <p class="client-video-copy">See what our clients have to say about their experience working with us and
-                the results we delivered.</p>
-              <button class="client-story-btn" type="button"><i class="far fa-play-circle"></i> Watch More Client
+              <span class="client-video-label">Client Stories</span>
+              <h3 class="client-video-heading">Real People. <span class="gold-text">Real Results.</span></h3>
+              <div class="client-heading-accent">
+                <span class="client-accent-line"></span>
+                <i class="fas fa-star client-accent-star" aria-hidden="true"></i>
+              </div>
+              <p class="client-video-copy">Discover how we've helped businesses overcome challenges, achieve growth, and
+                build lasting success through trusted real estate partnerships.</p>
+              <button class="client-story-btn" type="button"><i class="fas fa-play"></i> Watch More Client
                 Stories</button>
+              <div class="client-stats-row">
+                <div class="client-stat">
+                  <i class="far fa-heart" aria-hidden="true"></i>
+                  <strong>250+ Happy Clients</strong>
+                </div>
+                <div class="client-stat">
+                  <i class="fas fa-trophy" aria-hidden="true"></i>
+                  <strong>98% Satisfaction Rate</strong>
+                </div>
+                <div class="client-stat">
+                  <i class="fas fa-chart-line" aria-hidden="true"></i>
+                  <strong>300% Avg. Growth</strong>
+                </div>
+              </div>
+              <p class="client-impact-quote">It's not just what we do, it's the impact we make together.</p>
             </div>
 
-            <div class="client-video-card">
+            <div class="client-carousel-panel">
               <div class="client-story-controls">
                 <button class="client-story-nav" id="clientStoryPrev" type="button"
                   aria-label="Previous client video"><i class="fas fa-chevron-left"></i></button>
                 <button class="client-story-nav" id="clientStoryNext" type="button" aria-label="Next client video"><i
                     class="fas fa-chevron-right"></i></button>
               </div>
-              <div class="client-video-slider">
-                <div class="client-video-track" id="clientStoryTrack">
-                  <article class="client-video-slide">
-                    <div class="client-story-grid">
-                      <div class="client-story-item">
-                        <video class="client-video" muted loop playsinline controls>
-                          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                            type="video/mp4" />
-                        </video>
-                        <div class="client-story-quote">
-                          "The team was amazing to work with. They listened to our needs and delivered a result that
-                          truly transformed our business."
-                          <strong>- Michael P., Business Owner</strong>
-                        </div>
-                      </div>
-                      <div class="client-story-item">
-                        <video class="client-video" muted loop playsinline controls>
-                          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                            type="video/mp4" />
-                        </video>
-                        <div class="client-story-quote">
-                          "From the first call to final handover, communication was excellent and every milestone was
-                          handled on time."
-                          <strong>- Riya S., Homebuyer</strong>
+              <div class="client-carousel-viewport">
+                <div class="client-carousel-track" id="clientStoryTrack">
+                  <article class="client-testimonial-card is-active">
+                    <div class="client-card-video-wrap">
+                      <span class="client-video-quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+                      <video class="client-video" muted loop playsinline controls>
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                          type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="client-card-body">
+                      <div class="client-card-stars" aria-label="5 star rating">★★★★★</div>
+                      <p class="client-card-text">The team was amazing to work with. They listened to our needs and
+                        delivered a result that truly transformed our business.</p>
+                      <div class="client-card-author">
+                        <img class="client-avatar" src="https://i.pravatar.cc/80?img=12" alt="Michael P." />
+                        <div>
+                          <strong>Michael P.</strong>
+                          <span>Business Owner</span>
                         </div>
                       </div>
                     </div>
                   </article>
-                  <article class="client-video-slide">
-                    <div class="client-story-grid">
-                      <div class="client-story-item">
-                        <video class="client-video" muted loop playsinline controls>
-                          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                            type="video/mp4" />
-                        </video>
-                        <div class="client-story-quote">
-                          "Their recommendations were precise, budget-friendly, and we closed our deal faster than
-                          expected."
-                          <strong>- Arjun V., Investor</strong>
+                  <article class="client-testimonial-card">
+                    <div class="client-card-video-wrap">
+                      <span class="client-video-quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+                      <video class="client-video" muted loop playsinline controls>
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                          type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="client-card-body">
+                      <div class="client-card-stars" aria-label="5 star rating">★★★★★</div>
+                      <p class="client-card-text">From the first call to final handover, communication was excellent and
+                        every milestone was handled on time.</p>
+                      <div class="client-card-author">
+                        <img class="client-avatar" src="https://i.pravatar.cc/80?img=5" alt="Riya S." />
+                        <div>
+                          <strong>Riya S.</strong>
+                          <span>Homebuyer</span>
                         </div>
                       </div>
-                      <div class="client-story-item">
-                        <video class="client-video" muted loop playsinline controls>
-                          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                            type="video/mp4" />
-                        </video>
-                        <div class="client-story-quote">
-                          "Professional guidance, clear documentation support, and genuine follow-up made our home
-                          buying journey stress-free."
-                          <strong>- Neha R., Homebuyer</strong>
+                    </div>
+                  </article>
+                  <article class="client-testimonial-card">
+                    <div class="client-card-video-wrap">
+                      <span class="client-video-quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+                      <video class="client-video" muted loop playsinline controls>
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                          type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="client-card-body">
+                      <div class="client-card-stars" aria-label="5 star rating">★★★★★</div>
+                      <p class="client-card-text">Their recommendations were precise, budget-friendly, and we closed our
+                        deal faster than expected.</p>
+                      <div class="client-card-author">
+                        <img class="client-avatar" src="https://i.pravatar.cc/80?img=33" alt="Arjun V." />
+                        <div>
+                          <strong>Arjun V.</strong>
+                          <span>Investor</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="client-testimonial-card">
+                    <div class="client-card-video-wrap">
+                      <span class="client-video-quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+                      <video class="client-video" muted loop playsinline controls>
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                          type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="client-card-body">
+                      <div class="client-card-stars" aria-label="5 star rating">★★★★★</div>
+                      <p class="client-card-text">Professional guidance, clear documentation support, and genuine
+                        follow-up made our home buying journey stress-free.</p>
+                      <div class="client-card-author">
+                        <img class="client-avatar" src="https://i.pravatar.cc/80?img=9" alt="Neha R." />
+                        <div>
+                          <strong>Neha R.</strong>
+                          <span>Homebuyer</span>
                         </div>
                       </div>
                     </div>
@@ -12502,9 +12836,13 @@
               </div>
               <div class="client-story-dots">
                 <button class="client-story-dot active" type="button" data-client-story-slide="0"
-                  aria-label="Show client video 1"></button>
+                  aria-label="Show client story 1"></button>
                 <button class="client-story-dot" type="button" data-client-story-slide="1"
-                  aria-label="Show client video 2"></button>
+                  aria-label="Show client story 2"></button>
+                <button class="client-story-dot" type="button" data-client-story-slide="2"
+                  aria-label="Show client story 3"></button>
+                <button class="client-story-dot" type="button" data-client-story-slide="3"
+                  aria-label="Show client story 4"></button>
               </div>
             </div>
           </div>
@@ -12512,7 +12850,8 @@
       </div>
     </section>
 
-    <section class="why-choose-section" id="why-choose">
+    <section class="why-choose-section" id="why-choose" data-voice-label="Why Choose Us"
+      data-voice-text="Why choose Inchbrick Realty. Enjoy verified listings, best price assurance, and full support from search to handover. Trusted by over ten thousand home buyers across India.">
       <div class="container">
         <div class="why-choose-panel">
           <div class="why-choose-head">
@@ -12586,48 +12925,12 @@
             </div>
           </div>
 
-          <div class="wcu-bottom-strip">
-            <div class="wcu-strip-item">
-              <i class="fas fa-shield-alt" style="color:#16a34a;"></i>
-              <div>
-                <h5>100% Secure</h5>
-                <p>Your data is safe with us</p>
-              </div>
-            </div>
-            <div class="wcu-strip-item">
-              <i class="fas fa-certificate" style="color:#2563eb;"></i>
-              <div>
-                <h5>RERA Compliant</h5>
-                <p>All projects are RERA verified</p>
-              </div>
-            </div>
-            <div class="wcu-strip-item">
-              <i class="fas fa-award" style="color:#ca8a04;"></i>
-              <div>
-                <h5>Trusted Platform</h5>
-                <p>10,000+ happy customers</p>
-              </div>
-            </div>
-            <div class="wcu-strip-item">
-              <i class="fas fa-user-lock" style="color:#7c3aed;"></i>
-              <div>
-                <h5>Privacy Protection</h5>
-                <p>We never share your information</p>
-              </div>
-            </div>
-            <div class="wcu-strip-item">
-              <i class="fas fa-headset" style="color:#14b8a6;"></i>
-              <div>
-                <h5>24/7 Support</h5>
-                <p>We are here to help you anytime</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="blog-section" id="blog">
+    <section class="blog-section" id="blog" data-voice-label="Latest Blogs"
+      data-voice-text="Latest blogs and insights. Read expert tips on investing, luxury buying, and home loans to make smarter property decisions with Inchbrick Realty.">
       <div class="container">
         <div class="section-head">
           <div>
@@ -12646,7 +12949,8 @@
             <div class="blog-content">
               <span class="blog-tag">Investment</span>
               <h3 class="blog-title">Top 5 Localities to Invest in Mumbai in 2026</h3>
-              <p class="blog-description">High-growth micro-markets with strong rental demand and future infrastructure upside.</p>
+              <p class="blog-description">High-growth micro-markets with strong rental demand and future infrastructure
+                upside.</p>
               <a href="blog.html" class="btn blog-btn">Read more</a>
             </div>
           </article>
@@ -12658,7 +12962,8 @@
             <div class="blog-content">
               <span class="blog-tag">Luxury</span>
               <h3 class="blog-title">How to Evaluate Luxury Projects Before You Buy</h3>
-              <p class="blog-description">Verify builder track record, amenities quality, and long-term value with this checklist.</p>
+              <p class="blog-description">Verify builder track record, amenities quality, and long-term value with this
+                checklist.</p>
               <a href="blog.html" class="btn blog-btn">Read more</a>
             </div>
           </article>
@@ -12670,19 +12975,20 @@
             <div class="blog-content">
               <span class="blog-tag">Finance</span>
               <h3 class="blog-title">Home Loan Tips: Reduce EMI Without Stress</h3>
-              <p class="blog-description">Optimize tenure, interest strategy, and down payment for better monthly cash flow.</p>
+              <p class="blog-description">Optimize tenure, interest strategy, and down payment for better monthly cash
+                flow.</p>
               <a href="blog.html" class="btn blog-btn">Read more</a>
             </div>
           </article>
         </div>
       </div>
     </section>
-  <div id="site-footer"></div>
+    <div id="site-footer"></div>
   </main>
 
   <script>
     // --- Global Selectors ---
-const tabs = Array.from(document.querySelectorAll(".tab"));
+    const tabs = Array.from(document.querySelectorAll(".tab"));
     const locationInput = document.getElementById("locationInput");
     const suggestionsBox = document.getElementById("suggestions");
     const searchBtn = document.getElementById("searchBtn");
@@ -12776,7 +13082,7 @@ const tabs = Array.from(document.querySelectorAll(".tab"));
     let currentBrandIndex = 0;
 
     // --- Core UI Logic ---
-// Intersection Observer for animations
+    // Intersection Observer for animations
     const revealTargets = document.querySelectorAll("section, .mood-card, .hp-card, .brand-card, .impact-card, .blog-card");
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -13188,29 +13494,466 @@ const tabs = Array.from(document.querySelectorAll(".tab"));
     openEmiModalBtn?.addEventListener("click", () => { emiModal?.classList.add("open"); calculateEmi(); });
     closeEmiModalBtn?.addEventListener("click", () => emiModal?.classList.remove("open"));
 
-    // --- Voiceover ---
-    const voiceText = "Welcome to Inchbrick Realty. Explore our premium properties curated for your lifestyle.";
-    voicePlayBtn?.addEventListener("click", () => {
+    // --- Scroll Voice Tour ---
+    const voiceLangSelect = document.getElementById("voiceLangSelect");
+    const voiceSections = Array.from(document.querySelectorAll("[data-voice-text]"));
+    const voicePlayLabel = document.getElementById("voicePlayLabel");
+    const voicePlayIcon = document.getElementById("voicePlayIcon");
+    let voiceTourActive = false;
+    let lastSpokenSection = null;
+    let activeVoiceSection = null;
+    let cachedVoices = [];
+    const sectionVisibility = new Map();
+
+    const VOICE_LANG_CODES = {
+      en: "en-IN", hi: "hi-IN", mr: "mr-IN", gu: "gu-IN",
+      ta: "ta-IN", te: "te-IN", kn: "kn-IN", bn: "bn-IN"
+    };
+
+    const GOOGLE_TTS_CODES = {
+      en: "en", hi: "hi", mr: "mr", gu: "gu", ta: "ta", te: "te", kn: "kn", bn: "bn"
+    };
+
+    const CLOUD_TTS_LANGS = new Set(["mr", "gu", "ta", "te", "kn", "bn"]);
+
+    let voiceAudio = null;
+    let voiceAudioChunks = [];
+
+    const VOICE_UI = {
+      en: { start: "Start Voice Tour", on: "Voice Tour On", off: "Voice tour off · pick a language & scroll", playing: "Playing", nowAt: "On · now at" },
+      hi: { start: "वॉयस टूर शुरू करें", on: "वॉयस टूर चालू", off: "वॉयस टूर बंद · भाषा चुनें और स्क्रॉल करें", playing: "चल रहा है", nowAt: "चालू · अभी" },
+      mr: { start: "व्हॉईस टूर सुरू करा", on: "व्हॉईस टूर सुरू", off: "व्हॉईस टूर बंद · भाषा निवडा आणि स्क्रोल करा", playing: "सुरू आहे", nowAt: "सुरू · आता" },
+      gu: { start: "વૉઇસ ટૂર શરૂ કરો", on: "વૉઇસ ટૂર ચાલુ", off: "વૉઇસ ટૂર બંધ · ભાષા પસંદ કરો", playing: "ચાલી રહ્યું છે", nowAt: "ચાલુ · હવે" },
+      ta: { start: "குரல் சுற்றுப்பயணம் தொடங்கு", on: "குரல் சுற்றுப்பயணம் இயங்குகிறது", off: "குரல் சுற்றுப்பயணம் நிறுத்தம் · மொழியைத் தேர்ந்தெடுக்கவும்", playing: "இயங்குகிறது", nowAt: "இயங்குகிறது · இப்போது" },
+      te: { start: "వాయిస్ టూర్ ప్రారంభించండి", on: "వాయిస్ టూర్ ఆన్", off: "వాయిస్ టూర్ ఆఫ్ · భాష ఎంచుకోండి", playing: "ప్లే అవుతోంది", nowAt: "ఆన్ · ఇప్పుడు" },
+      kn: { start: "ವಾಯ್ಸ್ ಟೂರ್ ಪ್ರಾರಂಭಿಸಿ", on: "ವಾಯ್ಸ್ ಟೂರ್ ಆನ್", off: "ವಾಯ್ಸ್ ಟೂರ್ ಆಫ್ · ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ", playing: "ಪ್ಲೇ ಆಗುತ್ತಿದೆ", nowAt: "ಆನ್ · ಈಗ" },
+      bn: { start: "ভয়েস ট্যুর শুরু করুন", on: "ভয়েস ট্যুর চালু", off: "ভয়েস ট্যুর বন্ধ · ভাষা বেছে নিন", playing: "চলছে", nowAt: "চালু · এখন" }
+    };
+
+    const VOICE_LABELS = {
+      en: { heroBanner: "Hero", heroSearchSection: "Search", moodLifestyleSection: "Lifestyle", localities: "Destinations", homesPickedSection: "Homes For You", liveDealsSection: "Hot Deals", nriPremiumSection: "NRI Services", developersProjects: "Developers", socialProofSection: "Social Proof", reviewsVideoSection: "Client Stories", "why-choose": "Why Choose Us", blog: "Blogs" },
+      hi: { heroBanner: "होम", heroSearchSection: "खोज", moodLifestyleSection: "लाइफस्टाइल", localities: "गंतव्य", homesPickedSection: "आपके लिए घर", liveDealsSection: "हॉट डील", nriPremiumSection: "एनआरआई सेवाएं", developersProjects: "डेवलपर्स", socialProofSection: "सोशल प्रूफ", reviewsVideoSection: "क्लाइंट कहानियां", "why-choose": "क्यों चुनें", blog: "ब्लॉग" },
+      mr: { heroBanner: "होम", heroSearchSection: "शोध", moodLifestyleSection: "जीवनशैली", localities: "ठिकाणे", homesPickedSection: "तुमच्यासाठी घरे", liveDealsSection: "हॉट डील", nriPremiumSection: "एनआरआय सेवा", developersProjects: "डेव्हलपर्स", socialProofSection: "सोशल प्रूफ", reviewsVideoSection: "क्लायंट कथा", "why-choose": "का निवडावे", blog: "ब्लॉग" },
+      gu: { heroBanner: "હોમ", heroSearchSection: "શોધ", moodLifestyleSection: "લાઇફસ્ટાઇલ", localities: "ગંતવ્યો", homesPickedSection: "તમારા માટે ઘરો", liveDealsSection: "હોટ ડીલ", nriPremiumSection: "એનઆરઆઈ સેવાઓ", developersProjects: "ડેવલપર્સ", socialProofSection: "સોશિયલ પ્રૂફ", reviewsVideoSection: "ક્લાયંટ વાર્તાઓ", "why-choose": "શા માટે અમને", blog: "બ્લોગ" },
+      ta: { heroBanner: "முகப்பு", heroSearchSection: "தேடல்", moodLifestyleSection: "வாழ்க்கைமுறை", localities: "இடங்கள்", homesPickedSection: "உங்களுக்கான வீடுகள்", liveDealsSection: "ஹாட் டீல்ஸ்", nriPremiumSection: "என்ஆர்ஐ சேவைகள்", developersProjects: "டெவலப்பர்ஸ்", socialProofSection: "சமூக நம்பிக்கை", reviewsVideoSection: "வாடிக்கையாளர் கதைகள்", "why-choose": "ஏன் நாங்கள்", blog: "வலைப்பதிவு" },
+      te: { heroBanner: "హోమ్", heroSearchSection: "శోధన", moodLifestyleSection: "జీవనశైలి", localities: "గమ్యస్థానాలు", homesPickedSection: "మీ కోసం ఇళ్లు", liveDealsSection: "హాట్ డీల్స్", nriPremiumSection: "ఎన్ఆర్ఐ సేవలు", developersProjects: "డెవలపర్స్", socialProofSection: "సోషల్ ప్రూఫ్", reviewsVideoSection: "క్లయింట్ కథలు", "why-choose": "ఎందుకు మమ్మల్ని", blog: "బ్లాగ్" },
+      kn: { heroBanner: "ಹೋಮ್", heroSearchSection: "ಹುಡುಕಾಟ", moodLifestyleSection: "ಜೀವನಶೈಲಿ", localities: "ಗಮ್ಯಸ್ಥಾನಗಳು", homesPickedSection: "ನಿಮಗಾಗಿ ಮನೆಗಳು", liveDealsSection: "ಹಾಟ್ ಡೀಲ್ಸ್", nriPremiumSection: "ಎನ್ಆರ್ಐ ಸೇವೆಗಳು", developersProjects: "ಡೆವಲಪರ್ಸ್", socialProofSection: "ಸಾಮಾಜಿಕ ನಂಬಿಕೆ", reviewsVideoSection: "ಕ್ಲೈಂಟ್ ಕಥೆಗಳು", "why-choose": "ಏಕೆ ನಮ್ಮನ್ನು", blog: "ಬ್ಲಾಗ್" },
+      bn: { heroBanner: "হোম", heroSearchSection: "অনুসন্ধান", moodLifestyleSection: "জীবনধারা", localities: "গন্তব্য", homesPickedSection: "আপনার জন্য বাড়ি", liveDealsSection: "হট ডিল", nriPremiumSection: "এনআরআই সেবা", developersProjects: "ডেভেলপার", socialProofSection: "সামাজিক প্রমাণ", reviewsVideoSection: "ক্লায়েন্ট গল্প", "why-choose": "কেন আমাদের", blog: "ব্লগ" }
+    };
+
+    const VOICE_I18N = {
+      en: {
+        heroBanner: "Welcome to Inchbrick Realty. Discover curated homes for exceptional living with verified premium properties in India's best locations.",
+        heroSearchSection: "Use the search bar to find properties by location, type, price range, and bedrooms. Over two thousand five hundred happy buyers trust our verified listings across fifty plus cities.",
+        moodLifestyleSection: "Find property by mood and lifestyle. Choose from family living, city life, beachside homes, peaceful retreats, work from home spaces, or smart investment options that match your vibe.",
+        localities: "Explore top destinations across India. Browse featured localities and discover premium homes in cities that fit your lifestyle and investment goals.",
+        homesPickedSection: "Homes picked for you. Explore personalised property selections based on your lifestyle, budget, and dream location, updated daily with curated premium listings.",
+        liveDealsSection: "Live hot deals. Grab flash discounts on premium properties with verified prices and no hidden charges. Limited time offers on prime homes across top cities.",
+        nriPremiumSection: "Invest in India from anywhere in the world. Our NRI services offer dedicated support for overseas buyers, from virtual tours to documentation and end to end property assistance.",
+        developersProjects: "Trusted brands and iconic projects. We partner with India's leading developers like D L F, Lodha, Godrej, and Prestige to bring you landmark residential spaces you can trust.",
+        socialProofSection: "Luxury homes on screen. See how our premium properties have been featured and celebrated, building confidence through real visibility and trusted buyer experiences.",
+        reviewsVideoSection: "Hear from our happy clients. Read real Google reviews and watch client stories about how we helped buyers overcome challenges, achieve growth, and find lasting success.",
+        "why-choose": "Why choose Inchbrick Realty. Enjoy verified listings, best price assurance, and full support from search to handover. Trusted by over ten thousand home buyers across India.",
+        blog: "Latest blogs and insights. Read expert tips on investing, luxury buying, and home loans to make smarter property decisions with Inchbrick Realty."
+      },
+      hi: {
+        heroBanner: "इंचब्रिक रियल्टी में आपका स्वागत है। भारत के बेहतरीन स्थानों में सत्यापित प्रीमियम संपत्तियों के साथ असाधारण जीवन के लिए चुने गए घर खोजें।",
+        heroSearchSection: "स्थान, प्रकार, कीमत और बेडरूम के अनुसार संपत्ति खोजने के लिए सर्च बार का उपयोग करें। दो हजार पांच सौ से अधिक खुश खरीदार पचास से अधिक शहरों में हमारी सत्यापित लिस्टिंग पर भरोसा करते हैं।",
+        moodLifestyleSection: "मूड और लाइफस्टाइल के अनुसार संपत्ति खोजें। फैमिली लिविंग, सिटी लाइफ, बीचसाइड घर, शांत जगह, वर्क फ्रॉम होम या स्मार्ट निवेश विकल्प चुनें।",
+        localities: "भारत भर के शीर्ष गंतव्यों को एक्सप्लोर करें। फीचर्ड इलाकों को ब्राउज़ करें और अपनी जीवनशैली व निवेश लक्ष्यों के अनुसार प्रीमियम घर खोजें।",
+        homesPickedSection: "आपके लिए चुने गए घर। अपनी जीवनशैली, बजट और सपनों के स्थान के अनुसार रोज़ अपडेट होने वाली प्रीमियम लिस्टिंग देखें।",
+        liveDealsSection: "लाइव हॉट डील्स। सत्यापित कीमतों और बिना छुपे शुल्क के प्रीमियम संपत्तियों पर फ्लैश छूट पाएं। शीर्ष शहरों में सीमित समय के ऑफर।",
+        nriPremiumSection: "दुनिया में कहीं से भी भारत में निवेश करें। एनआरआई सेवाओं में वर्चुअल टूर से लेकर दस्तावेज़ और पूरी संपत्ति सहायता तक समर्पित सपोर्ट मिलता है।",
+        developersProjects: "विश्वसनीय ब्रांड और प्रतिष्ठित प्रोजेक्ट। डीएलएफ, लोधा, गोदरेज और प्रेस्टिज जैसे अग्रणी डेवलपर्स के साथ हम आपको भरोसेमंद आवास लाते हैं।",
+        socialProofSection: "स्क्रीन पर लक्ज़री होम्स। देखें कैसे हमारी प्रीमियम संपत्तियां फीचर्ड हुईं और खरीदारों का भरोसा बढ़ाया।",
+        reviewsVideoSection: "हमारे खुश ग्राहकों की कहानियां सुनें। असली Google रिव्यू और वीडियो देखें कि हमने खरीदारों को सफलता कैसे दिलाई।",
+        "why-choose": "इंचब्रिक रियल्टी क्यों चुनें। सत्यापित लिस्टिंग, बेस्ट प्राइस और खोज से हैंडओवर तक पूर्ण सहायता। दस हजार से अधिक खरीदारों का भरोसा।",
+        blog: "नवीनतम ब्लॉग और जानकारी। निवेश, लक्ज़री खरीद और होम लोन पर विशेषज्ञ सुझाव पढ़ें।"
+      },
+      mr: {
+        heroBanner: "इंचब्रिक रियल्टीमध्ये आपले स्वागत आहे. भारतातील उत्तम ठिकाणी सत्यापित प्रीमियम मालमत्तांसह अद्वितीय जीवनासाठी निवडक घरे शोधा.",
+        heroSearchSection: "स्थान, प्रकार, किंमत आणि बेडरूमनुसार मालमत्ता शोधण्यासाठी सर्च बार वापरा. दोन हजार पाचशेहून अधिक आनंदी खरेदीदार आमच्या सत्यापित लिस्टिंगवर विश्वास ठेवतात.",
+        moodLifestyleSection: "मूड आणि जीवनशैलीनुसार मालमत्ता शोधा. कुटुंब जीवन, शहर जीवन, समुद्रकिनारी घरे, शांत ठिकाणे किंवा गुंतवणूक पर्याय निवडा.",
+        localities: "भारतभरातील शीर्ष गंतव्ये एक्सप्लोर करा. वैशिष्ट्यीकृत परिसर पहा आणि तुमच्या जीवनशैलीनुसार प्रीमियम घरे शोधा.",
+        homesPickedSection: "तुमच्यासाठी निवडलेली घरे. जीवनशैली, बजेट आणि स्वप्नातील ठिकाणानुसार दररोज अपडेट होणाऱ्या लिस्टिंग पहा.",
+        liveDealsSection: "लाइव्ह हॉट डील्स. सत्यापित किंमतींवर प्रीमियम मालमत्तांवर फ्लॅश सवलती मिळवा. शीर्ष शहरांमध्ये मर्यादित काळ ऑफर.",
+        nriPremiumSection: "जगात कुठूनही भारतात गुंतवणूक करा. एनआरआय सेवांमध्ये व्हर्चुअल टूर ते कागदपत्रे आणि संपूर्ण सहाय्य मिळते.",
+        developersProjects: "विश्वासार्ह ब्रँड आणि प्रतिष्ठित प्रकल्प. डीएलएफ, लोधा, गोदरेज आणि प्रेस्टिजसारख्या अग्रगण्य डेव्हलपर्ससोबत आम्ही काम करतो.",
+        socialProofSection: "स्क्रीनवर लक्झरी होम्स. आमच्या प्रीमियम मालमत्ता कशा फीचर झाल्या ते पहा आणि खरेदीदारांचा विश्वास वाढवा.",
+        reviewsVideoSection: "आनंदी ग्राहकांच्या कथा ऐका. खरे Google रिव्ह्यू आणि व्हिडिओ पहा की आम्ही खरेदीदारांना कशी मदत केली.",
+        "why-choose": "इंचब्रिक रियल्टी का निवडावे. सत्यापित लिस्टिंग, उत्तम किंमत आणि शोध ते हस्तांतरणापर्यंत पूर्ण सहाय्य.",
+        blog: "नवीनतम ब्लॉग आणि माहिती. गुंतवणूक, लक्झरी खरेदी आणि होम लोनवर तज्ज्ञ सल्ले वाचा."
+      },
+      gu: {
+        heroBanner: "ઇંચબ્રિક રિયલ્ટીમાં આપનું સ્વાગત છે. ભારતના શ્રેષ્ઠ સ્થળોએ ચકાસાયેલી પ્રીમિયમ મિલકતો સાથે અનોખા જીવન માટે ઘરો શોધો.",
+        heroSearchSection: "સ્થાન, પ્રકાર, કિંમત અને બેડરૂમ પ્રમાણે મિલકત શોધવા સર્ચ બાર વાપરો. બે હજાર પાંચ સો થી વધુ ખુશ ખરીદદારો અમારી લિસ્ટિંગ પર વિશ્વાસ કરે છે.",
+        moodLifestyleSection: "મૂડ અને જીવનશૈલી પ્રમાણે મિલકત શોધો. ફેમિલી લિવિંગ, સિટી લાઇફ, બીચસાઇડ ઘરો અથવા રોકાણ વિકલ્પો પસંદ કરો.",
+        localities: "ભારત ભરના ટોચના ગંતવ્યો એક્સપ્લોર કરો. ફીચર્ડ વિસ્તારો બ્રાઉઝ કરો અને પ્રીમિયમ ઘરો શોધો.",
+        homesPickedSection: "તમારા માટે પસંદ કરેલા ઘરો. જીવનશૈલી, બજેટ અને સપનાના સ્થળ પ્રમાણે દૈનિક અપડેટ લિસ્ટિંગ જુઓ.",
+        liveDealsSection: "લાઇવ હોટ ડીલ્સ. ચકાસાયેલી કિંમતો પર પ્રીમિયમ મિલકતો પર ફ્લેશ ડિસ્કાઉન્ટ મેળવો.",
+        nriPremiumSection: "વિશ્વમાં ક્યાંયથી પણ ભારતમાં રોકાણ કરો. એનઆરઆઈ સેવાઓમાં વર્ચ્યુઅલ ટૂરથી દસ્તાવેજ સુધી સંપૂર્ણ સહાય.",
+        developersProjects: "વિશ્વસનીય બ્રાન્ડ્સ અને આઇકોનિક પ્રોજેક્ટ્સ. ડીએલએફ, લોધા, ગોદરેજ અને પ્રેસ્ટિજ સાથે અમે કામ કરીએ છીએ.",
+        socialProofSection: "સ્ક્રીન પર લક્ઝરી હોમ્સ. અમારી પ્રીમિયમ મિલકતો કેવી રીતે ફીચર થઈ તે જુઓ.",
+        reviewsVideoSection: "ખુશ ગ્રાહકોની વાર્તાઓ સાંભળો. અસલ Google રિવ્યૂ અને વિડિયો જુઓ.",
+        "why-choose": "ઇંચબ્રિક રિયલ્ટી કેમ પસંદ કરો. ચકાસાયેલી લિસ્ટિંગ, શ્રેષ્ઠ કિંમત અને પૂર્ણ સહાય.",
+        blog: "નવીનતમ બ્લોગ અને માહિતી. રોકાણ, લક્ઝરી ખરીદી અને હોમ લોન પર નિષ્ણાત સલાહ વાંચો."
+      },
+      ta: {
+        heroBanner: "இன்ச்பிரிக் ரியல்டிக்கு வரவேற்கிறோம். இந்தியாவின் சிறந்த இடங்களில் சரிபார்க்கப்பட்ட பிரீமியம் சொத்துகளுடன் சிறப்பான வாழ்க்கைக்கான வீடுகளைக் கண்டறியுங்கள்.",
+        heroSearchSection: "இடம், வகை, விலை மற்றும் படுக்கையறைகள் அடிப்படையில் சொத்துகளைத் தேட தேடல் பட்டியைப் பயன்படுத்துங்கள். ஆயிரக்கணக்கான மகிழ்ச்சியான வாங்குபவர்கள் எங்கள் பட்டியலை நம்புகிறார்கள்.",
+        moodLifestyleSection: "மனநிலை மற்றும் வாழ்க்கைமுறை அடிப்படையில் சொத்து தேடுங்கள். குடும்ப வாழ்க்கை, நகர வாழ்க்கை, கடற்கரை வீடுகள் அல்லது முதலீட்டு விருப்பங்களைத் தேர்வு செய்யுங்கள்.",
+        localities: "இந்தியா முழுவதும் முக்கிய இடங்களை ஆராயுங்கள். சிறப்பு பகுதிகளைப் பார்த்து உங்கள் வாழ்க்கைக்கு ஏற்ற பிரீமியம் வீடுகளைக் கண்டறியுங்கள்.",
+        homesPickedSection: "உங்களுக்காகத் தேர்ந்தெடுக்கப்பட்ட வீடுகள். வாழ்க்கைமுறை, பட்ஜெட் மற்றும் கனவு இடத்திற்கு ஏற்ப தினசரி புதுப்பிக்கப்படும் பட்டியல்களைப் பாருங்கள்.",
+        liveDealsSection: "நேரடி ஹாட் டீல்ஸ். சரிபார்க்கப்பட்ட விலையில் பிரீமியம் சொத்துகளில் தள்ளுபடிகளைப் பெறுங்கள்.",
+        nriPremiumSection: "உலகில் எங்கிருந்தும் இந்தியாவில் முதலீடு செய்யுங்கள். என்ஆர்ஐ சேவைகளில் மெய்நிகர் சுற்றுப்பயணம் முதல் ஆவணங்கள் வரை முழு உதவி.",
+        developersProjects: "நம்பகமான பிராண்டுகள் மற்றும் சிறப்பு திட்டங்கள். டிஎல்எஃப், லோதா, கோத்ரேஜ் மற்றும் பிரெஸ்டீஜ் போன்ற முன்னணி டெவலப்பர்களுடன் நாங்கள் பணியாற்றுகிறோம்.",
+        socialProofSection: "திரையில் லக்ஷரி ஹோம்ஸ். எங்கள் பிரீமியம் சொத்துகள் எவ்வாறு சிறப்பிக்கப்பட்டன என்பதைப் பாருங்கள்.",
+        reviewsVideoSection: "மகிழ்ச்சியான வாடிக்கையாளர் கதைகளைக் கேளுங்கள். உண்மையான Google விமர்சனங்கள் மற்றும் வீடியோக்களைப் பாருங்கள்.",
+        "why-choose": "ஏன் இன்ச்பிரிக் ரியல்டியைத் தேர்வு செய்ய வேண்டும். சரிபார்க்கப்பட்ட பட்டியல்கள், சிறந்த விலை மற்றும் முழு ஆதரவு.",
+        blog: "சமீபத்திய வலைப்பதிவுகள் மற்றும் நுண்ணறிவுகள். முதலீடு, லக்ஷரி வாங்குதல் மற்றும் வீட்டுக் கடன் குறித்த நிபுணர் குறிப்புகளைப் படியுங்கள்."
+      },
+      te: {
+        heroBanner: "ఇంచ్‌బ్రిక్ రియల్టీకి స్వాగతం. భారతదేశంలోని ఉత్తమ ప్రాంతాలలో ధృవీకరించబడిన ప్రీమియం ప్రాపర్టీలతో ప్రత్యేకమైన జీవనానికి ఇళ్లను కనుగొనండి.",
+        heroSearchSection: "ప్రాంతం, రకం, ధర మరియు బెడ్‌రూమ్‌ల ప్రకారం ప్రాపర్టీలు వెతకడానికి సెర్చ్ బార్‌ను ఉపయోగించండి. వేలాది సంతోషకరమైన కొనుగోలుదారులు మా లిస్టింగ్‌లను నమ్ముతారు.",
+        moodLifestyleSection: "మూడ్ మరియు జీవనశైలి ప్రకారం ప్రాపర్టీలు వెతకండి. ఫ్యామిలీ లివింగ్, సిటీ లైఫ్, బీచ్‌సైడ్ ఇళ్లు లేదా పెట్టుబడి ఎంపికలను ఎంచుకోండి.",
+        localities: "భారతదేశం అంతటా ప్రముఖ గమ్యస్థానాలను అన్వేషించండి. ప్రత్యేక ప్రాంతాలను చూడండి మరియు ప్రీమియం ఇళ్లను కనుగొనండి.",
+        homesPickedSection: "మీ కోసం ఎంపిక చేసిన ఇళ్లు. జీవనశైలి, బడ్జెట్ మరియు కలల స్థలం ప్రకారం రోజువారీ అప్‌డేట్ లిస్టింగ్‌లను చూడండి.",
+        liveDealsSection: "లైవ్ హాట్ డీల్స్. ధృవీకరించబడిన ధరలపై ప్రీమియం ప్రాపర్టీలపై ఫ్లాష్ డిస్కౌంట్‌లు పొందండి.",
+        nriPremiumSection: "ప్రపంచంలో ఎక్కడైనా నుండి భారతదేశంలో పెట్టుబడి పెట్టండి. ఎన్ఆర్ఐ సేవలలో వర్చువల్ టూర్ నుండి పత్రాల వరకు పూర్తి సహాయం.",
+        developersProjects: "విశ్వసనీయ బ్రాండ్‌లు మరియు ప్రతిష్ఠాత్మక ప్రాజెక్ట్‌లు. డీఎల్ఎఫ్, లోధా, గోద్రేజ్ మరియు ప్రెస్టీజ్ వంటి ప్రముఖ డెవలపర్లతో మేము పనిచేస్తాము.",
+        socialProofSection: "స్క్రీన్‌పై లగ్జరీ హోమ్స్. మా ప్రీమియం ప్రాపర్టీలు ఎలా ప్రదర్శించబడ్డాయో చూడండి.",
+        reviewsVideoSection: "సంతోషకరమైన క్లయింట్ కథలు వినండి. నిజమైన Google రివ్యూలు మరియు వీడియోలు చూడండి.",
+        "why-choose": "ఇంచ్‌బ్రిక్ రియల్టీని ఎందుకు ఎంచుకోవాలి. ధృవీకరించబడిన లిస్టింగ్‌లు, ఉత్తమ ధర మరియు పూర్తి మద్దతు.",
+        blog: "తాజా బ్లాగ్‌లు మరియు అంతర్దృష్టులు. పెట్టుబడి, లగ్జరీ కొనుగోలు మరియు హోమ్ లోన్‌పై నిపుణుల సలహాలు చదవండి."
+      },
+      kn: {
+        heroBanner: "ಇಂಚ್‌ಬ್ರಿಕ್ ರಿಯಲ್ಟಿಗೆ ಸ್ವಾಗತ. ಭಾರತದ ಅತ್ಯುತ್ತಮ ಸ್ಥಳಗಳಲ್ಲಿ ಪರಿಶೀಲಿಸಿದ ಪ್ರೀಮಿಯಂ ಆಸ್ತಿಗಳೊಂದಿಗೆ ವಿಶೇಷ ಜೀವನಕ್ಕಾಗಿ ಮನೆಗಳನ್ನು ಹುಡುಕಿ.",
+        heroSearchSection: "ಸ್ಥಳ, ಪ್ರಕಾರ, ಬೆಲೆ ಮತ್ತು ಬೆಡ್‌ರೂಮ್‌ಗಳ ಪ್ರಕಾರ ಆಸ್ತಿಗಳನ್ನು ಹುಡುಕಲು ಸರ್ಚ್ ಬಾರ್ ಬಳಸಿ. ಸಾವಿರಾರು ಸಂತೋಷದ ಖರೀದಿದಾರರು ನಮ್ಮ ಪಟ್ಟಿಗಳ ಮೇಲೆ ನಂಬಿಕೆ ಇಡುತ್ತಾರೆ.",
+        moodLifestyleSection: "ಮೂಡ್ ಮತ್ತು ಜೀವನಶೈಲಿಯ ಪ್ರಕಾರ ಆಸ್ತಿ ಹುಡುಕಿ. ಫ್ಯಾಮಿಲಿ ಲಿವಿಂಗ್, ಸಿಟಿ ಲೈಫ್, ಬೀಚ್‌ಸೈಡ್ ಮನೆಗಳು ಅಥವಾ ಹೂಡಿಕೆ ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಿ.",
+        localities: "ಭಾರತದಾದ್ಯಂತ ಪ್ರಮುಖ ಗಮ್ಯಸ್ಥಾನಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ವಿಶೇಷ ಪ್ರದೇಶಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ ಮತ್ತು ಪ್ರೀಮಿಯಂ ಮನೆಗಳನ್ನು ಹುಡುಕಿ.",
+        homesPickedSection: "ನಿಮಗಾಗಿ ಆಯ್ಕೆ ಮಾಡಿದ ಮನೆಗಳು. ಜೀವನಶೈಲಿ, ಬಜೆಟ್ ಮತ್ತು ಕನಸಿನ ಸ್ಥಳದ ಪ್ರಕಾರ ದೈನಂದಿನ ಅಪ್‌ಡೇಟ್ ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ.",
+        liveDealsSection: "ಲೈವ್ ಹಾಟ್ ಡೀಲ್ಸ್. ಪರಿಶೀಲಿಸಿದ ಬೆಲೆಗಳಲ್ಲಿ ಪ್ರೀಮಿಯಂ ಆಸ್ತಿಗಳ ಮೇಲೆ ಫ್ಲ್ಯಾಶ್ ರಿಯಾಯಿತಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
+        nriPremiumSection: "ಪ್ರಪಂಚದ ಎಲ್ಲಿಂದಾದರೂ ಭಾರತದಲ್ಲಿ ಹೂಡಿಕೆ ಮಾಡಿ. ಎನ್ಆರ್ಐ ಸೇವೆಗಳಲ್ಲಿ ವರ್ಚುವಲ್ ಟೂರ್‌ನಿಂದ ದಾಖಲೆಗಳವರೆಗೆ ಪೂರ್ಣ ಸಹಾಯ.",
+        developersProjects: "ವಿಶ್ವಾಸಾರ್ಹ ಬ್ರಾಂಡ್‌ಗಳು ಮತ್ತು ಪ್ರತಿಷ್ಠಿತ ಯೋಜನೆಗಳು. ಡಿಎಲ್ಎಫ್, ಲೋಧಾ, ಗೋದ್ರೇಜ್ ಮತ್ತು ಪ್ರೆಸ್ಟೀಜ್‌ನಂತಹ ಪ್ರಮುಖ ಡೆವಲಪರ್ಸ್‌ಗಳೊಂದಿಗೆ ನಾವು ಕೆಲಸ ಮಾಡುತ್ತೇವೆ.",
+        socialProofSection: "ಪರದೆಯ ಮೇಲೆ ಲಕ್ಸರಿ ಹೋಮ್ಸ್. ನಮ್ಮ ಪ್ರೀಮಿಯಂ ಆಸ್ತಿಗಳು ಹೇಗೆ ಪ್ರದರ್ಶಿಸಲ್ಪಟ್ಟವು ಎಂಬುದನ್ನು ನೋಡಿ.",
+        reviewsVideoSection: "ಸಂತೋಷದ ಕ್ಲೈಂಟ್ ಕಥೆಗಳನ್ನು ಕೇಳಿ. ನಿಜವಾದ Google ವಿಮರ್ಶೆಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳನ್ನು ನೋಡಿ.",
+        "why-choose": "ಇಂಚ್‌ಬ್ರಿಕ್ ರಿಯಲ್ಟಿಯನ್ನು ಏಕೆ ಆರಿಸಬೇಕು. ಪರಿಶೀಲಿಸಿದ ಪಟ್ಟಿಗಳು, ಉತ್ತಮ ಬೆಲೆ ಮತ್ತು ಪೂರ್ಣ ಬೆಂಬಲ.",
+        blog: "ಇತ್ತೀಚಿನ ಬ್ಲಾಗ್‌ಗಳು ಮತ್ತು ಒಳನೋಟಗಳು. ಹೂಡಿಕೆ, ಲಕ್ಸರಿ ಖರೀದಿ ಮತ್ತು ಹೋಮ್ ಲೋನ್ ಕುರಿತು ತಜ್ಞ ಸಲಹೆಗಳನ್ನು ಓದಿ."
+      },
+      bn: {
+        heroBanner: "ইনচব্রিক রিয়েল্টিতে আপনাকে স্বাগতম। ভারতের সেরা অবস্থানে যাচাইকৃত প্রিমিয়াম সম্পত্তি নিয়ে বিশেষ জীবনের জন্য বাড়ি খুঁজুন।",
+        heroSearchSection: "অবস্থান, ধরন, দাম এবং বেডরুম অনুযায়ী সম্পত্তি খুঁজতে সার্চ বার ব্যবহার করুন। হাজার হাজার খুশি ক্রেতা আমাদের তালিকায় বিশ্বাস করেন।",
+        moodLifestyleSection: "মুড এবং জীবনধারা অনুযায়ী সম্পত্তি খুঁজুন। ফ্যামিলি লিভিং, সিটি লাইফ, বিচসাইড বাড়ি বা বিনিয়োগের বিকল্প বেছে নিন।",
+        localities: "সারা ভারতে শীর্ষ গন্তব্য অন্বেষণ করুন। বৈশিষ্ট্যযুক্ত এলাকা দেখুন এবং প্রিমিয়াম বাড়ি খুঁজুন।",
+        homesPickedSection: "আপনার জন্য বাছাই করা বাড়ি। জীবনধারা, বাজেট এবং স্বপ্নের স্থান অনুযায়ী প্রতিদিন আপডেট হওয়া তালিকা দেখুন।",
+        liveDealsSection: "লাইভ হট ডিল। যাচাইকৃত দামে প্রিমিয়াম সম্পত্তিতে ফ্ল্যাশ ছাড় পান। শীর্ষ শহরে সীমিত সময়ের অফার।",
+        nriPremiumSection: "বিশ্বের যেকোনো জায়গা থেকে ভারতে বিনিয়োগ করুন। এনআরআই সেবায় ভার্চুয়াল ট্যুর থেকে নথি পর্যন্ত সম্পূর্ণ সহায়তা।",
+        developersProjects: "বিশ্বস্ত ব্র্যান্ড এবং আইকনিক প্রকল্প। ডিএলএফ, লোধা, গোদরেজ এবং প্রেস্টিজের মতো শীর্ষ ডেভেলপারদের সঙ্গে আমরা কাজ করি।",
+        socialProofSection: "স্ক্রিনে লাক্সারি হোমস। আমাদের প্রিমিয়াম সম্পত্তি কীভাবে ফিচার হয়েছে তা দেখুন।",
+        reviewsVideoSection: "খুশি ক্লায়েন্টদের গল্প শুনুন। আসল Google রিভিউ এবং ভিডিও দেখুন।",
+        "why-choose": "কেন ইনচব্রিক রিয়েল্টি বেছে নেবেন। যাচাইকৃত তালিকা, সেরা দাম এবং সম্পূর্ণ সহায়তা।",
+        blog: "সর্বশেষ ব্লগ এবং অন্তর্দৃষ্টি। বিনিয়োগ, লাক্সারি কেনাকাটা এবং হোম লোন নিয়ে বিশেষজ্ঞ পরামর্শ পড়ুন."
+      }
+    };
+
+    function getSelectedVoiceLang() {
+      return voiceLangSelect?.value || "en";
+    }
+
+    function getVoiceUi() {
+      const lang = getSelectedVoiceLang();
+      return VOICE_UI[lang] || VOICE_UI.en;
+    }
+
+    function getVoiceSectionKey(section) {
+      return section?.id || section?.dataset.voiceId || "";
+    }
+
+    function getVoiceText(section) {
+      const key = getVoiceSectionKey(section);
+      const lang = getSelectedVoiceLang();
+      return VOICE_I18N[lang]?.[key] || VOICE_I18N.en[key] || section?.dataset.voiceText || "";
+    }
+
+    function getVoiceLabel(section) {
+      const key = getVoiceSectionKey(section);
+      const lang = getSelectedVoiceLang();
+      return VOICE_LABELS[lang]?.[key] || VOICE_LABELS.en[key] || section?.dataset.voiceLabel || "Section";
+    }
+
+    function refreshVoiceList() {
+      cachedVoices = window.speechSynthesis.getVoices();
+    }
+
+    function pickVoiceForLang(langCode) {
+      if (!cachedVoices.length) refreshVoiceList();
+      const langPrefix = langCode.split("-")[0].toLowerCase();
+      const normalized = (voice) => voice.lang.replace("_", "-").toLowerCase();
+      return cachedVoices.find((voice) => normalized(voice) === langCode.toLowerCase())
+        || cachedVoices.find((voice) => normalized(voice).startsWith(langPrefix + "-"))
+        || cachedVoices.find((voice) => normalized(voice) === langPrefix)
+        || null;
+    }
+
+    function hasNativeVoiceForLang(langKey) {
+      const langCode = VOICE_LANG_CODES[langKey] || "en-IN";
+      return !!pickVoiceForLang(langCode);
+    }
+
+    function shouldUseCloudTTS(langKey) {
+      if (CLOUD_TTS_LANGS.has(langKey)) return true;
+      return !hasNativeVoiceForLang(langKey);
+    }
+
+    function stopCloudVoice() {
+      if (voiceAudio) {
+        voiceAudio.pause();
+        voiceAudio.removeAttribute("src");
+        voiceAudio.load();
+        voiceAudio = null;
+      }
+      voiceAudioChunks = [];
+    }
+
+    function stopAllVoice() {
       window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(voiceText);
-      u.onstart = () => voiceoverStatus && (voiceoverStatus.textContent = "Playing...");
-      u.onend = () => voiceoverStatus && (voiceoverStatus.textContent = "Finished.");
-      window.speechSynthesis.speak(u);
+      stopCloudVoice();
+    }
+
+    function splitTextForTTS(text, maxLen = 180) {
+      const chunks = [];
+      let remaining = text.trim();
+      while (remaining.length > maxLen) {
+        let splitAt = -1;
+        const delimiters = [". ", "। ", ", ", "; ", " "];
+        for (const delimiter of delimiters) {
+          const idx = remaining.lastIndexOf(delimiter, maxLen);
+          if (idx !== -1 && idx > splitAt - delimiter.length) {
+            splitAt = idx + delimiter.length;
+          }
+        }
+        if (splitAt <= 0 || splitAt > maxLen) splitAt = maxLen;
+        chunks.push(remaining.slice(0, splitAt).trim());
+        remaining = remaining.slice(splitAt).trim();
+      }
+      if (remaining) chunks.push(remaining);
+      return chunks.filter(Boolean);
+    }
+
+    function getGoogleTtsUrls(text, langKey) {
+      const tl = GOOGLE_TTS_CODES[langKey] || "en";
+      const q = encodeURIComponent(text);
+      return [
+        `https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=${tl}&client=gtx&q=${q}`,
+        `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${tl}&q=${q}`
+      ];
+    }
+
+    function playCloudChunkAudio(urls, urlIndex, label, ui, onComplete) {
+      if (!voiceTourActive) return;
+      if (urlIndex >= urls.length) {
+        onComplete?.();
+        return;
+      }
+      voiceAudio = new Audio(urls[urlIndex]);
+      voiceAudio.onplay = () => {
+        if (voiceoverStatus) voiceoverStatus.textContent = `${ui.playing}: ${label}`;
+      };
+      voiceAudio.onended = () => {
+        if (voiceTourActive) onComplete?.();
+      };
+      voiceAudio.onerror = () => playCloudChunkAudio(urls, urlIndex + 1, label, ui, onComplete);
+      voiceAudio.play().catch(() => playCloudChunkAudio(urls, urlIndex + 1, label, ui, onComplete));
+    }
+
+    function playNextCloudChunk(label, ui) {
+      if (!voiceTourActive || !voiceAudioChunks.length) return;
+      const chunk = voiceAudioChunks.shift();
+      const urls = getGoogleTtsUrls(chunk, getSelectedVoiceLang());
+      playCloudChunkAudio(urls, 0, label, ui, () => {
+        if (!voiceTourActive) return;
+        if (voiceAudioChunks.length) {
+          playNextCloudChunk(label, ui);
+        } else if (voiceoverStatus) {
+          voiceoverStatus.textContent = `${ui.nowAt} ${label}`;
+        }
+      });
+    }
+
+    function speakWithCloudTTS(text, label, ui) {
+      stopCloudVoice();
+      voiceAudioChunks = splitTextForTTS(text);
+      playNextCloudChunk(label, ui);
+    }
+
+    refreshVoiceList();
+    window.speechSynthesis.addEventListener("voiceschanged", refreshVoiceList);
+
+    const savedVoiceLang = localStorage.getItem("voiceTourLang");
+    if (savedVoiceLang && voiceLangSelect) {
+      voiceLangSelect.value = savedVoiceLang;
+    }
+
+    function updateVoiceTourUI() {
+      const ui = getVoiceUi();
+      voicePlayBtn?.classList.toggle("active", voiceTourActive);
+      voicePlayBtn?.setAttribute("aria-pressed", voiceTourActive ? "true" : "false");
+      if (voicePlayLabel) voicePlayLabel.textContent = voiceTourActive ? ui.on : ui.start;
+      if (voicePlayIcon) voicePlayIcon.className = voiceTourActive ? "fas fa-volume-high" : "fas fa-volume-up";
+      if (voiceStopBtn) voiceStopBtn.hidden = !voiceTourActive;
+      if (!voiceTourActive && voiceoverStatus) {
+        voiceoverStatus.textContent = ui.off;
+      }
+    }
+
+    function setActiveVoiceHighlight(section) {
+      if (activeVoiceSection === section) return;
+      activeVoiceSection?.classList.remove("voice-section-active");
+      activeVoiceSection = section;
+      activeVoiceSection?.classList.add("voice-section-active");
+    }
+
+    function speakVoiceSection(section, force = false) {
+      if (!section || !voiceTourActive) return;
+      if (!force && section === lastSpokenSection) return;
+      const text = getVoiceText(section);
+      const label = getVoiceLabel(section);
+      const ui = getVoiceUi();
+      const langKey = getSelectedVoiceLang();
+      if (!text) return;
+
+      stopAllVoice();
+      lastSpokenSection = section;
+      setActiveVoiceHighlight(section);
+
+      if (shouldUseCloudTTS(langKey)) {
+        speakWithCloudTTS(text, label, ui);
+        return;
+      }
+
+      const langCode = VOICE_LANG_CODES[langKey] || "en-IN";
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = langCode;
+      utterance.rate = 0.95;
+      utterance.pitch = 1;
+      const matchedVoice = pickVoiceForLang(langCode);
+      if (matchedVoice) utterance.voice = matchedVoice;
+      utterance.onstart = () => {
+        if (voiceoverStatus) voiceoverStatus.textContent = `${ui.playing}: ${label}`;
+      };
+      utterance.onend = () => {
+        if (voiceoverStatus && voiceTourActive) {
+          voiceoverStatus.textContent = `${ui.nowAt} ${label}`;
+        }
+      };
+      utterance.onerror = () => {
+        if (!voiceTourActive) return;
+        speakWithCloudTTS(text, label, ui);
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function getDominantVoiceSection() {
+      let best = null;
+      let bestRatio = 0;
+      sectionVisibility.forEach((ratio, section) => {
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          best = section;
+        }
+      });
+      return bestRatio >= 0.28 ? best : null;
+    }
+
+    function handleVoiceSectionChange() {
+      if (!voiceTourActive) return;
+      const section = getDominantVoiceSection();
+      if (section) speakVoiceSection(section);
+    }
+
+    const voiceObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        sectionVisibility.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+      handleVoiceSectionChange();
+    }, {
+      threshold: [0, 0.15, 0.28, 0.4, 0.55, 0.7, 0.85, 1],
+      rootMargin: "-12% 0px -12% 0px"
     });
-    voiceStopBtn?.addEventListener("click", () => window.speechSynthesis.cancel());
+
+    voiceSections.forEach((section) => voiceObserver.observe(section));
+
+    voicePlayBtn?.addEventListener("click", () => {
+      voiceTourActive = !voiceTourActive;
+      updateVoiceTourUI();
+      if (voiceTourActive) {
+        lastSpokenSection = null;
+        handleVoiceSectionChange();
+        if (!getDominantVoiceSection()) {
+          const fallback = voiceSections.find((section) => {
+            const rect = section.getBoundingClientRect();
+            return rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.2;
+          });
+          if (fallback) speakVoiceSection(fallback, true);
+        }
+      } else {
+        stopAllVoice();
+        lastSpokenSection = null;
+        activeVoiceSection?.classList.remove("voice-section-active");
+        activeVoiceSection = null;
+      }
+    });
+
+    voiceStopBtn?.addEventListener("click", () => {
+      voiceTourActive = false;
+      stopAllVoice();
+      lastSpokenSection = null;
+      activeVoiceSection?.classList.remove("voice-section-active");
+      activeVoiceSection = null;
+      updateVoiceTourUI();
+    });
+
+    voiceLangSelect?.addEventListener("change", () => {
+      localStorage.setItem("voiceTourLang", voiceLangSelect.value);
+      updateVoiceTourUI();
+      if (!voiceTourActive) return;
+      stopAllVoice();
+      lastSpokenSection = null;
+      const current = getDominantVoiceSection() || activeVoiceSection;
+      if (current) speakVoiceSection(current, true);
+    });
+
+    voicePauseBtn?.addEventListener("click", () => {
+      window.speechSynthesis.pause();
+      voiceAudio?.pause();
+    });
+    voiceResumeBtn?.addEventListener("click", () => {
+      window.speechSynthesis.resume();
+      voiceAudio?.play().catch(() => {});
+    });
+
+    window.addEventListener("beforeunload", () => stopAllVoice());
+    updateVoiceTourUI();
 
     // --- Reviews & Virtual Tour Sliders ---
-    const clientStoryTrack = document.getElementById("clientStoryTrack");
-    const clientStorySlides = Array.from(document.querySelectorAll(".client-video-slide"));
+    const clientStoryCards = Array.from(document.querySelectorAll(".client-testimonial-card"));
     const clientStoryDots = Array.from(document.querySelectorAll(".client-story-dot"));
     const clientStoryPrev = document.getElementById("clientStoryPrev");
     const clientStoryNext = document.getElementById("clientStoryNext");
     let currentClientStorySlide = 0;
 
     function updateClientStorySlider(index) {
-      if (!clientStoryTrack || !clientStorySlides.length) return;
-      currentClientStorySlide = (index + clientStorySlides.length) % clientStorySlides.length;
-      clientStoryTrack.style.transform = `translateX(-${currentClientStorySlide * 100}%)`;
+      if (!clientStoryCards.length) return;
+      const total = clientStoryCards.length;
+      currentClientStorySlide = (index + total) % total;
+      clientStoryCards.forEach((card, i) => {
+        card.classList.remove("is-active", "is-prev", "is-next", "is-hidden");
+        const offset = (i - currentClientStorySlide + total) % total;
+        if (offset === 0) card.classList.add("is-active");
+        else if (offset === 1) card.classList.add("is-next");
+        else if (offset === total - 1) card.classList.add("is-prev");
+        else card.classList.add("is-hidden");
+      });
       clientStoryDots.forEach((dot, i) => dot.classList.toggle("active", i === currentClientStorySlide));
     }
     clientStoryPrev?.addEventListener("click", () => updateClientStorySlider(currentClientStorySlide - 1));
