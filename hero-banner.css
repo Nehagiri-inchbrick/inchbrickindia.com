@@ -472,12 +472,196 @@
 
 /* ── Bottom wrapper for search + stats (outside hero card) ── */
 .hero-bottom-section {
-  padding: 0 calc((100% - 1020px) / 2);
-  padding-bottom: 20px;
+  padding: 0 20px;
+  padding-bottom: 24px;
   max-width: 1400px;
   margin: 0 auto;
-  width: calc(100% - 40px);
+  width: 100%;
 }
+
+/* ── Premium Tabbed Search Panel ── */
+.hpanel-wrap {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.14), 0 4px 16px rgba(0, 0, 0, 0.06);
+  margin: -26px 0 12px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* Tabs */
+.hpanel-tabs {
+  display: flex;
+  background: #f8fafc;
+  border-bottom: 1px solid #e9eef5;
+  padding: 0 8px;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hpanel-tabs::-webkit-scrollbar { display: none; }
+
+.hpanel-tab {
+  background: transparent;
+  border: none;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+.hpanel-tab:hover { color: #0c1a2e; background: rgba(201, 165, 92, 0.05); }
+.hpanel-tab.active {
+  color: #0c1a2e;
+  border-bottom-color: #c9a55c;
+  background: #fff;
+}
+.hpanel-tab i { color: #c9a55c; font-size: 12px; }
+
+/* Search Row */
+.hpanel-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px 6px 20px;
+  gap: 0;
+}
+
+.hpanel-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.hpanel-field--location { flex: 1.8; }
+
+.hpanel-icon {
+  color: #c9a55c;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.hpanel-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  background: transparent;
+  width: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.hpanel-input::placeholder { color: #94a3b8; font-weight: 500; }
+
+.hpanel-select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  appearance: auto;
+}
+
+.hpanel-divider {
+  width: 1px;
+  height: 36px;
+  background: #e2e8f0;
+  flex-shrink: 0;
+  margin: 0 8px;
+}
+
+.hpanel-btn {
+  background: linear-gradient(135deg, #1a2e4a, #0c1a2e);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(12, 26, 46, 0.25);
+}
+.hpanel-btn:hover {
+  background: linear-gradient(135deg, #c9a55c, #b8923f);
+  box-shadow: 0 8px 24px rgba(201, 165, 92, 0.35);
+  transform: translateY(-1px);
+}
+.hpanel-btn i { font-size: 13px; }
+
+/* Popular Searches */
+.hpanel-popular {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px 14px;
+  border-top: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+.hpanel-popular-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.hpanel-popular a {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0f172a;
+  background: #f1f5f9;
+  padding: 4px 13px;
+  border-radius: 99px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.hpanel-popular a:hover {
+  background: #c9a55c;
+  color: #fff;
+}
+
+/* ── Responsive for hpanel ── */
+@media (max-width: 900px) {
+  .hpanel-row {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 8px;
+  }
+  .hpanel-field { flex: 1 1 44%; padding: 8px 0; }
+  .hpanel-field--location { flex: 1 1 100%; }
+  .hpanel-divider { display: none; }
+  .hpanel-btn { width: 100%; justify-content: center; padding: 14px; border-radius: 10px; }
+}
+
+@media (max-width: 600px) {
+  .hpanel-field { flex: 1 1 100%; }
+  .hpanel-tabs { padding: 0 4px; }
+  .hpanel-tab { padding: 12px 14px; font-size: 12px; }
+}
+
+
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {

@@ -12,11 +12,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="hero-banner.css">
   <style>
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
+
     :root {
       --primary: #c29a63;
       --primary-dark: #0f2339;
@@ -3826,27 +3828,12 @@
     }
 
     .reviews-showcase {
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 24px;
       background: #fff;
-      padding: 1.2rem 1rem 0.95rem;
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
-      margin-top: 0.75rem;
-    }
-
-    .google-head {
-      text-align: center;
-      margin-bottom: 0.8rem;
-    }
-
-    .google-icon {
-      margin-bottom: 0.5rem;
-    }
-
-    .google-icon img {
-      width: 180px;
-      height: auto;
-      object-fit: contain;
+      padding: 2.2rem;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.02);
+      margin-top: 1rem;
     }
 
     .google-title {
@@ -3879,97 +3866,120 @@
       font-size: 0.95rem;
     }
 
-    .google-cards {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.65rem;
+    /* --- Compact Trust Ribbon (Reviews) --- */
+    .google-mosaic {
+      display: flex;
+      gap: 15px;
+      margin: 2rem 0;
+      height: 200px;
+    }
+
+    .mosaic-tile {
       flex: 1;
-    }
-
-    .google-review-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
       background: #fff;
-      padding: 0.62rem;
-      box-shadow: 0 5px 14px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
-    .google-review-top {
+    .mosaic-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    }
+
+    .tile-score {
+      flex: 0 0 220px;
+      background: linear-gradient(135deg, #010409 0%, #0d1117 100%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .tile-wide { flex: 1.5; }
+
+    .mosaic-score-big {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #fff 0%, #c39b62 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .mosaic-stars {
+      color: #fbbf24;
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+
+    .mosaic-user {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.45rem;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .review-user {
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-    }
-
-    .review-avatar {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
+    .mosaic-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #f3f4f6;
       display: grid;
       place-items: center;
-      font-weight: 700;
-      color: #fff !important;
-      font-size: 0.82rem;
-      background: linear-gradient(135deg, #7c3aed, #a855f7);
-    }
-
-    .review-avatar.green {
-      background: linear-gradient(135deg, #15803d, #4ade80);
-    }
-
-    .review-avatar.blue {
-      background: linear-gradient(135deg, #2563eb, #60a5fa);
-    }
-
-    .review-avatar.orange {
-      background: linear-gradient(135deg, #ea580c, #fb923c);
-    }
-
-    .review-user strong {
-      display: block;
+      font-weight: 800;
       font-size: 0.9rem;
-      color: #111827;
-      line-height: 1.2;
     }
 
-    .review-user span {
-      color: #4d4d4a;
-      font-size: 0.74rem;
-    }
-
-    .google-mark {
-      font-size: 1.05rem;
-    }
-
-    .stars {
-      color: #fbbf24;
-      letter-spacing: 1px;
-      margin-bottom: 0.45rem;
-      font-size: 0.94rem;
-    }
-
-    .review-text {
-      color: #334155;
-      font-size: 0.88rem;
-      line-height: 1.45;
-      margin-bottom: 0;
-    }
-
-    .reviews-footer-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1rem;
-      color: #334155;
+    .mosaic-text {
       font-size: 0.95rem;
-      font-weight: 500;
+      color: #475569;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .mosaic-google-ico {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 24px;
+      opacity: 0.4;
+      /* Increased visibility */
+    }
+
+    .google-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 2rem;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .google-full-logo {
+      height: 30px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1024px) {
+      .google-mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+
+      .tile-score {
+        grid-column: span 2;
+        height: 300px;
+      }
+
+      .tile-wide {
+        grid-column: span 2;
+      }
     }
 
     .client-story-wrap {
@@ -4355,6 +4365,7 @@
     }
 
     @media (max-width: 700px) {
+
       .client-testimonial-card.is-prev,
       .client-testimonial-card.is-next {
         opacity: 0;
@@ -11618,103 +11629,397 @@
     }
 
     /* Blog — home page (gold light theme) */
+    /* --- Creative Editorial Journal (Blogs) --- */
     .blog-section {
-      background: linear-gradient(180deg, #fff 0%, #f8fafc 55%, #f5f0e8 100%);
-      border-top: 1px solid rgba(194, 154, 99, 0.15);
+      background: #fbfbf9;
+      padding: 8rem 0;
+      position: relative;
     }
 
-    .blog-eyebrow {
-      display: inline-block;
-      font-size: 0.7rem;
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 30px;
+    }
+
+    .editorial-card {
+      position: relative;
+      background: #fff;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .editorial-card.feat {
+      grid-column: span 7;
+      grid-row: span 2;
+      height: 600px;
+    }
+
+    .editorial-card.sub {
+      grid-column: span 5;
+      height: 285px;
+      display: flex;
+    }
+
+    .editorial-thumb {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feat .editorial-thumb {
+      height: 60%;
+    }
+
+    .sub .editorial-thumb {
+      width: 45%;
+      height: 100%;
+    }
+
+    .editorial-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s ease;
+    }
+
+    .editorial-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .editorial-body {
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sub .editorial-body {
+      width: 55%;
+      padding: 25px;
+    }
+
+    .editorial-tag {
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--primary);
-      background: rgba(194, 154, 99, 0.12);
-      border: 1px solid rgba(194, 154, 99, 0.3);
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+      color: #c39b62;
+      margin-bottom: 12px;
+      display: block;
     }
 
-    .blog-view-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
+    .editorial-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
       font-weight: 700;
-      color: #7c5c2e;
-      padding: 0.55rem 1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(194, 154, 99, 0.4);
-      background: #fff;
-      white-space: nowrap;
-      transition: all 0.2s ease;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: #010409;
     }
 
-    .blog-view-all:hover {
-      background: linear-gradient(135deg, var(--primary), #9a7a4a);
-      color: #fff;
-      border-color: var(--primary);
+    .sub .editorial-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
     }
 
-    .blog-tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #7c5c2e;
-      background: rgba(194, 154, 99, 0.12);
-      padding: 0.2rem 0.55rem;
-      border-radius: 6px;
-      margin-bottom: 0.45rem;
-    }
-
-    .blog-section .blog-card {
-      background: #fff;
-      border: 1px solid rgba(194, 154, 99, 0.15);
-      box-shadow: 0 8px 28px rgba(15, 35, 57, 0.06);
-    }
-
-    .blog-section .blog-card:hover {
-      border-color: rgba(194, 154, 99, 0.45);
-      box-shadow: 0 16px 40px rgba(194, 154, 99, 0.15);
-      transform: translateY(-4px);
-    }
-
-    .blog-section .blog-description {
+    .editorial-desc {
+      font-size: 0.95rem;
       color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
 
-    .blog-section .blog-btn {
+    .editorial-link {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #010409;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      text-decoration: none;
-      border-color: rgba(194, 154, 99, 0.45);
-      background: rgba(194, 154, 99, 0.1);
-      color: #7c5c2e;
+      gap: 10px;
+      transition: gap 0.3s ease;
     }
 
-    .blog-section .blog-btn:hover {
-      background: linear-gradient(135deg, var(--primary), #9a7a4a);
+    .editorial-link:hover {
+      gap: 15px;
+      color: #c39b62;
+    }
+
+    .blog-corner-decor {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(195, 155, 98, 0.05) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    @media (max-width: 1024px) {
+
+      .editorial-card.feat,
+      .editorial-card.sub {
+        grid-column: span 12;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .sub .editorial-thumb {
+        width: 100%;
+        height: 200px;
+      }
+
+      .sub .editorial-body {
+        width: 100%;
+      }
+    }
+
+    /* --- The Shard - Highly Creative Deal Layout --- */
+    .deal-shard-section {
+      background: #010409;
+      padding: 4rem 0;
+      overflow: hidden;
       color: #fff;
-      border-color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    .blog-section .section-subtitle {
-      color: #64748b;
+    .shard-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      padding: 0 40px;
+      position: relative;
+    }
+
+    .shard-sidebar {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 12px;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.05);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+    }
+
+    .shard-grid-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shard-heading {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .shard-title {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .shard-title span {
+      color: #c39b62;
+      font-style: italic;
+    }
+
+    .shard-pulse {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+      padding: 6px 15px;
+      border-radius: 100px;
+    }
+
+    .p-dot {
+      width: 6px;
+      height: 6px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: shard-p 1.5s infinite;
+    }
+
+    @keyframes shard-p {
+      0% {
+        opacity: 0.4;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.3);
+      }
+
+      100% {
+        opacity: 0.4;
+        transform: scale(1);
+      }
+    }
+
+    .shard-grid {
+      display: flex;
+      gap: 20px;
+      height: 480px;
+      align-items: center;
+    }
+
+    .deal-shard {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      background: #0d1117;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .deal-shard:nth-child(even) {
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      margin-top: 40px;
+      height: calc(100% - 40px);
+    }
+
+    .deal-shard:hover {
+      flex: 1.4;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      border-color: rgba(195, 155, 98, 0.4);
+      z-index: 10;
+    }
+
+    .shard-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+      filter: grayscale(100%);
+      transition: all 0.6s ease;
+    }
+
+    .deal-shard:hover .shard-img {
+      opacity: 0.7;
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    .shard-content {
+      position: absolute;
+      inset: 0;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .shard-tag {
+      background: #ef4444;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 4px 12px;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .shard-price-wrap {
+      margin-top: auto;
+    }
+
+    .shard-drop {
+      color: #ef4444;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .shard-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .shard-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .shard-loc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .shard-loc i {
+      color: #c39b62;
+    }
+
+    .shard-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+    }
+
+    .deal-shard:hover .shard-footer {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .shard-btn {
+      color: #c39b62;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      border-bottom: 1px solid #c39b62;
     }
 
     @media (max-width: 900px) {
-      .blog-section .section-head {
+      .shard-grid {
         flex-direction: column;
-        align-items: flex-start;
+        height: auto;
+      }
+
+      .deal-shard {
+        height: 350px;
+        clip-path: none !important;
+        margin-top: 0 !important;
+      }
+
+      .shard-sidebar {
+        display: none;
       }
     }
   </style>
   <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/gate-intro.css">
   <link rel="stylesheet" href="css/layout.css">
 
 </head>
@@ -11735,8 +12040,7 @@
         <option value="kn">ಕನ್ನಡ</option>
         <option value="bn">বাংলা</option>
       </select>
-      <button type="button" class="voice-tour-btn" id="voicePlayBtn" aria-pressed="false"
-        aria-label="Start voice tour">
+      <button type="button" class="voice-tour-btn" id="voicePlayBtn" aria-pressed="false" aria-label="Start voice tour">
         <i class="fas fa-volume-high" id="voicePlayIcon" aria-hidden="true"></i>
         <span id="voicePlayLabel">Start Voice Tour</span>
       </button>
@@ -11760,119 +12064,85 @@
       <!-- Gradient Overlay -->
       <div class="hero-gradient-layer"></div>
 
-      <!-- Top Right Premium Badge -->
-      <div class="hero-premium-badge">
-        <div class="hpb-icon"><i class="fa-regular fa-star"></i></div>
-        <div class="hpb-info">
-          <h4>Premium Homes</h4>
-          <p>Verified &amp; Trusted</p>
-        </div>
-      </div>
-
       <!-- Visual Content Area -->
       <div class="hero-visual-area">
         <div class="hero-main-content">
           <!-- Top Badge -->
           <div class="hero-top-badge">
             <span class="htb-icon"><i class="fa-solid fa-house-chimney"></i></span>
-            <span class="htb-text">Find Your Perfect Home</span>
+            <span class="htb-text">India's #1 Premium Real Estate Portal</span>
           </div>
 
           <!-- Main Title -->
-          <h1>Curated Homes for <span class="hero-gold-word">Exceptional Living</span> Home</h1>
+          <h1>Find Your Dream Home<br>with <span class="hero-gold-word">Inchbrick</span></h1>
 
           <!-- Description -->
-          <p class="hero-desc">Discover premium properties in the best locations.<br>Verified listings. Trusted by
-            thousands.</p>
+          <p class="hero-desc">Discover 10,000+ verified luxury properties across India's top cities.<br>Zero brokerage.
+            Expert guidance. Transparent pricing.</p>
 
         </div>
-      </div>
-
-      <!-- Featured Property Card -->
-      <div class="hero-featured-card">
-        <div class="hfc-left">
-          <div class="hfc-tag"><span class="hfc-dot"></span> FEATURED PROPERTY</div>
-          <h3>Modern Ocean View Villa</h3>
-          <p class="hfc-loc"><i class="fa-solid fa-location-dot"></i> Goa, India</p>
-          <div class="hfc-specs">
-            <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
-            <span><i class="fa-solid fa-bath"></i> 5 Baths</span>
-            <span><i class="fa-solid fa-maximize"></i> 3,240 Sqft</span>
-          </div>
-        </div>
-        <a href="#" class="hfc-arrow"><i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
     </section>
 
-    <!-- Search Bar (outside hero for proper overlap) -->
+    <!-- Search Panel (outside hero for proper overlap) -->
     <div class="hero-bottom-section" data-voice-label="Search" id="heroSearchSection"
       data-voice-text="Use the search bar to find properties by location, type, price range, and bedrooms. Over two thousand five hundred happy buyers trust our verified listings across fifty plus cities.">
-      <div class="hero-search-bar">
-        <div class="hsb-field">
-          <div class="hsb-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="hsb-text">
-            <strong>Enter location</strong>
-            <span>City, Area or ZIP</span>
-          </div>
+
+      <!-- Premium Tabbed Search Panel -->
+      <div class="hpanel-wrap">
+        <div class="hpanel-tabs">
+          <button class="hpanel-tab active" onclick="switchHeroTab(this,'buy')"><i class="fa-solid fa-house-user"></i>
+            Buy</button>
+          <button class="hpanel-tab" onclick="switchHeroTab(this,'rent')"><i class="fa-solid fa-key"></i> Rent</button>
+          <button class="hpanel-tab" onclick="switchHeroTab(this,'projects')"><i class="fa-solid fa-city"></i>
+            Projects</button>
+          <button class="hpanel-tab" onclick="switchHeroTab(this,'commercial')"><i class="fa-solid fa-store"></i>
+            Commercial</button>
+          <button class="hpanel-tab" onclick="switchHeroTab(this,'plot')"><i class="fa-solid fa-map"></i> Plots /
+            Land</button>
         </div>
-        <div class="hsb-divider"></div>
-        <div class="hsb-field">
-          <div class="hsb-icon"><i class="fa-solid fa-house"></i></div>
-          <div class="hsb-text">
-            <strong>Property Type</strong>
-            <span>Select type</span>
+        <div class="hpanel-row">
+          <div class="hpanel-field hpanel-field--location">
+            <i class="fa-solid fa-location-dot hpanel-icon"></i>
+            <input id="search-locality" class="hpanel-input" type="text"
+              placeholder="Search city, locality, landmark...">
           </div>
-          <i class="fa-solid fa-chevron-down hsb-chevron"></i>
-        </div>
-        <div class="hsb-divider"></div>
-        <div class="hsb-field">
-          <div class="hsb-icon"><i class="fa-solid fa-tag"></i></div>
-          <div class="hsb-text">
-            <strong>Price Range</strong>
-            <span>Min - Max</span>
+          <div class="hpanel-divider"></div>
+          <div class="hpanel-field hpanel-field--select">
+            <i class="fa-solid fa-house hpanel-icon"></i>
+            <select id="search-type" class="hpanel-select">
+              <option value="">All Property Types</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Villa">Villa</option>
+              <option value="Plot">Plot</option>
+              <option value="Office">Office</option>
+              <option value="Shop">Shop</option>
+            </select>
           </div>
-          <i class="fa-solid fa-chevron-down hsb-chevron"></i>
-        </div>
-        <div class="hsb-divider"></div>
-        <div class="hsb-field">
-          <div class="hsb-icon"><i class="fa-solid fa-bed"></i></div>
-          <div class="hsb-text">
-            <strong>Bedrooms</strong>
-            <span>Any</span>
+          <div class="hpanel-divider"></div>
+          <div class="hpanel-field hpanel-field--select">
+            <i class="fa-solid fa-city hpanel-icon"></i>
+            <select id="search-city" class="hpanel-select">
+              <option value="">All Cities</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Pune">Pune</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Goa">Goa</option>
+              <option value="Chennai">Chennai</option>
+            </select>
           </div>
-          <i class="fa-solid fa-chevron-down hsb-chevron"></i>
+          <button class="hpanel-btn" onclick="performPremiumSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+          </button>
         </div>
-        <button class="hsb-search-btn" onclick="performPremiumSearch()">
-          <i class="fa-solid fa-magnifying-glass"></i> Search Properties
-        </button>
       </div>
 
-      <!-- Stats Strip -->
-      <div class="hero-stats-strip">
-        <div class="hss-item">
-          <div class="hss-icon"><i class="fa-regular fa-face-smile"></i></div>
-          <div class="hss-text"><strong>2,500+</strong><span>Happy Buyers</span></div>
-        </div>
-        <div class="hss-divider"></div>
-        <div class="hss-item">
-          <div class="hss-icon"><i class="fa-solid fa-house-chimney"></i></div>
-          <div class="hss-text"><strong>10,000+</strong><span>Verified Properties</span></div>
-        </div>
-        <div class="hss-divider"></div>
-        <div class="hss-item">
-          <div class="hss-icon"><i class="fa-solid fa-building"></i></div>
-          <div class="hss-text"><strong>50+</strong><span>Top Cities</span></div>
-        </div>
-        <div class="hss-divider"></div>
-        <div class="hss-item">
-          <div class="hss-icon"><i class="fa-solid fa-headset"></i></div>
-          <div class="hss-text"><strong>24/7</strong><span>Expert Support</span></div>
-        </div>
-      </div>
+
     </div>
-
-    <div id="gateScrollZone" class="gate-scroll-zone" aria-hidden="true"></div>
 
     <section class="mood-lifestyle-section" data-voice-label="Lifestyle" id="moodLifestyleSection"
       data-voice-text="Find property by mood and lifestyle. Choose from family living, city life, beachside homes, peaceful retreats, work from home spaces, or smart investment options that match your vibe.">
@@ -11982,8 +12252,6 @@
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
 
@@ -12221,119 +12489,73 @@
       </div>
     </section>
 
-    <!-- Live Hot Deals -->
-    <section class="hpd-section dark" id="liveDealsSection" data-voice-label="Live Hot Deals"
-      data-voice-text="Live hot deals. Grab flash discounts on premium properties with verified prices and no hidden charges. Limited time offers on prime homes across top cities.">
-      <div class="hpd-inner">
+    <section class="deal-shard-section" id="liveDealsSection">
+      <div class="shard-wrapper">
+        <div class="shard-sidebar">LIVE_OFFERS_EXCHANGE</div>
 
-        <!-- Cards -->
-        <div class="hpd-cards">
-
-          <article class="hpd-card">
-            <div class="hpd-card-img">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80"
-                alt="Deal One">
-              <span class="hpd-card-badge deal">🔥 Hot Deal</span>
-              <span class="hpd-discount">-12%</span>
+        <div class="shard-grid-wrap">
+          <div class="shard-heading">
+            <h2 class="shard-title">Live <span>Hot</span> Deals</h2>
+            <div class="shard-pulse">
+              <span class="p-dot"></span> LIVE NOW
             </div>
-            <div class="hpd-card-body">
-              <div class="hpd-urgency">
-                <i class="fas fa-clock"></i> Ends in 2 days
-                <div class="hpd-urgency-bar">
-                  <div class="hpd-urgency-fill" style="width:72%"></div>
+          </div>
+          <div class="shard-grid">
+            <!-- Shard 1 -->
+            <article class="deal-shard">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="shard-img"
+                alt="Luxury Shard">
+              <div class="shard-content">
+                <span class="shard-tag">Top Pick</span>
+                <div class="shard-price-wrap">
+                  <span class="shard-drop">SAVE ₹ 1.2 Cr</span>
+                  <p class="shard-price">₹ 8.45 Cr</p>
+                  <h3 class="shard-name">The Ritz Penthouse</h3>
+                  <div class="shard-loc"><i class="fa-solid fa-location-dot"></i> Gurugram, Sec 42</div>
+                  <div class="shard-footer">
+                    <a href="#" class="shard-btn">Secure Deal</a>
+                  </div>
                 </div>
               </div>
-              <p class="hpd-card-price">₹ 1.89 Cr* <span class="hpd-card-price-old">₹ 2.15 Cr</span></p>
-              <p class="hpd-card-name">Skyline Premium Flat</p>
-              <p class="hpd-card-loc"><i class="fas fa-map-marker-alt"></i> Worli, Mumbai</p>
-              <div class="hpd-card-specs">
-                <span class="hpd-spec"><i class="fas fa-bed"></i> 3 Beds</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-bath"></i> 2 Baths</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-expand"></i> 1,450 sqft</span>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="hpd-card">
-            <div class="hpd-card-img">
-              <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=700&q=80"
-                alt="Deal Two">
-              <span class="hpd-card-badge hot">Limited</span>
-              <span class="hpd-discount">-8%</span>
-            </div>
-            <div class="hpd-card-body">
-              <div class="hpd-urgency">
-                <i class="fas fa-clock"></i> Ends in 5 days
-                <div class="hpd-urgency-bar">
-                  <div class="hpd-urgency-fill" style="width:45%"></div>
+            <!-- Shard 2 -->
+            <article class="deal-shard">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" class="shard-img"
+                alt="Azure Shard">
+              <div class="shard-content">
+                <span class="shard-tag">Flash</span>
+                <div class="shard-price-wrap">
+                  <span class="shard-drop">SAVE ₹ 40L</span>
+                  <p class="shard-price">₹ 2.10 Cr</p>
+                  <h3 class="shard-name">Azure Residence</h3>
+                  <div class="shard-loc"><i class="fa-solid fa-location-dot"></i> Mumbai, Worli</div>
+                  <div class="shard-footer">
+                    <a href="#" class="shard-btn">Secure Deal</a>
+                  </div>
                 </div>
               </div>
-              <p class="hpd-card-price">₹ 4.10 Cr* <span class="hpd-card-price-old">₹ 4.45 Cr</span></p>
-              <p class="hpd-card-name">Hilltop Villa Estate</p>
-              <p class="hpd-card-loc"><i class="fas fa-map-marker-alt"></i> Lonavala, Pune</p>
-              <div class="hpd-card-specs">
-                <span class="hpd-spec"><i class="fas fa-bed"></i> 5 Beds</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-bath"></i> 4 Baths</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-expand"></i> 4,200 sqft</span>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="hpd-card">
-            <div class="hpd-card-img">
-              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80"
-                alt="Deal Three">
-              <span class="hpd-card-badge deal">🔥 Flash Sale</span>
-              <span class="hpd-discount">-15%</span>
-            </div>
-            <div class="hpd-card-body">
-              <div class="hpd-urgency">
-                <i class="fas fa-clock"></i> Ends in 18 hrs
-                <div class="hpd-urgency-bar">
-                  <div class="hpd-urgency-fill" style="width:88%"></div>
+            <!-- Shard 3 -->
+            <article class="deal-shard">
+              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde" class="shard-img"
+                alt="Veridian Shard">
+              <div class="shard-content">
+                <span class="shard-tag">Hot</span>
+                <div class="shard-price-wrap">
+                  <span class="shard-drop">SAVE ₹ 25L</span>
+                  <p class="shard-price">₹ 1.75 Cr</p>
+                  <h3 class="shard-name">Veridian Estate</h3>
+                  <div class="shard-loc"><i class="fa-solid fa-location-dot"></i> Pune, Hinjewadi</div>
+                  <div class="shard-footer">
+                    <a href="#" class="shard-btn">Secure Deal</a>
+                  </div>
                 </div>
               </div>
-              <p class="hpd-card-price">₹ 98 L* <span class="hpd-card-price-old">₹ 1.15 Cr</span></p>
-              <p class="hpd-card-name">Urban Studio Retreat</p>
-              <p class="hpd-card-loc"><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</p>
-              <div class="hpd-card-specs">
-                <span class="hpd-spec"><i class="fas fa-bed"></i> 2 Beds</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-bath"></i> 2 Baths</span>
-                <div class="hpd-spec-sep"></div>
-                <span class="hpd-spec"><i class="fas fa-expand"></i> 980 sqft</span>
-              </div>
-            </div>
-          </article>
-
+            </article>
+          </div>
         </div>
-
-        <!-- Side Panel -->
-        <aside class="hpd-side">
-          <div class="hpd-eyebrow"><i class="fas fa-fire"></i> Limited Time</div>
-          <h2 class="hpd-title">Live <em>Hot</em><br>Deals</h2>
-          <p class="hpd-desc">Flash discounts on premium properties — verified prices, no hidden charges. Grab before
-            they're gone.</p>
-          <div class="hpd-countdown">
-            <span class="hpd-countdown-label">Next deal refresh</span>
-            <div class="hpd-timer">
-              <div class="hpd-timer-unit"><strong id="dealHrs">08</strong><span>Hrs</span></div>
-              <div class="hpd-timer-unit"><strong id="dealMin">42</strong><span>Min</span></div>
-              <div class="hpd-timer-unit"><strong id="dealSec">17</strong><span>Sec</span></div>
-            </div>
-          </div>
-          <div class="hpd-tags">
-            <span class="hpd-tag active">Upto 15% Off</span>
-            <span class="hpd-tag">Prime Areas</span>
-            <span class="hpd-tag">Verified</span>
-          </div>
-          <button class="hpd-cta gold" type="button"><i class="fas fa-bolt"></i> View All Deals</button>
-        </aside>
-
       </div>
     </section>
 
@@ -12637,76 +12859,49 @@
 
 
         <div class="reviews-showcase">
-          <div class="google-head">
-            <div class="google-icon"><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuBQ302nmWkKgcaVZq3F9TBppbva7eRw4RA&s">
+          <div class="google-brand-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuBQ302nmWkKgcaVZq3F9TBppbva7eRw4RA&s"
+              class="google-full-logo" alt="Google">
+            <div style="height: 20px; width: 1px; background: #ddd;"></div>
+            <span style="font-weight: 700; font-size: 14px; color: #5f6368;">Verified Customer Reviews</span>
+          </div>
+          <div class="google-mosaic">
+            <!-- Overall Score Tile -->
+            <div class="mosaic-tile tile-score">
+              <span class="mosaic-score-big">4.9</span>
+              <div class="mosaic-stars">★★★★★</div>
+              <p style="font-size: 0.7rem; letter-spacing: 2px; opacity: 0.7;">TRUST RATING</p>
             </div>
-            <!-- <h3 class="google-title">Google Reviews</h3> -->
-            <p class="google-subtitle">Real reviews from real clients who trust our work.</p>
+
+            <!-- Review 1 -->
+            <div class="mosaic-tile tile-wide">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuBQ302nmWkKgcaVZq3F9TBppbva7eRw4RA&s"
+                class="mosaic-google-ico" alt="G">
+              <div class="mosaic-user">
+                <span class="mosaic-avatar" style="background: #e0f2fe; color: #0369a1;">JM</span>
+                <div>
+                  <strong>Josh M.</strong>
+                  <p style="font-size: 11px; color: #64748b;">Verified Buyer</p>
+                </div>
+              </div>
+              <p class="mosaic-text">"Absolutely fantastic experience! The team was professional and delivered beyond our expectations."</p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="mosaic-tile">
+              <div class="mosaic-user">
+                <span class="mosaic-avatar" style="background: #fef2f2; color: #b91c1c;">ST</span>
+                <div><strong>Sarah T.</strong></div>
+              </div>
+              <p class="mosaic-text">"Incredible service from start to finish. Truly caring professionals with transparent support."</p>
+            </div>
           </div>
 
-          <div class="google-row">
-            <button class="google-arrow" type="button" aria-label="Previous reviews"><i
-                class="fas fa-chevron-left"></i></button>
-            <div class="google-cards">
-              <article class="google-review-card">
-                <div class="google-review-top">
-                  <div class="review-user">
-                    <span class="review-avatar">J</span>
-                    <div><strong>Josh M.</strong><span>2 weeks ago</span></div>
-                  </div>
-                  <span class="google-mark">G</span>
-                </div>
-                <p class="stars">★★★★★</p>
-                <p class="review-text">Absolutely fantastic experience! The team was professional and delivered beyond
-                  our expectations.</p>
-              </article>
-
-              <article class="google-review-card">
-                <div class="google-review-top">
-                  <div class="review-user">
-                    <span class="review-avatar green">S</span>
-                    <div><strong>Sarah T.</strong><span>1 month ago</span></div>
-                  </div>
-                  <span class="google-mark">G</span>
-                </div>
-                <p class="stars">★★★★★</p>
-                <p class="review-text">Incredible service from start to finish. Truly caring professionals with
-                  transparent support.</p>
-              </article>
-
-              <article class="google-review-card">
-                <div class="google-review-top">
-                  <div class="review-user">
-                    <span class="review-avatar blue">R</span>
-                    <div><strong>Ryan K.</strong><span>1 month ago</span></div>
-                  </div>
-                  <span class="google-mark">G</span>
-                </div>
-                <p class="stars">★★★★★</p>
-                <p class="review-text">Top-notch professionalism and attention to detail. Our project was completed
-                  exactly on time.</p>
-              </article>
-
-              <article class="google-review-card">
-                <div class="google-review-top">
-                  <div class="review-user">
-                    <span class="review-avatar orange">A</span>
-                    <div><strong>Amanda L.</strong><span>3 weeks ago</span></div>
-                  </div>
-                  <span class="google-mark">G</span>
-                </div>
-                <p class="stars">★★★★★</p>
-                <p class="review-text">Great communication, honest pricing, and amazing results. We will definitely come
-                  back again.</p>
-              </article>
-            </div>
-            <button class="google-arrow" type="button" aria-label="Next reviews"><i
-                class="fas fa-chevron-right"></i></button>
+          <div style="text-align: center; margin-top: 30px;">
+            <a href="#" class="editorial-link" style="border-bottom: 1px solid #c39b62; padding-bottom: 5px;">Read More
+              Verified Reviews on Google <i class="fas fa-external-link-alt"
+                style="font-size: 10px; margin-left: 8px;"></i></a>
           </div>
-
-          <a href="#" class="reviews-footer-link"><i class="far fa-star"></i> See all reviews on Google <i
-              class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="client-story-wrap">
@@ -12924,7 +13119,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -12932,52 +13126,57 @@
     <section class="blog-section" id="blog" data-voice-label="Latest Blogs"
       data-voice-text="Latest blogs and insights. Read expert tips on investing, luxury buying, and home loans to make smarter property decisions with Inchbrick Realty.">
       <div class="container">
+        <div class="blog-corner-decor"></div>
+
         <div class="section-head">
           <div>
-            <span class="blog-eyebrow">Insights &amp; guides</span>
-            <h2 class="section-title">Latest Blogs</h2>
-            <p class="section-subtitle">Expert tips, city trends, and smart buying insights from Inchbrick Realty.</p>
+            <span class="editorial-tag">Insights &amp; Guides</span>
+            <h2 class="editorial-title" style="font-size: 3rem; margin-bottom: 5px;">Editorial Journal</h2>
+            <p class="editorial-desc">Expert tips, city trends, and smart buying insights.</p>
           </div>
-          <a href="blog.html" class="blog-view-all">View all <i class="fas fa-arrow-right"></i></a>
+          <a href="blog.html" class="editorial-link"
+            style="padding: 10px 25px; border: 1px solid #000; border-radius: 100px;">View All Stories</a>
         </div>
 
-        <div class="blog-grid">
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
-              alt="Modern apartment buildings in Mumbai" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Investment</span>
-              <h3 class="blog-title">Top 5 Localities to Invest in Mumbai in 2026</h3>
-              <p class="blog-description">High-growth micro-markets with strong rental demand and future infrastructure
-                upside.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+        <div class="editorial-grid">
+          <!-- Featured Blog -->
+          <article class="editorial-card feat">
+            <div class="editorial-thumb">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+                alt="Mumbai Investment">
+            </div>
+            <div class="editorial-body">
+              <span class="editorial-tag">Investment Journal</span>
+              <h3 class="editorial-title">The 2026 Mumbai Investment Guide: Micro-Market Insights</h3>
+              <p class="editorial-desc">Discover high-growth localities with strong rental demand and upcoming
+                infrastructure catalysts that are reshaping the Mumbai skyline.</p>
+              <a href="blog.html" class="editorial-link">Explore Article <i class="fas fa-chevron-right"></i></a>
             </div>
           </article>
 
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1000&q=80"
-              alt="Luxury living room interior" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Luxury</span>
-              <h3 class="blog-title">How to Evaluate Luxury Projects Before You Buy</h3>
-              <p class="blog-description">Verify builder track record, amenities quality, and long-term value with this
-                checklist.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+          <!-- Sub Blog 1 -->
+          <article class="editorial-card sub">
+            <div class="editorial-thumb">
+              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80"
+                alt="Luxury Checklist">
+            </div>
+            <div class="editorial-body">
+              <span class="editorial-tag">Luxury Living</span>
+              <h3 class="editorial-title">Evaluation Checklist for Ultra-Luxury Projects</h3>
+              <a href="blog.html" class="editorial-link">Read More</a>
             </div>
           </article>
 
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1000&q=80"
-              alt="Home loan documents and calculator" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Finance</span>
-              <h3 class="blog-title">Home Loan Tips: Reduce EMI Without Stress</h3>
-              <p class="blog-description">Optimize tenure, interest strategy, and down payment for better monthly cash
-                flow.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+          <!-- Sub Blog 2 -->
+          <article class="editorial-card sub">
+            <div class="editorial-thumb">
+              <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=800&q=80"
+                alt="Finance Strategies">
+            </div>
+            <div class="editorial-body">
+              <span class="editorial-tag">Finance & Wealth</span>
+              <h3 class="editorial-title">Low-Stress Strategies to Optimize Your Home Loan EMI</h3>
+              <a href="blog.html" class="editorial-link">Read More</a>
             </div>
           </article>
         </div>
@@ -13929,7 +14128,7 @@
     });
     voiceResumeBtn?.addEventListener("click", () => {
       window.speechSynthesis.resume();
-      voiceAudio?.play().catch(() => {});
+      voiceAudio?.play().catch(() => { });
     });
 
     window.addEventListener("beforeunload", () => stopAllVoice());
@@ -14006,12 +14205,34 @@
   </script>
 
   <script>
+    let activeHeroTab = 'buy';
+
+    function switchHeroTab(btn, tab) {
+      activeHeroTab = tab;
+
+      // Update UI
+      document.querySelectorAll('.hpanel-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Dynamic placeholder update
+      const input = document.getElementById('search-locality');
+      if (tab === 'projects') {
+        input.placeholder = 'Search developer or project name...';
+      } else if (tab === 'commercial') {
+        input.placeholder = 'Search office, shop or warehouse location...';
+      } else if (tab === 'plot') {
+        input.placeholder = 'Search plots or land area...';
+      } else {
+        input.placeholder = 'Search city, locality, landmark...';
+      }
+    }
+
     function performPremiumSearch() {
       const locality = document.getElementById('search-locality').value;
       const type = document.getElementById('search-type').value;
       const city = document.getElementById('search-city').value;
 
-      console.log('Search Triggered:', { locality, type, city });
+      console.log('Search Triggered:', { tab: activeHeroTab, locality, type, city });
 
       // Slick feedback
       const alertDiv = document.createElement('div');
@@ -14032,11 +14253,11 @@
       alertDiv.style.gap = '10px';
       alertDiv.style.transition = 'all 0.5s ease';
 
-      alertDiv.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #c39b62; font-size: 18px;"></i> Searching for ${type || 'properties'} in ${locality || 'any locality'}${city ? ', ' + city : ''}...`;
+      alertDiv.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #c39b62; font-size: 18px;"></i> Searching for <strong>${activeHeroTab}</strong> properties: ${type || 'All types'} in ${locality || 'any locality'}${city ? ', ' + city : ''}...`;
 
       document.body.appendChild(alertDiv);
 
-      // Smooth scroll to localities or homes-picked-section
+      // Smooth scroll to results
       setTimeout(() => {
         alertDiv.style.opacity = '0';
         alertDiv.style.transform = 'translateY(20px)';
@@ -14049,36 +14270,6 @@
       }
     }
   </script>
-
-  <div id="gateOverlay" class="gate-overlay" aria-hidden="true">
-    <div class="gate-solid-fill"></div>
-    <div class="gate-video-wrap">
-      <video id="gateVideo" muted loop playsinline preload="auto"
-        poster="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80">
-        <source src="https://cdn.pixabay.com/video/2017/06/09/9741-221158551_large.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="gate-panel gate-panel-left" id="gatePanelLeft">
-      <span class="gate-panel-emblem">IB</span>
-    </div>
-    <div class="gate-panel gate-panel-right" id="gatePanelRight">
-      <span class="gate-panel-emblem">IB</span>
-    </div>
-    <div class="gate-center-brand" id="gateCenterBrand">
-      <div class="gate-brand-inner" id="gateBrandInner">
-        <p class="gate-logo">Inchbrick <span>Realty</span></p>
-        <p class="gate-tagline" id="gateTagline">Luxury Awaits Within</p>
-      </div>
-    </div>
-    <div class="gate-scroll-hint" id="gateHint">
-      <span>Keep scrolling</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
-    <div class="gate-progress-bar" id="gateProgressBar"></div>
-    <button type="button" class="gate-skip" id="gateSkipBtn">Skip video</button>
-  </div>
-
-  <script src="js/gate-intro.js"></script>
 </body>
 
 </html>
