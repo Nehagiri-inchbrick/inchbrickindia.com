@@ -94,17 +94,4 @@
       grid.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
-
-  cards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      e.preventDefault();
-      const title = card.querySelector("h3")?.textContent || "Article";
-      const t = document.createElement("div");
-      t.style.cssText =
-        "position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;background:#0f2339;color:#fff;border:1px solid #c29a63;border-radius:14px;padding:12px 20px;font:600 13px Plus Jakarta Sans,sans-serif;max-width:90vw;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.2)";
-      t.textContent = "Full article coming soon: " + title;
-      document.body.appendChild(t);
-      setTimeout(() => t.remove(), 2800);
-    });
-  });
 })();

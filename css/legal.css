@@ -1,45 +1,43 @@
-/* Privacy Policy & Terms — shared legal pages */
+/* Privacy Policy & Terms — compact legal banners */
 .legal-page {
   background: #f5f5f5;
 }
 
 .legal-hero-wrap {
   width: min(1240px, 92%);
-  margin: 1.25rem auto 0;
+  margin: 0.85rem auto 0;
 }
 
 .legal-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  min-height: 320px;
-  border-radius: 28px;
+  display: block;
+  border-radius: 18px;
   overflow: hidden;
   background: #0f2339;
   border: 1px solid rgba(194, 154, 99, 0.28);
-  box-shadow: 0 12px 40px rgba(15, 35, 57, 0.2);
+  box-shadow: 0 8px 28px rgba(15, 35, 57, 0.14);
 }
 
 .legal-hero-content {
   position: relative;
   z-index: 2;
-  padding: clamp(2rem, 4vw, 3rem);
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.85rem;
+  gap: 0.45rem;
 }
 
 .legal-hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   width: fit-content;
-  padding: 0.4rem 0.9rem;
+  padding: 0.28rem 0.65rem;
   border-radius: 999px;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #f2d6a2;
   background: rgba(194, 154, 99, 0.12);
@@ -52,10 +50,11 @@
 
 .legal-hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.45rem, 3vw, 2rem);
   font-weight: 700;
   color: #fff;
   line-height: 1.15;
+  margin: 0;
 }
 
 .legal-hero h1 span {
@@ -63,39 +62,27 @@
 }
 
 .legal-hero-desc {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 32rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 36rem;
+  margin: 0;
 }
 
 .legal-hero-updated {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
 }
 
 .legal-hero-visual {
-  position: relative;
-  min-height: 240px;
-}
-
-.legal-hero-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.legal-hero-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #0f2339 0%, transparent 45%);
+  display: none;
 }
 
 .legal-main {
   width: min(820px, 92%);
   margin: 0 auto;
-  padding: 2.5rem 0 3.5rem;
+  padding: 1.75rem 0 3rem;
 }
 
 .legal-card {
@@ -176,24 +163,17 @@
   border-color: #0f2339;
 }
 
-@media (max-width: 900px) {
-  .legal-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .legal-hero-visual {
-    min-height: 200px;
-    order: -1;
-  }
-
-  .legal-hero-visual::after {
-    background: linear-gradient(180deg, transparent 40%, #0f2339 100%);
-  }
-}
-
 @media (max-width: 768px) {
   .legal-hero-wrap {
     width: calc(100% - 24px);
-    margin: 12px auto 0;
+    margin: 0.75rem auto 0;
+  }
+
+  .legal-hero {
+    border-radius: 14px;
+  }
+
+  .legal-hero-content {
+    padding: 1.1rem 1.15rem;
   }
 }

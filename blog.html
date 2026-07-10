@@ -25,38 +25,16 @@
 
   <div class="blog-hero-wrap">
     <section class="blog-hero" aria-label="Inchbrick Realty blog">
-      <div class="blog-hero-editorial">
-        <span class="blog-hero-kicker"><i class="fas fa-pen-nib"></i> The Inchbrick Journal</span>
-        <h1 class="blog-hero-title">Stories Behind <span>Every Address</span></h1>
-        <p class="blog-hero-desc">
-          Market intelligence, buyer guides, and lifestyle picks — written for families, investors, and first-time
-          homeowners across India.
-        </p>
-        <form class="blog-hero-search" id="blogSearchForm" role="search">
-          <input type="search" id="blogSearchHero" placeholder="Search articles, cities, topics…" aria-label="Search blog" />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <div class="blog-hero-visual">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80"
-          alt="City skyline and modern architecture">
-        <div class="blog-hero-stack">
-          <a href="#blogGrid" class="blog-mini-card">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&q=80" alt="">
-            <div>
-              <span>Trending</span>
-              <strong>2026 Metro Corridors Worth Watching</strong>
-            </div>
-          </a>
-          <a href="#blogGrid" class="blog-mini-card">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80" alt="">
-            <div>
-              <span>Guide</span>
-              <strong>First Home? RERA Checklist Inside</strong>
-            </div>
-          </a>
+      <div class="blog-hero-inner">
+        <div class="blog-hero-main">
+          <span class="blog-hero-kicker"><i class="fas fa-pen-nib"></i> The Inchbrick Journal</span>
+          <h1 class="blog-hero-title">Blog &amp; <span>Insights</span></h1>
+          <p class="blog-hero-desc">Market trends, buyer guides, and investment tips from our experts.</p>
         </div>
+        <form class="blog-hero-search" id="blogSearchForm" role="search">
+          <input type="search" id="blogSearchHero" placeholder="Search articles…" aria-label="Search blog" />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
       </div>
     </section>
   </div>
@@ -76,7 +54,7 @@
     <input type="search" id="blogSearch" hidden aria-hidden="true" tabindex="-1" />
 
     <section class="blog-featured" aria-label="Featured articles">
-      <a href="#" class="blog-featured-main" data-category="market">
+      <a href="blog-detail.html" class="blog-featured-main" data-category="market">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
           alt="Noida skyline">
@@ -91,7 +69,7 @@
         </div>
       </a>
       <div class="blog-featured-side">
-        <a href="#" class="blog-side-card" data-category="guides">
+        <a href="blog-detail.html" class="blog-side-card" data-category="guides">
           <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80" alt="Home keys">
           <div>
             <span class="blog-tag blog-tag--red">Guides</span>
@@ -100,7 +78,7 @@
             <span class="blog-read">Read article <i class="fas fa-arrow-right"></i></span>
           </div>
         </a>
-        <a href="#" class="blog-side-card" data-category="investment">
+        <a href="blog-detail.html" class="blog-side-card" data-category="investment">
           <img src="https://images.unsplash.com/photo-1600607687644-c7171b4243f3?auto=format&fit=crop&w=400&q=80" alt="Luxury interior">
           <div>
             <span class="blog-tag blog-tag--gold">Investment</span>
@@ -113,7 +91,7 @@
     </section>
 
     <div class="blog-bento" id="blogGrid">
-      <a href="#" class="blog-card is-wide" data-category="market">
+      <a href="blog-detail.html" class="blog-card is-wide" data-category="market">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1449844908441-8829872d2602?auto=format&fit=crop&w=900&q=80" alt="Mumbai">
           <span class="blog-tag blog-tag--navy">Market</span>
@@ -128,7 +106,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card" data-category="guides">
+      <a href="blog-detail.html" class="blog-card" data-category="guides">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Villa">
           <span class="blog-tag blog-tag--red">Guides</span>
@@ -143,7 +121,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card" data-category="lifestyle">
+      <a href="blog-detail.html" class="blog-card" data-category="lifestyle">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Pool home">
           <span class="blog-tag blog-tag--gold">Lifestyle</span>
@@ -158,7 +136,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card" data-category="investment">
+      <a href="blog-detail.html" class="blog-card" data-category="investment">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1560520653-9a0d9c016fad?auto=format&fit=crop&w=600&q=80" alt="Charts">
           <span class="blog-tag blog-tag--red">Investment</span>
@@ -173,7 +151,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card" data-category="market">
+      <a href="blog-detail.html" class="blog-card" data-category="market">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab7?auto=format&fit=crop&w=600&q=80" alt="Bangalore">
           <span class="blog-tag blog-tag--navy">Market</span>
@@ -188,7 +166,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card" data-category="guides">
+      <a href="blog-detail.html" class="blog-card" data-category="guides">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1582407947306-fb9f028aeeb1?auto=format&fit=crop&w=600&q=80" alt="Documents">
           <span class="blog-tag blog-tag--red">Guides</span>
@@ -203,7 +181,7 @@
         </div>
       </a>
 
-      <a href="#" class="blog-card is-wide" data-category="lifestyle">
+      <a href="blog-detail.html" class="blog-card is-wide" data-category="lifestyle">
         <div class="blog-card-img">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe21c16aa?auto=format&fit=crop&w=900&q=80" alt="Interior">
           <span class="blog-tag blog-tag--gold">Lifestyle</span>

@@ -3,75 +3,64 @@
   background: #f0f2f5;
 }
 
-/* Hero banner — matches About / Projects style */
+/* Hero banner — compact professional strip */
 .listings-hero-wrap {
   width: min(1240px, 92%);
-  margin: 1.25rem auto 0;
+  margin: 1rem auto 0;
 }
 
 .listings-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  min-height: 380px;
-  border-radius: 28px;
+  border-radius: 16px;
   overflow: hidden;
-  background: #0f2339;
-  border: 1px solid rgba(194, 154, 99, 0.28);
-  box-shadow: 0 12px 40px rgba(15, 35, 57, 0.2);
+  background:
+    linear-gradient(135deg, rgba(15, 35, 57, 0.94) 0%, rgba(21, 45, 74, 0.92) 100%),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80") center / cover no-repeat;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px rgba(15, 35, 57, 0.08);
 }
 
-.listings-hero-content {
-  position: relative;
-  z-index: 2;
-  padding: clamp(2rem, 4vw, 3rem);
+.listings-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.15rem 1.35rem;
+  flex-wrap: wrap;
+}
+
+.listings-hero-main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.listings-hero-content::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  left: -40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(194, 154, 99, 0.22), transparent 68%);
-  pointer-events: none;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .listings-hero-kicker {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   width: fit-content;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f2d6a2;
-  background: rgba(194, 154, 99, 0.12);
-  border: 1px solid rgba(194, 154, 99, 0.45);
+  color: #c29a63;
 }
 
 .listings-hero-kicker i {
+  font-size: 0.62rem;
   color: #c29a63;
 }
 
 .listings-hero h1 {
-  position: relative;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  font-weight: 800;
   color: #fff;
-  line-height: 1.12;
+  line-height: 1.2;
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 .listings-hero h1 span {
@@ -79,85 +68,60 @@
 }
 
 .listings-hero-desc {
-  position: relative;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 34rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 28rem;
   margin: 0;
 }
 
 .listings-hero-stats {
-  position: relative;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1.25rem 2rem;
-  padding-top: 0.5rem;
-  margin-top: 0.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 0.65rem 1.1rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.listings-hero-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
 }
 
 .listings-hero-stat strong {
-  display: block;
-  font-size: 1.45rem;
+  font-size: 1rem;
   font-weight: 800;
-  color: #c29a63;
-  line-height: 1.1;
+  color: #f2d6a2;
+  line-height: 1;
 }
 
 .listings-hero-stat span {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
-}
-
-.listings-hero-visual {
-  position: relative;
-  min-height: 280px;
-}
-
-.listings-hero-visual img {
-  width: 100%;
-  height: 100%;
-  min-height: 380px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.listings-hero-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #0f2339 0%, transparent 42%);
-  pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .listings-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .listings-hero-visual {
-    min-height: 240px;
-    order: -1;
-  }
-
-  .listings-hero-visual img {
-    min-height: 240px;
-  }
-
-  .listings-hero-visual::after {
-    background: linear-gradient(180deg, transparent 35%, #0f2339 100%);
-  }
 }
 
 @media (max-width: 768px) {
   .listings-hero-wrap {
     width: calc(100% - 24px);
-    margin: 12px auto 0;
+    margin: 0.75rem auto 0;
+  }
+
+  .listings-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.1rem;
+  }
+
+  .listings-hero-stats {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -360,7 +324,6 @@
   font-weight: 600;
   color: #475569;
 }
-
 .listings-sort-wrap select {
   padding: 0.45rem 0.65rem;
   border-radius: 8px;
@@ -382,9 +345,7 @@
   grid-template-areas: "img main aside";
   gap: 1.25rem;
   align-items: stretch;
-  padding: 1rem;
   background: #fff;
-  border-radius: 18px;
   border: 1px solid #e8e4df;
   overflow: visible;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -392,7 +353,6 @@
 
 .prop-list-item:hover {
   box-shadow: 0 12px 32px rgba(15, 35, 57, 0.1);
-  border-color: #c29a63;
 }
 
 .prop-list-img {
@@ -402,9 +362,7 @@
   min-height: 240px;
   height: 100%;
   margin: 0;
-  border-radius: 14px;
   overflow: hidden;
-  border: 3px solid rgba(194, 154, 99, 0.4);
   box-shadow: 0 8px 24px rgba(15, 35, 57, 0.15);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
@@ -524,7 +482,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: 0.25rem 0;
+padding: 1rem .2rem;
 }
 
 .prop-list-details {
@@ -649,7 +607,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  padding: 0.75rem 0 0.75rem 1rem;
+  padding: 0.75rem .75rem 0.75rem 1rem;
   border-left: 1px solid #eef2f6;
 }
 
@@ -695,7 +653,7 @@
 }
 
 .prop-list-btn-primary {
-  background: #c9242b;
+  background: #112643;
   color: #fff;
 }
 

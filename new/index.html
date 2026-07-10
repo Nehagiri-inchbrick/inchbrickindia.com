@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArchBrick Realty — Find Your Perfect Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-cube"></i></span>
+        ArchBrick <em>Realty</em>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#buy">Buy</a>
+        <a href="#rent">Rent</a>
+        <a href="#projects">Projects</a>
+        <a href="#invest">Invest</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+        <a href="#contact" class="btn btn-dark">Contact Us</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80" alt="Luxury modern home at dusk" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="kicker hero-kicker" data-animate="fade-up">FIND YOUR PERFECT SPACE</p>
+      <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+        Spaces that inspire, homes that stay <em>with you.</em>
+      </h1>
+      <p class="hero-desc" data-animate="fade-up" data-delay="200">
+        Discover handpicked residential and commercial properties curated for modern living, smart investment, and lasting value.
+      </p>
+    </div>
+    <div class="container search-wrap" data-animate="fade-up" data-delay="400">
+      <div class="search-card">
+        <div class="search-tabs">
+          <button class="search-tab active" data-tab="buy">Buy</button>
+          <button class="search-tab" data-tab="rent">Rent</button>
+          <button class="search-tab" data-tab="commercial">Commercial</button>
+        </div>
+        <form class="search-form">
+          <div class="search-field">
+            <label>Enter location</label>
+            <select><option>Select City</option><option>Delhi NCR</option><option>Mumbai</option><option>Bangalore</option></select>
+          </div>
+          <div class="search-field">
+            <label>Property Type</label>
+            <select><option>All Types</option><option>Apartment</option><option>Villa</option><option>Plot</option></select>
+          </div>
+          <div class="search-field">
+            <label>Min Price</label>
+            <select><option>Any</option><option>₹50 Lakh</option><option>₹1 Cr</option></select>
+          </div>
+          <div class="search-field">
+            <label>Max Price</label>
+            <select><option>Any</option><option>₹2 Cr</option><option>₹5 Cr</option></select>
+          </div>
+          <button type="submit" class="btn btn-search"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle -->
+  <section class="section lifestyle" id="services">
+    <div class="container">
+      <p class="kicker" data-animate="fade-up">EXPLORE BY LIFESTYLE</p>
+      <h2 class="section-title" data-animate="fade-up" data-delay="80">Find Property that fits your lifestyle.</h2>
+      <div class="lifestyle-grid">
+        <article class="lifestyle-card" data-animate="fade-up" data-delay="0">
+          <div class="lifestyle-img">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&q=80" alt="City skyline" />
+            <span class="lifestyle-icon"><i class="fa-solid fa-city"></i></span>
+          </div>
+          <h3>City Living</h3>
+          <p>Urban homes near business hubs, metro lines, and premium amenities.</p>
+        </article>
+        <article class="lifestyle-card" data-animate="fade-up" data-delay="100">
+          <div class="lifestyle-img">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80" alt="Luxury interior" />
+            <span class="lifestyle-icon"><i class="fa-solid fa-gem"></i></span>
+          </div>
+          <h3>Luxury Living</h3>
+          <p>Exclusive residences with world-class finishes and concierge services.</p>
+        </article>
+        <article class="lifestyle-card" data-animate="fade-up" data-delay="200">
+          <div class="lifestyle-img">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80" alt="Nature landscape" />
+            <span class="lifestyle-icon"><i class="fa-solid fa-tree"></i></span>
+          </div>
+          <h3>Nature Living</h3>
+          <p>Serene retreats surrounded by greenery, lakes, and open skies.</p>
+        </article>
+        <article class="lifestyle-card" data-animate="fade-up" data-delay="300">
+          <div class="lifestyle-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80" alt="Investment property" />
+            <span class="lifestyle-icon"><i class="fa-solid fa-chart-line"></i></span>
+          </div>
+          <h3>Smart Investment</h3>
+          <p>High-yield assets in growth corridors with strong rental demand.</p>
+        </article>
+        <article class="lifestyle-card" data-animate="fade-up" data-delay="400">
+          <div class="lifestyle-img">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80" alt="Commercial building" />
+            <span class="lifestyle-icon"><i class="fa-solid fa-building"></i></span>
+          </div>
+          <h3>Commercial Spaces</h3>
+          <p>Office, retail, and mixed-use spaces in prime commercial zones.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section featured" id="projects">
+    <div class="container featured-inner">
+      <div class="featured-text" data-animate="fade-right">
+        <p class="kicker">FEATURED PROJECTS</p>
+        <h2 class="section-title left">Handpicked for you.</h2>
+        <p class="section-desc">Explore premium developments from India's most trusted builders — curated for quality, location, and long-term value.</p>
+        <a href="#" class="btn btn-outline">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="featured-carousel-wrap" data-animate="fade-left">
+        <button class="carousel-btn prev" id="projectPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="featured-carousel" id="projectCarousel">
+          <article class="project-card">
+            <div class="project-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="DLF Privana West" /></div>
+            <div class="project-body">
+              <h3>DLF Privana West</h3>
+              <p class="project-loc"><i class="fa-solid fa-location-dot"></i> Sector 77, Gurugram</p>
+              <p class="project-price">₹ 4.75 Cr+</p>
+              <p class="project-type">4 BHK Apartments</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Lodha Altamount" /></div>
+            <div class="project-body">
+              <h3>Lodha Altamount</h3>
+              <p class="project-loc"><i class="fa-solid fa-location-dot"></i> Altamount Road, Mumbai</p>
+              <p class="project-price">₹ 12.5 Cr+</p>
+              <p class="project-type">3 & 4 BHK Residences</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Godrej Palm Retreat" /></div>
+            <div class="project-body">
+              <h3>Godrej Palm Retreat</h3>
+              <p class="project-loc"><i class="fa-solid fa-location-dot"></i> Sarjapur, Bangalore</p>
+              <p class="project-price">₹ 1.85 Cr+</p>
+              <p class="project-type">2 & 3 BHK Apartments</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="https://images.unsplash.com/photo-1605276374101-de7987928353?w=600&q=80" alt="Prestige City" /></div>
+            <div class="project-body">
+              <h3>Prestige City</h3>
+              <p class="project-loc"><i class="fa-solid fa-location-dot"></i> Sarjapur Road, Bangalore</p>
+              <p class="project-price">₹ 2.10 Cr+</p>
+              <p class="project-type">Villas & Apartments</p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-btn next" id="projectNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item" data-animate="fade-up">
+        <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+        <span class="stat-num" data-count="10">0</span><span class="stat-suffix">+</span>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat-item" data-animate="fade-up" data-delay="100">
+        <div class="stat-icon"><i class="fa-solid fa-building"></i></div>
+        <span class="stat-num" data-count="500">0</span><span class="stat-suffix">+</span>
+        <p>Projects Delivered</p>
+      </div>
+      <div class="stat-item" data-animate="fade-up" data-delay="200">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <span class="stat-num" data-count="20">0</span><span class="stat-suffix">K+</span>
+        <p>Happy Customers</p>
+      </div>
+      <div class="stat-item" data-animate="fade-up" data-delay="300">
+        <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <span class="stat-num" data-count="15">0</span><span class="stat-suffix">+</span>
+        <p>Cities Served</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment -->
+  <section class="section invest" id="invest">
+    <div class="container invest-inner">
+      <div class="invest-text" data-animate="fade-right">
+        <p class="kicker">WHY INVEST?</p>
+        <h2 class="section-title left">Invest today. Secure tomorrow.</h2>
+        <ul class="invest-list">
+          <li><i class="fa-solid fa-check"></i> Proven appreciation in top growth corridors</li>
+          <li><i class="fa-solid fa-check"></i> Expert guidance from market specialists</li>
+          <li><i class="fa-solid fa-check"></i> Transparent deals with verified documentation</li>
+        </ul>
+        <a href="#" class="btn btn-dark">Explore Investment Opportunities <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="invest-visual" data-animate="fade-left">
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=900&q=80" alt="City skyline" />
+        <div class="appreciation-card" data-animate="scale-in" data-delay="600">
+          <div class="appreciation-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <strong>Average Property Appreciation</strong>
+            <span class="gold-text">8–12% Annual Growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="brands">
+    <p class="brands-label">TRUSTED BY LEADING BRANDS</p>
+    <div class="brands-track-wrap">
+      <div class="brands-track">
+        <span>DLF</span><span>LODHA</span><span>GODREJ</span><span>PIRAMAL</span><span>PRESTIGE</span><span>SOBHA</span>
+        <span>DLF</span><span>LODHA</span><span>GODREJ</span><span>PIRAMAL</span><span>PRESTIGE</span><span>SOBHA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section videos">
+    <div class="container">
+      <div class="videos-header" data-animate="fade-up">
+        <h2 class="section-title left">Luxury Homes on Screen</h2>
+        <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="videos-grid">
+        <article class="video-card" data-animate="fade-up" data-delay="0">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Skyline Residences" />
+            <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <h3>Skyline Residences</h3>
+          <p class="video-loc">Bandra West, Mumbai</p>
+          <p class="video-price">₹ 8.5 Cr+</p>
+        </article>
+        <article class="video-card" data-animate="fade-up" data-delay="100">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Emerald Villas" />
+            <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <h3>Emerald Villas</h3>
+          <p class="video-loc">Whitefield, Bangalore</p>
+          <p class="video-price">₹ 3.2 Cr+</p>
+        </article>
+        <article class="video-card" data-animate="fade-up" data-delay="200">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80" alt="The Grand Meridian" />
+            <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <h3>The Grand Meridian</h3>
+          <p class="video-loc">Golf Course Road, Gurugram</p>
+          <p class="video-price">₹ 6.8 Cr+</p>
+        </article>
+        <article class="video-card" data-animate="fade-up" data-delay="300">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=80" alt="Palm Grove Estate" />
+            <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <h3>Palm Grove Estate</h3>
+          <p class="video-loc">Jubilee Hills, Hyderabad</p>
+          <p class="video-price">₹ 5.1 Cr+</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <p class="kicker" data-animate="fade-up">WHAT OUR CLIENTS SAY</p>
+      <div class="testimonial-carousel-wrap" data-animate="fade-up" data-delay="100">
+        <div class="testimonial-track" id="testimonialTrack">
+          <article class="testimonial-card active">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">"ArchBrick made our home-buying journey seamless. Their team understood exactly what we needed and found us the perfect property within our budget."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=12" alt="Rohit Sharma" />
+              <div><strong>Rohit Sharma</strong><span>Homebuyer</span></div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">"As an NRI investor, I needed a partner I could trust. ArchBrick's transparent process and market insights gave me complete confidence."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=32" alt="Priya Mehta" />
+              <div><strong>Priya Mehta</strong><span>Investor</span></div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">"From site visits to documentation, every step was handled professionally. We couldn't be happier with our new luxury apartment."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=68" alt="Arjun Kapoor" />
+              <div><strong>Arjun Kapoor</strong><span>Homebuyer</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" id="contact" data-animate="fade-up">
+    <div class="container cta-inner">
+      <img class="cta-chair" src="https://images.unsplash.com/photo-1567538096631-e2c55d64108?w=200&q=80" alt="" />
+      <p class="cta-text">Ready to find your perfect property? Connect with our experts for a personalized consultation.</p>
+      <a href="#" class="btn btn-gold">Schedule a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-icon"><i class="fa-solid fa-cube"></i></span>
+          ArchBrick <em>Realty</em>
+        </a>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Buy Property</a>
+        <a href="#">Rent Property</a>
+        <a href="#">Projects</a>
+        <a href="#">Invest</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">RERA Info</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <a href="mailto:hello@archbrick.com">hello@archbrick.com</a>
+        <p class="footer-address">Tower A, Cyber City, Gurugram 122002</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 ArchBrick Realty. All rights reserved.</p>
+        <p>Site by ArchBrick Digital</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

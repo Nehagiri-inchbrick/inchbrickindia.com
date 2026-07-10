@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMI Calculator | Inchbrick Realty</title>
+  <meta name="description" content="Calculate your home loan EMI instantly. Enter loan amount, interest rate, and tenure to get monthly EMI, total interest, and download your report." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/emi-calculator.css">
+</head>
+<body class="emi-page" data-page="services">
+  <script src="js/layout.js"></script>
+  <div id="site-header" data-page="services"></div>
+
+  <section class="emi-hero">
+    <div class="emi-container">
+      <a href="index.html" class="emi-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <span class="emi-kicker"><i class="fas fa-calculator"></i> Home Loan Tools</span>
+      <h1>EMI <span>Calculator</span></h1>
+      <p>Plan your home purchase with accurate monthly EMI estimates. Adjust loan amount, interest rate, and tenure to see instant results.</p>
+    </div>
+  </section>
+
+  <main class="emi-main">
+    <div class="emi-container emi-layout">
+      <section class="emi-panel emi-panel--form" aria-labelledby="emiFormTitle">
+        <h2 id="emiFormTitle"><i class="fas fa-sliders"></i> Loan Details</h2>
+
+        <div class="emi-field">
+          <div class="emi-field-head">
+            <label for="loanAmount">Loan Amount</label>
+            <span class="emi-field-val" id="loanAmountVal">₹ 80,00,000</span>
+          </div>
+          <input type="range" id="loanAmountRange" min="500000" max="50000000" step="100000" value="8000000">
+          <input type="number" id="loanAmount" min="500000" max="50000000" step="100000" value="8000000" aria-label="Loan amount in rupees">
+        </div>
+
+        <div class="emi-field">
+          <div class="emi-field-head">
+            <label for="interestRate">Interest Rate (% p.a.)</label>
+            <span class="emi-field-val" id="interestRateVal">8.5%</span>
+          </div>
+          <input type="range" id="interestRateRange" min="6" max="16" step="0.1" value="8.5">
+          <input type="number" id="interestRate" min="6" max="16" step="0.1" value="8.5" aria-label="Interest rate percent per year">
+        </div>
+
+        <div class="emi-field">
+          <div class="emi-field-head">
+            <label for="loanTenure">Tenure (Years)</label>
+            <span class="emi-field-val" id="loanTenureVal">20 Years</span>
+          </div>
+          <input type="range" id="loanTenureRange" min="1" max="30" step="1" value="20">
+          <input type="number" id="loanTenure" min="1" max="30" step="1" value="20" aria-label="Loan tenure in years">
+        </div>
+
+        <div class="emi-quick-tags">
+          <span>Quick amounts:</span>
+          <button type="button" class="emi-quick" data-amount="5000000">₹ 50 L</button>
+          <button type="button" class="emi-quick" data-amount="8000000">₹ 80 L</button>
+          <button type="button" class="emi-quick" data-amount="10000000">₹ 1 Cr</button>
+          <button type="button" class="emi-quick" data-amount="15000000">₹ 1.5 Cr</button>
+        </div>
+      </section>
+
+      <section class="emi-panel emi-panel--result" aria-labelledby="emiResultTitle">
+        <h2 id="emiResultTitle"><i class="fas fa-chart-pie"></i> Your Results</h2>
+
+        <div class="emi-result-hero">
+          <span>Monthly EMI</span>
+          <strong id="monthlyEmi">₹ 0</strong>
+        </div>
+
+        <div class="emi-result-grid">
+          <article class="emi-result-card">
+            <i class="fas fa-coins"></i>
+            <span>Total Interest</span>
+            <strong id="totalInterest">₹ 0</strong>
+          </article>
+          <article class="emi-result-card">
+            <i class="fas fa-wallet"></i>
+            <span>Total Payment</span>
+            <strong id="totalPayment">₹ 0</strong>
+          </article>
+          <article class="emi-result-card">
+            <i class="fas fa-percent"></i>
+            <span>Principal Amount</span>
+            <strong id="principalAmount">₹ 0</strong>
+          </article>
+          <article class="emi-result-card">
+            <i class="fas fa-calendar-days"></i>
+            <span>Loan Tenure</span>
+            <strong id="tenureMonths">0 months</strong>
+          </article>
+        </div>
+
+        <div class="emi-breakdown">
+          <div class="emi-breakdown-bar" aria-hidden="true">
+            <span class="emi-bar-principal" id="principalBar" style="width: 65%"></span>
+            <span class="emi-bar-interest" id="interestBar" style="width: 35%"></span>
+          </div>
+          <div class="emi-breakdown-legend">
+            <span><i class="emi-dot emi-dot--principal"></i> Principal</span>
+            <span><i class="emi-dot emi-dot--interest"></i> Interest</span>
+          </div>
+        </div>
+
+        <button type="button" class="emi-download-btn" id="downloadReportBtn">
+          <i class="fas fa-download"></i> Download Report
+        </button>
+
+        <p class="emi-disclaimer">*Indicative calculation only. Actual EMI may vary based on bank policies, processing fees, and insurance.</p>
+      </section>
+    </div>
+
+    <section class="emi-features">
+      <div class="emi-container">
+        <h2>Why use our EMI calculator?</h2>
+        <div class="emi-features-grid">
+          <article><i class="fas fa-bolt"></i><strong>Instant Results</strong><p>See EMI updates in real time as you adjust inputs.</p></article>
+          <article><i class="fas fa-shield-halved"></i><strong>100% Free</strong><p>No signup required. Plan your budget privately.</p></article>
+          <article><i class="fas fa-file-lines"></i><strong>Download Report</strong><p>Save a summary to share with your family or banker.</p></article>
+          <article><i class="fas fa-headset"></i><strong>Expert Support</strong><p>Need help? <a href="contact.html">Talk to our loan advisors</a>.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/emi-calculator.js"></script>
+</body>
+</html>

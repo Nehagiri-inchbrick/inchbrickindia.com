@@ -173,7 +173,7 @@
           (featured ? '<span class="prop-list-featured">Featured</span>' : "") +
           sharpImageMarkup(p.img, p.name) +
           '<span class="prop-list-photo-count"><i class="fas fa-images"></i> ' + photoCount + " Photos</span>" +
-          '<button type="button" class="prop-list-wish" aria-label="Save property"><i class="far fa-heart"></i></button>' +
+          '<button type="button" class="prop-list-wish' + (window.SAVED_STORE && window.SAVED_STORE.isSaved(p.id) ? " is-active" : "") + '" aria-label="Save property" data-id="' + p.id + '"><i class="' + (window.SAVED_STORE && window.SAVED_STORE.isSaved(p.id) ? "fas" : "far") + ' fa-heart"></i></button>' +
           "</a>" +
           '<div class="prop-list-main">' +
           '<div class="prop-list-details">' +
@@ -219,6 +219,18 @@
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
+        const id = Number(btn.dataset.id || btn.closest("[data-id]")?.dataset.id);
+        if (window.SAVED_STORE && id) {
+          window.SAVED_STORE.toggle(id);
+          const saved = window.SAVED_STORE.isSaved(id);
+          btn.classList.toggle("is-active", saved);
+          const icon = btn.querySelector("i");
+          if (icon) {
+            icon.classList.toggle("far", !saved);
+            icon.classList.toggle("fas", saved);
+          }
+          return;
+        }
         btn.classList.toggle("is-active");
         const icon = btn.querySelector("i");
         if (icon) {

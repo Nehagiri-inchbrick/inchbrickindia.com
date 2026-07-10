@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved Properties | Inchbrick Realty</title>
+  <meta name="description" content="Your saved property wishlist — compare, share, and manage shortlisted homes across India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/saved-properties.css">
+</head>
+<body class="sp-page" data-page="services">
+  <script src="js/layout.js"></script>
+  <div id="site-header" data-page="services"></div>
+
+  <section class="sp-hero">
+    <div class="sp-container">
+      <a href="listings.html" class="sp-back"><i class="fas fa-arrow-left"></i> Back to Listings</a>
+      <span class="sp-kicker"><i class="fas fa-heart"></i> Your Shortlist</span>
+      <h1>Saved <span>Properties</span></h1>
+      <p>Keep track of homes you love. Wishlist favourites, compare side by side, share with family, or remove when you're done.</p>
+    </div>
+  </section>
+
+  <main class="sp-main">
+    <div class="sp-container">
+      <section class="sp-features" aria-label="Saved properties features">
+        <article class="sp-feature">
+          <span class="sp-feature-icon"><i class="fas fa-heart"></i></span>
+          <h2>Wishlist</h2>
+          <p>Save properties while browsing and revisit them anytime from your personal shortlist.</p>
+        </article>
+        <article class="sp-feature">
+          <span class="sp-feature-icon"><i class="fas fa-scale-balanced"></i></span>
+          <h2>Compare</h2>
+          <p>Select saved homes and compare price, area, and location in one view.</p>
+        </article>
+        <article class="sp-feature">
+          <span class="sp-feature-icon"><i class="fas fa-share-nodes"></i></span>
+          <h2>Share</h2>
+          <p>Send property details to family or advisors via link, WhatsApp, or native share.</p>
+        </article>
+        <article class="sp-feature">
+          <span class="sp-feature-icon"><i class="fas fa-trash-can"></i></span>
+          <h2>Remove</h2>
+          <p>Clear individual listings or reset your entire wishlist in one click.</p>
+        </article>
+      </section>
+
+      <section class="sp-toolbar" aria-label="Wishlist actions">
+        <div class="sp-toolbar-left">
+          <h2><i class="fas fa-bookmark"></i> My Wishlist</h2>
+          <span class="sp-count" id="spCount">0 saved</span>
+        </div>
+        <div class="sp-toolbar-actions">
+          <button type="button" class="sp-btn sp-btn--outline" id="spCompareBtn" disabled>
+            <i class="fas fa-scale-balanced"></i> Compare Selected
+          </button>
+          <a href="listings.html" class="sp-btn sp-btn--primary"><i class="fas fa-plus"></i> Browse Listings</a>
+        </div>
+      </section>
+
+      <section class="sp-grid-wrap" id="spGridWrap">
+        <div class="sp-grid" id="spGrid"></div>
+        <div class="sp-empty" id="spEmpty" hidden>
+          <i class="fas fa-heart-circle-xmark"></i>
+          <h3>No saved properties yet</h3>
+          <p>Start exploring listings and tap the heart icon to build your wishlist.</p>
+          <a href="listings.html" class="sp-btn sp-btn--primary">Explore Properties</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="sp-toast" id="spToast" role="status" aria-live="polite"></div>
+
+  <div id="site-footer"></div>
+  <script src="js/listings-data.js"></script>
+  <script src="js/saved-store.js"></script>
+  <script src="js/saved-properties.js"></script>
+</body>
+</html>
