@@ -271,7 +271,7 @@
 
 /* Mega dropdown — Property Listing */
 .header .nav-dropdown--mega {
-  min-width: min(760px, calc(100vw - 2rem));
+  min-width: min(897px, calc(100vw - 2rem));
   left: 50%;
 }
 

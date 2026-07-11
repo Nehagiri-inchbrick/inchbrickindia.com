@@ -17,7 +17,7 @@
 .hero-housing {
   position: relative;
   width: 100%;
-  min-height: 580px;
+  min-height: 645px;
   display: flex;
   align-items: center;
   padding: clamp(2.75rem, 5vw, 4rem) 0;
