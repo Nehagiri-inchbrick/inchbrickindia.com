@@ -13291,99 +13291,164 @@
       }
     }
 
-    /* Blog — home page (gold light theme) */
-    .blog-section {
-      background: linear-gradient(180deg, #fff 0%, #f8fafc 55%, #f5f0e8 100%);
+    /* Blog — home page (overlay strip) */
+    .blog-section.home-blog {
+      padding: 1.75rem 0 1.9rem;
+      background: #fff;
       border-top: 1px solid rgba(194, 154, 99, 0.15);
     }
 
-    .blog-eyebrow {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--primary);
-      background: rgba(194, 154, 99, 0.12);
-      border: 1px solid rgba(194, 154, 99, 0.3);
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 0.5rem;
+    .home-blog-head {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 1rem;
     }
 
-    .blog-view-all {
+    .home-blog-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #9a6f2c;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .home-blog-kicker span {
+      width: 22px;
+      height: 1px;
+      background: rgba(154, 111, 44, 0.4);
+    }
+
+    .home-blog-head h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+      line-height: 1.12;
+      color: #0f2339;
+      letter-spacing: -0.02em;
+    }
+
+    .home-blog-head h2 em {
+      font-style: italic;
+      color: #9a6f2c;
+    }
+
+    .home-blog-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .home-blog-card {
+      position: relative;
+      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 5 / 4;
+      text-decoration: none;
+      box-shadow: 0 8px 26px rgba(15, 35, 57, 0.1);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .home-blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 38px rgba(15, 35, 57, 0.14);
+    }
+
+    .home-blog-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .home-blog-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .home-blog-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.85rem 0.9rem;
+      background: linear-gradient(0deg, rgba(15, 35, 57, 0.92) 0%, rgba(15, 35, 57, 0.4) 42%, transparent 68%);
+    }
+
+    .home-blog-tag {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      padding: 0.22rem 0.52rem;
+      border-radius: 5px;
+      background: #c29a63;
+      color: #0f2339;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .home-blog-tag--red {
+      background: #c9242b;
+      color: #fff;
+    }
+
+    .home-blog-overlay h3 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(0.88rem, 1.35vw, 1.02rem);
+      line-height: 1.32;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .home-blog-foot {
+      text-align: center;
+      margin-top: 0.9rem;
+    }
+
+    .home-blog-more {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: #7c5c2e;
-      padding: 0.55rem 1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(194, 154, 99, 0.4);
-      background: #fff;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-    }
-
-    .blog-view-all:hover {
-      background: linear-gradient(135deg, var(--primary), #9a7a4a);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .blog-tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #7c5c2e;
-      background: rgba(194, 154, 99, 0.12);
-      padding: 0.2rem 0.55rem;
-      border-radius: 6px;
-      margin-bottom: 0.45rem;
-    }
-
-    .blog-section .blog-card {
-      background: #fff;
-      border: 1px solid rgba(194, 154, 99, 0.15);
-      box-shadow: 0 8px 28px rgba(15, 35, 57, 0.06);
-    }
-
-    .blog-section .blog-card:hover {
-      border-color: rgba(194, 154, 99, 0.45);
-      box-shadow: 0 16px 40px rgba(194, 154, 99, 0.15);
-      transform: translateY(-4px);
-    }
-
-    .blog-section .blog-description {
-      color: #64748b;
-    }
-
-    .blog-section .blog-btn {
-      display: inline-flex;
-      align-items: center;
+      color: #c9242b;
       text-decoration: none;
-      border-color: rgba(194, 154, 99, 0.45);
-      background: rgba(194, 154, 99, 0.1);
-      color: #7c5c2e;
+      transition: color 0.2s ease, gap 0.2s ease;
     }
 
-    .blog-section .blog-btn:hover {
-      background: linear-gradient(135deg, var(--primary), #9a7a4a);
-      color: #fff;
-      border-color: var(--primary);
+    .home-blog-more:hover {
+      color: #9a6f2c;
+      gap: 0.55rem;
     }
 
-    .blog-section .section-subtitle {
-      color: #64748b;
+    @media (max-width: 768px) {
+      .home-blog-row {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0.75rem;
+        padding-bottom: 0.2rem;
+        scrollbar-width: thin;
+      }
+
+      .home-blog-card {
+        flex: 0 0 min(240px, 78vw);
+        scroll-snap-align: start;
+        aspect-ratio: 4 / 3;
+      }
     }
 
-    @media (max-width: 900px) {
-      .blog-section .section-head {
-        flex-direction: column;
-        align-items: flex-start;
+    @media (max-width: 640px) {
+      .blog-section.home-blog {
+        padding: 1.5rem 0 1.65rem;
       }
     }
   </style>
@@ -13417,51 +13482,92 @@
   </div>
 
   <main id="homeMain">
-    <section class="hero-housing" id="heroBanner" data-voice-label="Hero"
-      data-voice-text="Welcome to Inchbrick Realty. Trusted place to find a home with verified listings across India's top cities. Search by locality, project, or builder.">
-      <div class="hero-housing-bg" aria-hidden="true">
-        <img src="banner2.png" alt="">
+    <section class="hero-cinema hero-housing" id="heroBanner" data-voice-label="Hero"
+      data-voice-text="Welcome to Inchbrick Realty. Discover India's finest properties. Buy, rent or invest in the best properties across top cities in India.">
+      <div class="hero-cinema-media" aria-hidden="true">
+        <video class="hero-cinema-video" id="heroBannerVideo" muted loop playsinline autoplay preload="auto"
+          poster="https://images.pexels.com/videos/3280311/pictures/preview-0.jpg">
+          <source src="https://cdn.pixabay.com/video/2026/07/09/362909_large.mp4"
+            type="video/mp4">
+        </video>
       </div>
 
-      <div class="hero-housing-shell">
-        <div class="hero-housing-inner">
+      <div class="hero-cinema-shade" aria-hidden="true"></div>
 
-          <h1>Find Your Perfect Home</h1>
-          <p class="hero-housing-stats">Verified premium properties from India's most trusted developers</p>
+      <div class="hero-cinema-center" id="heroSearchSection" data-voice-label="Search"
+        data-voice-text="Search properties to buy, rent, or invest. Enter a city, locality, or project name.">
+        <div class="hero-banner-brand">
+          <span class="hero-banner-logo" aria-hidden="true">
+            <i class="fas fa-home"></i>
+          </span>
+          <p class="hero-banner-tagline">Your Home. Your World. Your Way.</p>
+          <span class="hero-banner-divider" aria-hidden="true"></span>
+        </div>
 
-          <div class="hpanel-wrap" id="heroSearchSection" data-voice-label="Search"
-            data-voice-text="Search properties to buy, rent, or invest. Enter a city, locality, or project name.">
-            <div class="hpanel-tabs" role="tablist" aria-label="Property search type">
-              <button class="hpanel-tab active" type="button" role="tab" aria-selected="true"
-                data-hero-tab="buy">Buy</button>
-              <button class="hpanel-tab" type="button" role="tab" aria-selected="false"
-                data-hero-tab="rent">Rent</button>
-              <button class="hpanel-tab" type="button" role="tab" aria-selected="false" data-hero-tab="new">New
-                Projects</button>
-              <button class="hpanel-tab" type="button" role="tab" aria-selected="false"
-                data-hero-tab="invest">Invest</button>
-            </div>
-            <div class="hpanel-row">
-              <div class="hpanel-field hpanel-field--location">
-                <i class="fas fa-location-dot hpanel-icon"></i>
-                <input class="hpanel-input" id="hero-search-input" type="text"
-                  placeholder="Enter city, locality, or project name"
-                  aria-label="Enter city, locality, or project name">
+        <h1 class="hero-cinema-title">Discover India's<br><span>Finest Properties</span></h1>
+        <p class="hero-banner-subtitle">Buy, Rent or Invest in the best properties across top cities in India.</p>
+
+        <div class="hero-cinema-tabs" role="tablist" aria-label="Property search type">
+          <button class="hero-cinema-tab" type="button" role="tab" aria-selected="false" data-hero-tab="rent">
+            <i class="fas fa-building" aria-hidden="true"></i> Rent
+          </button>
+          <button class="hero-cinema-tab active" type="button" role="tab" aria-selected="true" data-hero-tab="buy">
+            <i class="fas fa-clipboard-list" aria-hidden="true"></i> Buy
+          </button>
+          <button class="hero-cinema-tab" type="button" role="tab" aria-selected="false" data-hero-tab="new">
+            <i class="fas fa-house-chimney" aria-hidden="true"></i> New Projects
+          </button>
+          <button class="hero-cinema-tab" type="button" role="tab" aria-selected="false" data-hero-tab="invest">
+            <i class="fas fa-chart-line" aria-hidden="true"></i> Invest
+          </button>
+        </div>
+
+        <form class="hero-cinema-search" onsubmit="event.preventDefault(); performPremiumSearch();">
+          <label class="visually-hidden" for="hero-search-input">City, locality, or project</label>
+          <div class="hero-search-combo">
+            <div class="hero-search-field">
+              <div class="hero-search-input-wrap city-search-wrap">
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+                <input class="hero-cinema-input" id="hero-search-input" type="text"
+                  placeholder="Try Mumbai, Dubai, Goa..." autocomplete="off">
               </div>
-              <button class="hpanel-btn" type="button" onclick="performPremiumSearch()">
-                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-                <span>Search</span>
-                <i class="fas fa-arrow-right hpanel-btn-arrow" aria-hidden="true"></i>
-              </button>
             </div>
+            <button class="hero-cinema-search-btn" type="submit">
+              <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+              <span>Search</span>
+            </button>
           </div>
+        </form>
 
-          <div class="hero-housing-popular">
-            <span>Trending cities</span>
-            <a href="listings.html">Mumbai</a>
-            <a href="listings.html">Bangalore</a>
-            <a href="listings.html">Pune</a>
-            <a href="listings.html">Hyderabad</a>
+        <div class="hero-cinema-meta">
+          <div class="hero-cinema-trust">
+            <span class="hero-trust-item">
+              <i class="fas fa-home" aria-hidden="true"></i>
+              <strong>850+</strong>
+              <em>Listings</em>
+            </span>
+            <span class="hero-trust-item">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              <strong>15+</strong>
+              <em>Years</em>
+            </span>
+            <span class="hero-trust-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <strong>12</strong>
+              <em>Cities</em>
+            </span>
+            <span class="hero-trust-item">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <strong>50+</strong>
+              <em>Developers</em>
+            </span>
+          </div>
+          <div class="hero-housing-popular hero-cinema-trending">
+            <span>Trending</span>
+            <a href="city.html?city=mumbai">Mumbai</a>
+            <a href="city.html?city=bangalore">Bangalore</a>
+            <a href="city.html?city=pune">Pune</a>
+            <a href="city.html?city=hyderabad">Hyderabad</a>
             <a href="listings.html">Gurgaon</a>
           </div>
         </div>
@@ -13643,11 +13749,11 @@
             <h2>Explore <em>Prime Areas</em></h2>
             <p class="loc-compact-sub">India's most sought-after property destinations.</p>
           </div>
-          <a href="explore.html" class="loc-compact-link">View all cities <i class="fas fa-arrow-right"></i></a>
+          <a href="city.html" class="loc-compact-link">View all cities <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="loc-city-grid">
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=mumbai" class="loc-city-card">
             <span class="loc-city-tag">Popular</span>
             <div class="loc-city-icon loc-city-icon--mumbai"><i class="fas fa-water"></i></div>
             <div class="loc-city-body">
@@ -13656,7 +13762,7 @@
               <div class="loc-city-meta"><strong>₹ 1.2 Cr+</strong><span>1,240+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=bangalore" class="loc-city-card">
             <span class="loc-city-tag">IT Hub</span>
             <div class="loc-city-icon loc-city-icon--bangalore"><i class="fas fa-laptop-code"></i></div>
             <div class="loc-city-body">
@@ -13665,7 +13771,7 @@
               <div class="loc-city-meta"><strong>₹ 85 L+</strong><span>980+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=pune" class="loc-city-card">
             <span class="loc-city-tag">Growth</span>
             <div class="loc-city-icon loc-city-icon--pune"><i class="fas fa-graduation-cap"></i></div>
             <div class="loc-city-body">
@@ -13674,7 +13780,7 @@
               <div class="loc-city-meta"><strong>₹ 65 L+</strong><span>720+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=delhi" class="loc-city-card">
             <span class="loc-city-tag">Premium</span>
             <div class="loc-city-icon loc-city-icon--delhi"><i class="fas fa-landmark"></i></div>
             <div class="loc-city-body">
@@ -13683,7 +13789,7 @@
               <div class="loc-city-meta"><strong>₹ 95 L+</strong><span>1,100+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=hyderabad" class="loc-city-card">
             <span class="loc-city-tag">Hot</span>
             <div class="loc-city-icon loc-city-icon--hyderabad"><i class="fas fa-gem"></i></div>
             <div class="loc-city-body">
@@ -13692,7 +13798,7 @@
               <div class="loc-city-meta"><strong>₹ 78 L+</strong><span>640+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=chennai" class="loc-city-card">
             <span class="loc-city-tag">Coastal</span>
             <div class="loc-city-icon loc-city-icon--chennai"><i class="fas fa-ship"></i></div>
             <div class="loc-city-body">
@@ -13701,7 +13807,7 @@
               <div class="loc-city-meta"><strong>₹ 72 L+</strong><span>580+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=kolkata" class="loc-city-card">
             <span class="loc-city-tag">Heritage</span>
             <div class="loc-city-icon loc-city-icon--kolkata"><i class="fas fa-bridge"></i></div>
             <div class="loc-city-body">
@@ -13710,7 +13816,7 @@
               <div class="loc-city-meta"><strong>₹ 55 L+</strong><span>420+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=ahmedabad" class="loc-city-card">
             <span class="loc-city-tag">Value</span>
             <div class="loc-city-icon loc-city-icon--ahmedabad"><i class="fas fa-industry"></i></div>
             <div class="loc-city-body">
@@ -13719,7 +13825,7 @@
               <div class="loc-city-meta"><strong>₹ 48 L+</strong><span>390+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=goa" class="loc-city-card">
             <span class="loc-city-tag">Coastal</span>
             <div class="loc-city-icon loc-city-icon--goa"><i class="fas fa-umbrella-beach"></i></div>
             <div class="loc-city-body">
@@ -13728,7 +13834,7 @@
               <div class="loc-city-meta"><strong>₹ 88 L+</strong><span>320+ listings</span></div>
             </div>
           </a>
-          <a href="city.html" class="loc-city-card">
+          <a href="city.html?city=dubai" class="loc-city-card">
             <span class="loc-city-tag">Global</span>
             <div class="loc-city-icon loc-city-icon--dubai"><i class="fas fa-building"></i></div>
             <div class="loc-city-body">
@@ -14646,57 +14752,48 @@
       </div>
     </section>
 
-    <section class="blog-section" id="blog" data-voice-label="Latest Blogs"
+    <section class="blog-section home-blog" id="blog" data-voice-label="Latest Blogs"
       data-voice-text="Latest blogs and insights. Read expert tips on investing, luxury buying, and home loans to make smarter property decisions with Inchbrick Realty.">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="blog-eyebrow">Insights &amp; guides</span>
-            <h2 class="section-title">Latest Blogs</h2>
-            <p class="section-subtitle">Expert tips, city trends, and smart buying insights from Inchbrick Realty.</p>
-          </div>
-          <a href="blog.html" class="blog-view-all">View all <i class="fas fa-arrow-right"></i></a>
+        <div class="home-blog-head">
+          <div class="home-blog-kicker"><span></span> Insights &amp; Guides <span></span></div>
+          <h2>Latest <em>Blogs</em></h2>
         </div>
 
-        <div class="blog-grid">
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+        <div class="home-blog-row">
+          <a href="blog.html" class="home-blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
               alt="Modern apartment buildings in Mumbai" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Investment</span>
-              <h3 class="blog-title">Top 5 Localities to Invest in Mumbai in 2026</h3>
-              <p class="blog-description">High-growth micro-markets with strong rental demand and future infrastructure
-                upside.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+            <div class="home-blog-overlay">
+              <span class="home-blog-tag">Investment</span>
+              <h3>Top 5 Localities to Invest in Mumbai in 2026</h3>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1000&q=80"
+          <a href="blog.html" class="home-blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80"
               alt="Luxury living room interior" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Luxury</span>
-              <h3 class="blog-title">How to Evaluate Luxury Projects Before You Buy</h3>
-              <p class="blog-description">Verify builder track record, amenities quality, and long-term value with this
-                checklist.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+            <div class="home-blog-overlay">
+              <span class="home-blog-tag home-blog-tag--red">Luxury</span>
+              <h3>How to Evaluate Luxury Projects Before You Buy</h3>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
-            <img class="blog-image"
-              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1000&q=80"
+          <a href="blog.html" class="home-blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=800&q=80"
               alt="Home loan documents and calculator" loading="lazy" />
-            <div class="blog-content">
-              <span class="blog-tag">Finance</span>
-              <h3 class="blog-title">Home Loan Tips: Reduce EMI Without Stress</h3>
-              <p class="blog-description">Optimize tenure, interest strategy, and down payment for better monthly cash
-                flow.</p>
-              <a href="blog.html" class="btn blog-btn">Read more</a>
+            <div class="home-blog-overlay">
+              <span class="home-blog-tag">Finance</span>
+              <h3>Home Loan Tips: Reduce EMI Without Stress</h3>
             </div>
-          </article>
+          </a>
+        </div>
+
+        <div class="home-blog-foot">
+          <a href="blog.html" class="home-blog-more">View all articles <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -14711,8 +14808,7 @@
     const searchBtn = document.getElementById("searchBtn");
     const resultText = document.getElementById("resultText");
     const popularLinks = Array.from(document.querySelectorAll(".popular a"));
-    const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
-    const heroSliderDots = Array.from(document.querySelectorAll(".hero-slider-dot"));
+    const heroBannerVideo = document.getElementById("heroBannerVideo");
     const hotDealSlides = Array.from(document.querySelectorAll(".hpd-feature-deal"));
     const hotDealDots = Array.from(document.querySelectorAll(".hpd-slider-dot"));
     const hotDealPrev = document.getElementById("hotDealPrev");
@@ -14794,8 +14890,6 @@
     let virtualAutoTimer = null;
     let currentInvestmentSlide = 0;
     let currentPropSlide = 0;
-    let currentHeroSlide = 0;
-    let heroSlideTimer = null;
     let currentHotDealSlide = 0;
     let hotDealTimer = null;
     let locIndex = 0;
@@ -14813,7 +14907,7 @@
     document.addEventListener("layout-ready", mountVoiceTourInHeader);
 
     // Intersection Observer for animations
-    const revealTargets = document.querySelectorAll("section, .mood-card, .brand-card, .impact-card, .blog-card");
+    const revealTargets = document.querySelectorAll("section, .mood-card, .brand-card, .impact-card, .home-blog-card");
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -14824,25 +14918,13 @@
     }, { threshold: 0.1 });
     revealTargets.forEach(el => { el.classList.add("reveal"); revealObserver.observe(el); });
 
-    function updateHeroSlider(index = 0) {
-      if (!heroSlides.length) return;
-      currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
-      heroSlides.forEach((slide, i) => slide.classList.toggle("active", i === currentHeroSlide));
-      heroSliderDots.forEach((dot, i) => dot.classList.toggle("active", i === currentHeroSlide));
+    function initHeroBannerVideo() {
+      if (!heroBannerVideo) return;
+      const playPromise = heroBannerVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
     }
-
-    function startHeroSlider() {
-      if (!heroSlides.length) return;
-      clearInterval(heroSlideTimer);
-      heroSlideTimer = setInterval(() => updateHeroSlider(currentHeroSlide + 1), 5200);
-    }
-
-    heroSliderDots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        updateHeroSlider(i);
-        startHeroSlider();
-      });
-    });
 
     function updateHotDealSlider(index = 0) {
       if (!hotDealSlides.length) return;
@@ -15438,7 +15520,7 @@
       ".nri-card h4", ".nri-card p",
       ".developer-card h4", ".developer-card p",
       ".why-card h3", ".why-card p",
-      ".blog-card h3", ".blog-card p"
+      ".home-blog-card h3"
     ].join(",");
 
     function cleanVoiceContent(text) {
@@ -15869,8 +15951,7 @@
 
     // --- Final Init ---
     document.addEventListener('DOMContentLoaded', () => {
-      updateHeroSlider(0);
-      startHeroSlider();
+      initHeroBannerVideo();
       updateHotDealSlider(0);
       startHotDealSlider();
       updateLocationSlider(0);
@@ -15888,52 +15969,29 @@
     }));
   </script>
 
+  <script src="js/cities-data.js"></script>
+  <script src="js/city-search.js"></script>
   <script>
     function performPremiumSearch() {
       const query = document.getElementById('hero-search-input')?.value?.trim() || '';
-      const activeTab = document.querySelector('.hero-housing .hpanel-tab.active');
-      const intent = activeTab?.dataset.heroTab || 'buy';
+      const citySlug = window.CitySearch?.resolveCity(query);
 
-      console.log('Search Triggered:', { query, intent });
-
-      const intentLabels = { buy: 'homes to buy', rent: 'homes to rent', new: 'new projects', invest: 'investment properties' };
-      const alertDiv = document.createElement('div');
-      alertDiv.style.position = 'fixed';
-      alertDiv.style.bottom = '30px';
-      alertDiv.style.right = '30px';
-      alertDiv.style.background = '#0c1a2e';
-      alertDiv.style.color = '#fff';
-      alertDiv.style.border = '1px solid #c9a55c';
-      alertDiv.style.borderRadius = '12px';
-      alertDiv.style.padding = '16px 24px';
-      alertDiv.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
-      alertDiv.style.zIndex = '10001';
-      alertDiv.style.fontFamily = '"Plus Jakarta Sans", sans-serif';
-      alertDiv.style.fontSize = '14px';
-      alertDiv.style.display = 'flex';
-      alertDiv.style.alignItems = 'center';
-      alertDiv.style.gap = '10px';
-      alertDiv.style.transition = 'all 0.5s ease';
-
-      alertDiv.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #c9a55c; font-size: 18px;"></i> Searching ${intentLabels[intent] || 'properties'}${query ? ' in ' + query : ''}...`;
-
-      document.body.appendChild(alertDiv);
-
-      setTimeout(() => {
-        alertDiv.style.opacity = '0';
-        alertDiv.style.transform = 'translateY(20px)';
-        setTimeout(() => alertDiv.remove(), 500);
-      }, 3000);
-
-      const targetSection = document.getElementById('localities');
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+      if (citySlug) {
+        window.location.href = 'city.html?city=' + encodeURIComponent(citySlug);
+        return;
       }
+
+      if (query) {
+        window.location.href = 'listings.html?q=' + encodeURIComponent(query);
+        return;
+      }
+
+      window.location.href = 'city.html';
     }
 
-    document.querySelectorAll('.hero-housing .hpanel-tab').forEach((tab) => {
+    document.querySelectorAll('.hero-cinema-tab').forEach((tab) => {
       tab.addEventListener('click', () => {
-        document.querySelectorAll('.hero-housing .hpanel-tab').forEach((t) => {
+        document.querySelectorAll('.hero-cinema-tab').forEach((t) => {
           t.classList.remove('active');
           t.setAttribute('aria-selected', 'false');
         });
@@ -15946,14 +16004,21 @@
       if (e.key === 'Enter') performPremiumSearch();
     });
 
+    (function initHeroCitySearch() {
+      const input = document.getElementById('hero-search-input');
+      if (input && window.CitySearch) {
+        window.CitySearch.initAutocomplete(input, { limit: 5 });
+      }
+    })();
+
     (function initHeroSearchPlaceholder() {
       const input = document.getElementById('hero-search-input');
       if (!input) return;
       const examples = [
-        'Enter city, locality, or project name',
-        'Try Mumbai, Bandra, Worli…',
+        'Try Mumbai, Dubai, Goa…',
         'Try Bangalore, Whitefield…',
-        'Try Pune, Baner, Hinjewadi…',
+        'Try Delhi NCR, Noida…',
+        'Try Pune, Hinjewadi…',
         'Try Hyderabad, Gachibowli…'
       ];
       let idx = 0;

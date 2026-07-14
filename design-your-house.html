@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Your Own House | Inchbrick Realty</title>
+  <meta name="description" content="Design your dream home with Inchbrick — explore house styles, floor plans, interior inspiration, architecture services, and book a free consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/design-your-house.css">
+</head>
+<body class="dyh-page" data-page="services">
+  <script src="js/layout.js"></script>
+  <div id="site-header" data-page="services"></div>
+
+  <!-- Hero -->
+  <section class="dyh-hero">
+    <div class="dyh-container dyh-hero-grid">
+      <div class="dyh-hero-content">
+        <span class="dyh-kicker">Custom Home Design</span>
+        <h1>Design Your <span>Own House</span></h1>
+        <p class="dyh-hero-desc">From architectural blueprints to interior finishes — craft a home that reflects your lifestyle, budget, and vision with Inchbrick's design experts.</p>
+        <div class="dyh-hero-actions">
+          <a href="#dyh-styles" class="dyh-btn dyh-btn--primary"><i class="fas fa-home"></i> Explore Styles</a>
+          <a href="#dyh-consult" class="dyh-btn dyh-btn--outline"><i class="fas fa-calendar-check"></i> Free Consultation</a>
+        </div>
+        <div class="dyh-hero-stats">
+          <div class="dyh-hero-stat">
+            <i class="fas fa-drafting-compass"></i>
+            <div><strong data-count="350" data-suffix="+">0</strong><span>Homes Designed</span></div>
+          </div>
+          <div class="dyh-hero-stat">
+            <i class="fas fa-user-tie"></i>
+            <div><strong data-count="48" data-suffix="">0</strong><span>Architects</span></div>
+          </div>
+          <div class="dyh-hero-stat">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><strong data-count="12" data-suffix="">0</strong><span>Cities</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="dyh-hero-visual">
+        <div class="dyh-hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Custom designed luxury home">
+        </div>
+        <div class="dyh-hero-float">
+          <i class="fas fa-award"></i>
+          <div>
+            <strong>Award-Winning Designs</strong>
+            <span>Trusted by 2,500+ families</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="dyh-jump" aria-label="Page sections">
+    <div class="dyh-container dyh-jump-inner">
+      <a href="#dyh-styles">House Styles</a>
+      <a href="#dyh-plans">Floor Plans</a>
+      <a href="#dyh-inspire">Interior Inspiration</a>
+      <a href="#dyh-services">Architecture Services</a>
+      <a href="#dyh-consult">Consultation</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- House Styles -->
+    <section class="dyh-section dyh-section--cream" id="dyh-styles">
+      <div class="dyh-container">
+        <div class="dyh-sec-head dyh-reveal">
+          <span class="dyh-kicker">House Styles</span>
+          <h2>Architectural styles for every vision</h2>
+          <p>Everyone has a different idea of the perfect home. Pick a style that matches your taste, and we'll customise it to your plot.</p>
+          <div class="dyh-diamond" aria-hidden="true"><i class="fas fa-diamond"></i></div>
+        </div>
+
+        <div class="dyh-style-filters dyh-reveal dyh-reveal--d1">
+          <button type="button" class="dyh-style-filter is-active" data-filter="all">All Styles</button>
+          <button type="button" class="dyh-style-filter" data-filter="modern">Modern</button>
+          <button type="button" class="dyh-style-filter" data-filter="classic">Classic</button>
+          <button type="button" class="dyh-style-filter" data-filter="luxury">Luxury</button>
+          <button type="button" class="dyh-style-filter" data-filter="eco">Eco</button>
+        </div>
+
+        <div class="dyh-styles-grid dyh-reveal dyh-reveal--d2">
+          <button type="button" class="dyh-style-card is-active" data-style="modern" data-category="modern" aria-pressed="true">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80" alt="Modern Minimalist">
+            <span class="dyh-style-icon"><i class="fas fa-cube"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Modern Minimalist</h3>
+              <p>Clean lines, glass &amp; open spaces</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">12 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="contemporary" data-category="modern" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Contemporary">
+            <span class="dyh-style-icon"><i class="fas fa-building"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Contemporary</h3>
+              <p>Bold forms &amp; mixed materials</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">10 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="traditional" data-category="classic" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cd4e?auto=format&fit=crop&w=700&q=80" alt="Traditional Indian">
+            <span class="dyh-style-icon"><i class="fas fa-om"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Traditional Indian</h3>
+              <p>Courtyards, jaali &amp; heritage</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">8 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="mediterranean" data-category="classic" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=80" alt="Mediterranean Villa">
+            <span class="dyh-style-icon"><i class="fas fa-sun"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Mediterranean Villa</h3>
+              <p>Arches, stucco &amp; courtyards</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">7 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="farmhouse" data-category="classic" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80" alt="Modern Farmhouse">
+            <span class="dyh-style-icon"><i class="fas fa-tractor"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Modern Farmhouse</h3>
+              <p>Rustic charm &amp; warm wood</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">9 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="luxury" data-category="luxury" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=700&q=80" alt="Luxury Estate">
+            <span class="dyh-style-icon"><i class="fas fa-gem"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Luxury Estate</h3>
+              <p>Grand living &amp; premium finishes</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">6 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="eco" data-category="eco" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad4cdcf3?auto=format&fit=crop&w=700&q=80" alt="Eco Green Home">
+            <span class="dyh-style-icon"><i class="fas fa-leaf"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Eco Green Home</h3>
+              <p>Solar-ready &amp; sustainable</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">5 Plans</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="dyh-style-card" data-style="colonial" data-category="classic" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1605276374101-dea6bf5a0a2a?auto=format&fit=crop&w=700&q=80" alt="Colonial Classic">
+            <span class="dyh-style-icon"><i class="fas fa-landmark"></i></span>
+            <div class="dyh-style-overlay">
+              <h3>Colonial Classic</h3>
+              <p>Columned porticos &amp; elegance</p>
+              <div class="dyh-style-card-foot">
+                <span class="dyh-style-select">Select Style <i class="fas fa-arrow-right"></i></span>
+                <span class="dyh-style-count">4 Plans</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="dyh-style-preview-panel is-open dyh-reveal" id="dyhStylePreview">
+          <div class="dyh-style-preview-img">
+            <img id="dyhPreviewImg" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="Modern Minimalist">
+          </div>
+          <div class="dyh-style-preview-body">
+            <span class="dyh-style-preview-tag" id="dyhPreviewTag">Clean Lines</span>
+            <h3 id="dyhPreviewTitle">Modern Minimalist</h3>
+            <p id="dyhPreviewDesc">Open floor plans, floor-to-ceiling glass, flat roofs, and a neutral palette with bold accent materials like steel and concrete.</p>
+            <div class="dyh-style-tags" id="dyhPreviewFeatures">
+              <span>Flat roof</span><span>Glass facades</span><span>Open plan</span><span>Smart home ready</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dyh-sec-cta dyh-reveal">
+          <a href="#dyh-consult" class="dyh-btn dyh-btn--gold-outline"><i class="fas fa-star"></i> Start Designing Your House <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor Plans -->
+    <section class="dyh-section dyh-section--alt" id="dyh-plans">
+      <div class="dyh-container">
+        <div class="dyh-sec-head dyh-reveal">
+          <span class="dyh-kicker">Floor Plans</span>
+          <h2>Layouts crafted for modern living</h2>
+          <p>Start with a proven floor plan and customise room sizes, storeys, and orientation to suit your plot dimensions.</p>
+          <div class="dyh-diamond" aria-hidden="true"><i class="fas fa-diamond"></i></div>
+        </div>
+
+        <div class="dyh-plans-grid">
+          <article class="dyh-plan-card dyh-reveal">
+            <div class="dyh-plan-card-img">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="2 BHK floor plan">
+              <span class="dyh-plan-badge">2 BHK</span>
+            </div>
+            <div class="dyh-plan-card-body">
+              <div class="dyh-plan-loc"><i class="fas fa-ruler-combined"></i> 1,050 sq.ft · G + 1</div>
+              <h3>Compact 2 BHK</h3>
+              <p class="dyh-plan-by">Ideal for young couples &amp; first-time builders</p>
+              <div class="dyh-plan-price">₹ 28 – 38 Lakhs</div>
+              <button type="button" class="dyh-plan-view">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </article>
+          <article class="dyh-plan-card dyh-reveal dyh-reveal--d1">
+            <div class="dyh-plan-card-img">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80" alt="3 BHK floor plan">
+              <span class="dyh-plan-badge">3 BHK</span>
+            </div>
+            <div class="dyh-plan-card-body">
+              <div class="dyh-plan-loc"><i class="fas fa-ruler-combined"></i> 1,650 sq.ft · G + 2</div>
+              <h3>Family 3 BHK</h3>
+              <p class="dyh-plan-by">Most popular — balanced for a family of four</p>
+              <div class="dyh-plan-price">₹ 45 – 65 Lakhs</div>
+              <button type="button" class="dyh-plan-view">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </article>
+          <article class="dyh-plan-card dyh-reveal dyh-reveal--d2">
+            <div class="dyh-plan-card-img">
+              <img src="https://images.unsplash.com/photo-1580587771525-2b910dbaefbf?auto=format&fit=crop&w=600&q=80" alt="4 BHK floor plan">
+              <span class="dyh-plan-badge">4 BHK</span>
+            </div>
+            <div class="dyh-plan-card-body">
+              <div class="dyh-plan-loc"><i class="fas fa-ruler-combined"></i> 2,400 sq.ft · G + 2</div>
+              <h3>Spacious 4 BHK</h3>
+              <p class="dyh-plan-by">Puja space, lounge &amp; terrace garden</p>
+              <div class="dyh-plan-price">₹ 75 Lakhs – 1.1 Cr</div>
+              <button type="button" class="dyh-plan-view">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="dyh-feature-bar dyh-reveal">
+          <div><i class="fas fa-pencil-ruler"></i><strong>Customisable</strong><span>Tailor every room to your needs</span></div>
+          <div><i class="fas fa-file-contract"></i><strong>RERA Compliant</strong><span>Approval-ready drawings</span></div>
+          <div><i class="fas fa-clock"></i><strong>Fast Turnaround</strong><span>Concept in 7–10 days</span></div>
+          <div><i class="fas fa-shield-halved"></i><strong>Expert Review</strong><span>Senior architect oversight</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Inspiration -->
+    <section class="dyh-section" id="dyh-inspire">
+      <div class="dyh-container">
+        <div class="dyh-sec-head dyh-reveal">
+          <span class="dyh-kicker">Interior Inspiration</span>
+          <h2>Spaces that inspire your dream home</h2>
+          <p>Curated mood boards across living spaces, kitchens, bedrooms, and outdoor areas to spark your design vision.</p>
+          <div class="dyh-diamond" aria-hidden="true"><i class="fas fa-diamond"></i></div>
+        </div>
+
+        <div class="dyh-inspire-grid">
+          <div class="dyh-inspire-card dyh-inspire-card--wide dyh-reveal">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="Modern living room">
+            <div class="dyh-inspire-overlay"><span>Living Room</span><h4>Warm Minimal Living</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-reveal dyh-reveal--d1">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=500&q=80" alt="Kitchen">
+            <div class="dyh-inspire-overlay"><span>Kitchen</span><h4>Modular Open Kitchen</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-reveal dyh-reveal--d2">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=80" alt="Bedroom">
+            <div class="dyh-inspire-overlay"><span>Bedroom</span><h4>Serene Master Suite</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-inspire-card--tall dyh-reveal dyh-reveal--d1">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Bathroom">
+            <div class="dyh-inspire-overlay"><span>Bathroom</span><h4>Spa-inspired Bath</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-reveal dyh-reveal--d2">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=500&q=80" alt="Study">
+            <div class="dyh-inspire-overlay"><span>Study</span><h4>Work-from-home Nook</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-reveal dyh-reveal--d3">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80" alt="Outdoor">
+            <div class="dyh-inspire-overlay"><span>Outdoor</span><h4>Terrace Lounge</h4></div>
+          </div>
+          <div class="dyh-inspire-card dyh-inspire-card--wide dyh-reveal dyh-reveal--d2">
+            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68c0b1e2?auto=format&fit=crop&w=900&q=80" alt="Dining">
+            <div class="dyh-inspire-overlay"><span>Dining</span><h4>Elegant Dining Space</h4></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Services -->
+    <section class="dyh-section dyh-section--cream" id="dyh-services">
+      <div class="dyh-container">
+        <div class="dyh-sec-head dyh-reveal">
+          <span class="dyh-kicker">Architecture Services</span>
+          <h2>Building trust. Delivering results.</h2>
+          <p>End-to-end design and build support — from concept sketches to construction supervision and handover.</p>
+          <div class="dyh-diamond" aria-hidden="true"><i class="fas fa-diamond"></i></div>
+        </div>
+
+        <div class="dyh-services-grid">
+          <article class="dyh-service-card dyh-reveal">
+            <div class="dyh-service-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <h3>Concept Design</h3>
+            <p>Initial sketches, 3D renders, and style boards tailored to your plot and family needs.</p>
+          </article>
+          <article class="dyh-service-card dyh-reveal dyh-reveal--d1">
+            <div class="dyh-service-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h3>Working Drawings</h3>
+            <p>Detailed architectural, structural, and MEP drawings ready for municipal approval.</p>
+          </article>
+          <article class="dyh-service-card dyh-reveal dyh-reveal--d2">
+            <div class="dyh-service-icon"><i class="fas fa-couch"></i></div>
+            <h3>Interior Design</h3>
+            <p>Complete interior planning — furniture layout, materials, lighting, and custom joinery.</p>
+          </article>
+          <article class="dyh-service-card dyh-reveal dyh-reveal--d1">
+            <div class="dyh-service-icon"><i class="fas fa-tree"></i></div>
+            <h3>Landscape Design</h3>
+            <p>Gardens, terraces, water features, and outdoor living zones for your home.</p>
+          </article>
+          <article class="dyh-service-card dyh-reveal dyh-reveal--d2">
+            <div class="dyh-service-icon"><i class="fas fa-hard-hat"></i></div>
+            <h3>Construction Supervision</h3>
+            <p>On-site quality checks, contractor coordination, and milestone inspections.</p>
+          </article>
+          <article class="dyh-service-card dyh-reveal dyh-reveal--d3">
+            <div class="dyh-service-icon"><i class="fas fa-leaf"></i></div>
+            <h3>Green Building</h3>
+            <p>Energy-efficient designs with solar integration and IGBC/GRIHA compliance.</p>
+          </article>
+        </div>
+
+        <div class="dyh-trust-banner dyh-reveal">
+          <div class="dyh-trust-left">
+            <i class="fas fa-shield-halved"></i>
+            <div>
+              <h4>Your vision is our foundation</h4>
+              <p>350+ custom homes delivered across 12 Indian cities</p>
+            </div>
+          </div>
+          <div class="dyh-trust-rating">
+            <div class="dyh-trust-score">4.9★</div>
+            <div>
+              <strong>4.9 out of 5</strong>
+              <span>From 800+ design clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section class="dyh-section" id="dyh-consult">
+      <div class="dyh-container">
+        <div class="dyh-sec-head dyh-reveal">
+          <span class="dyh-kicker">Consultation</span>
+          <h2>Ready to design your perfect home?</h2>
+          <p>Tell us about your dream home and our architects will reach out within 24 hours with a personalised design brief.</p>
+          <div class="dyh-diamond" aria-hidden="true"><i class="fas fa-diamond"></i></div>
+        </div>
+
+        <div class="dyh-consult-wrap dyh-reveal dyh-reveal--d1">
+          <div class="dyh-consult-visual">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b4243f3?auto=format&fit=crop&w=800&q=80" alt="Interior design consultation">
+            <div class="dyh-consult-visual-overlay">
+              <h3>How It Works</h3>
+              <p>Our design process is collaborative, transparent, and tailored to your budget.</p>
+              <ol class="dyh-consult-steps">
+                <li><span>1</span> Share your plot details, style preference, and budget</li>
+                <li><span>2</span> Free 30-minute consultation with a senior architect</li>
+                <li><span>3</span> Receive a concept proposal with 3D renders</li>
+                <li><span>4</span> Refine the design and begin construction</li>
+              </ol>
+            </div>
+          </div>
+          <div class="dyh-consult-form">
+            <h3 class="dyh-form-title">Book Your Free Consultation</h3>
+            <p class="dyh-form-sub">No obligation, no hidden charges.</p>
+            <form class="dyh-form-grid" id="dyhConsultForm">
+              <div class="dyh-field">
+                <label for="dyhName">Full Name</label>
+                <input type="text" id="dyhName" name="name" placeholder="Your name" required>
+              </div>
+              <div class="dyh-field">
+                <label for="dyhPhone">Phone Number</label>
+                <input type="tel" id="dyhPhone" name="phone" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="dyh-field">
+                <label for="dyhEmail">Email Address</label>
+                <input type="email" id="dyhEmail" name="email" placeholder="you@email.com" required>
+              </div>
+              <div class="dyh-field">
+                <label for="dyhCity">City</label>
+                <input type="text" id="dyhCity" name="city" placeholder="e.g. Bangalore" required>
+              </div>
+              <div class="dyh-field">
+                <label for="dyhPlot">Plot Size</label>
+                <select id="dyhPlot" name="plot" required>
+                  <option value="">Select plot size</option>
+                  <option>30×40 ft (1,200 sq.ft)</option>
+                  <option>40×50 ft (2,000 sq.ft)</option>
+                  <option>50×60 ft (3,000 sq.ft)</option>
+                  <option>60×80 ft (4,800 sq.ft)</option>
+                  <option>Custom / Larger</option>
+                </select>
+              </div>
+              <div class="dyh-field">
+                <label for="dyhBudget">Budget Range</label>
+                <select id="dyhBudget" name="budget" required>
+                  <option value="">Select budget</option>
+                  <option>₹ 25 – 40 Lakhs</option>
+                  <option>₹ 40 – 75 Lakhs</option>
+                  <option>₹ 75 Lakhs – 1.5 Cr</option>
+                  <option>₹ 1.5 – 3 Crore</option>
+                  <option>₹ 3 Crore+</option>
+                </select>
+              </div>
+              <div class="dyh-field dyh-field--full">
+                <label>Preferred House Style</label>
+                <div class="dyh-style-pills">
+                  <button type="button" class="dyh-style-pill is-selected" data-style="modern">Modern</button>
+                  <button type="button" class="dyh-style-pill" data-style="contemporary">Contemporary</button>
+                  <button type="button" class="dyh-style-pill" data-style="traditional">Traditional</button>
+                  <button type="button" class="dyh-style-pill" data-style="mediterranean">Mediterranean</button>
+                  <button type="button" class="dyh-style-pill" data-style="farmhouse">Farmhouse</button>
+                  <button type="button" class="dyh-style-pill" data-style="luxury">Luxury</button>
+                </div>
+              </div>
+              <div class="dyh-field dyh-field--full">
+                <label for="dyhMessage">Tell us about your vision</label>
+                <textarea id="dyhMessage" name="message" placeholder="Number of bedrooms, special requirements, timeline, etc."></textarea>
+              </div>
+              <div class="dyh-field dyh-field--full">
+                <button type="submit" class="dyh-btn dyh-btn--navy dyh-btn--block"><i class="fas fa-paper-plane"></i> Request Free Consultation</button>
+              </div>
+            </form>
+            <div class="dyh-form-success" id="dyhFormSuccess">
+              <i class="fas fa-check-circle"></i> Thank you! Our design team will contact you within 24 hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/design-your-house.js"></script>
+</body>
+</html>
